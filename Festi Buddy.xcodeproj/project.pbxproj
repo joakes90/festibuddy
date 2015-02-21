@@ -10,11 +10,18 @@
 		D0EF9C091A98889F00850489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C081A98889F00850489 /* main.m */; };
 		D0EF9C0C1A98889F00850489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C0B1A98889F00850489 /* AppDelegate.m */; };
 		D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */; };
-		D0EF9C121A98889F00850489 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C111A98889F00850489 /* ViewController.m */; };
 		D0EF9C151A98889F00850489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EF9C131A98889F00850489 /* Main.storyboard */; };
 		D0EF9C171A98889F00850489 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EF9C161A98889F00850489 /* Images.xcassets */; };
 		D0EF9C1A1A98889F00850489 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EF9C181A98889F00850489 /* LaunchScreen.xib */; };
 		D0EF9C261A98889F00850489 /* Festi_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C251A98889F00850489 /* Festi_BuddyTests.m */; };
+		D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C311A98890B00850489 /* ECPercentDrivenInteractiveTransition.m */; };
+		D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C331A98890B00850489 /* ECSlidingAnimationController.m */; };
+		D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C361A98890B00850489 /* ECSlidingInteractiveTransition.m */; };
+		D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C381A98890B00850489 /* ECSlidingSegue.m */; };
+		D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C3A1A98890B00850489 /* ECSlidingViewController.m */; };
+		D0EF9C421A98890B00850489 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C3C1A98890B00850489 /* UIViewController+ECSlidingViewController.m */; };
+		D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C441A98896400850489 /* SlidingViewController.swift */; };
+		D0EF9C471A988D5500850489 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C461A988D5500850489 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +41,28 @@
 		D0EF9C0A1A98889F00850489 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0EF9C0B1A98889F00850489 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0EF9C0E1A98889F00850489 /* Festi_Buddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Festi_Buddy.xcdatamodel; sourceTree = "<group>"; };
-		D0EF9C101A98889F00850489 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0EF9C111A98889F00850489 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D0EF9C141A98889F00850489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0EF9C161A98889F00850489 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0EF9C191A98889F00850489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D0EF9C1F1A98889F00850489 /* Festi BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Festi BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF9C241A98889F00850489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EF9C251A98889F00850489 /* Festi_BuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Festi_BuddyTests.m; sourceTree = "<group>"; };
+		D0EF9C301A98890B00850489 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		D0EF9C311A98890B00850489 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		D0EF9C321A98890B00850489 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		D0EF9C331A98890B00850489 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		D0EF9C341A98890B00850489 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
+		D0EF9C351A98890B00850489 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		D0EF9C361A98890B00850489 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		D0EF9C371A98890B00850489 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
+		D0EF9C381A98890B00850489 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
+		D0EF9C391A98890B00850489 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		D0EF9C3A1A98890B00850489 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		D0EF9C3B1A98890B00850489 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		D0EF9C3C1A98890B00850489 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
+		D0EF9C431A98896400850489 /* Festi Buddy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Festi Buddy-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0EF9C441A98896400850489 /* SlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingViewController.swift; sourceTree = "<group>"; };
+		D0EF9C461A988D5500850489 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,15 +104,17 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D0EF9C2F1A98890B00850489 /* ECSlidingViewController */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
 				D0EF9C0B1A98889F00850489 /* AppDelegate.m */,
-				D0EF9C101A98889F00850489 /* ViewController.h */,
-				D0EF9C111A98889F00850489 /* ViewController.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,
+				D0EF9C441A98896400850489 /* SlidingViewController.swift */,
+				D0EF9C461A988D5500850489 /* MenuTableViewController.swift */,
 				D0EF9C161A98889F00850489 /* Images.xcassets */,
 				D0EF9C181A98889F00850489 /* LaunchScreen.xib */,
 				D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */,
 				D0EF9C061A98889F00850489 /* Supporting Files */,
+				D0EF9C431A98896400850489 /* Festi Buddy-Bridging-Header.h */,
 			);
 			path = "Festi Buddy";
 			sourceTree = "<group>";
@@ -120,6 +143,26 @@
 				D0EF9C241A98889F00850489 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0EF9C2F1A98890B00850489 /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF9C301A98890B00850489 /* ECPercentDrivenInteractiveTransition.h */,
+				D0EF9C311A98890B00850489 /* ECPercentDrivenInteractiveTransition.m */,
+				D0EF9C321A98890B00850489 /* ECSlidingAnimationController.h */,
+				D0EF9C331A98890B00850489 /* ECSlidingAnimationController.m */,
+				D0EF9C341A98890B00850489 /* ECSlidingConstants.h */,
+				D0EF9C351A98890B00850489 /* ECSlidingInteractiveTransition.h */,
+				D0EF9C361A98890B00850489 /* ECSlidingInteractiveTransition.m */,
+				D0EF9C371A98890B00850489 /* ECSlidingSegue.h */,
+				D0EF9C381A98890B00850489 /* ECSlidingSegue.m */,
+				D0EF9C391A98890B00850489 /* ECSlidingViewController.h */,
+				D0EF9C3A1A98890B00850489 /* ECSlidingViewController.m */,
+				D0EF9C3B1A98890B00850489 /* UIViewController+ECSlidingViewController.h */,
+				D0EF9C3C1A98890B00850489 /* UIViewController+ECSlidingViewController.m */,
+			);
+			path = ECSlidingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +266,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EF9C0C1A98889F00850489 /* AppDelegate.m in Sources */,
+				D0EF9C421A98890B00850489 /* UIViewController+ECSlidingViewController.m in Sources */,
+				D0EF9C471A988D5500850489 /* MenuTableViewController.swift in Sources */,
 				D0EF9C091A98889F00850489 /* main.m in Sources */,
-				D0EF9C121A98889F00850489 /* ViewController.m in Sources */,
+				D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */,
+				D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
+				D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */,
+				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
+				D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */,
+				D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +397,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Festi Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Festi Buddy/Festi Buddy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -357,9 +410,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Festi Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Festi Buddy/Festi Buddy-Bridging-Header.h";
 			};
 			name = Release;
 		};
