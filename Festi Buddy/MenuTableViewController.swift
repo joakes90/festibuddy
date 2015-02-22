@@ -48,7 +48,17 @@ class MenuTableViewController: UITableViewController {
     }
 
 
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch menuItems[indexPath.row]{
+            case "" :
+                break
+            case "Festival Countdown":
+                //enter code here to set the top view to the countdown view later
+                break
+        default :
+            break
+        }
+    }
 
     /*
     // MARK: - Navigation
