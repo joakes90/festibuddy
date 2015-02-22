@@ -13,8 +13,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuButton.frame = CGRectMake(8, 10, 24, 34)
-        menuButton.backgroundColor = UIColor.blackColor()
+        menuButton.frame = CGRectMake(8, 25, 35, 35)
+        menuButton.setImage(UIImage(named: "menubutton.png"), forState: UIControlState.Normal)
         menuButton.addTarget(self, action: "showMenu", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(menuButton)

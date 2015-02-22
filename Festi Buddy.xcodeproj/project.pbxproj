@@ -10,6 +10,7 @@
 		D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */; };
 		D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9F1A994E3900CAE8D9 /* timeBackground.png */; };
 		D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */; };
+		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0EF9C091A98889F00850489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C081A98889F00850489 /* main.m */; };
 		D0EF9C0C1A98889F00850489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C0B1A98889F00850489 /* AppDelegate.m */; };
 		D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 		D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.png; sourceTree = "<group>"; };
 		D0037B9F1A994E3900CAE8D9 /* timeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBackground.png; sourceTree = "<group>"; };
 		D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0EF9C031A98889F00850489 /* Festi Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Festi Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF9C071A98889F00850489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EF9C081A98889F00850489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		D0037B9D1A994E3900CAE8D9 /* App Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				D0DD62101A998ECB00224542 /* menubutton.png */,
 				D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */,
 				D0037B9F1A994E3900CAE8D9 /* timeBackground.png */,
 			);
@@ -264,6 +267,7 @@
 			files = (
 				D0EF9C151A98889F00850489 /* Main.storyboard in Resources */,
 				D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */,
+				D0DD62111A998ECB00224542 /* menubutton.png in Resources */,
 				D0EF9C1A1A98889F00850489 /* LaunchScreen.xib in Resources */,
 				D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */,
 				D0EF9C171A98889F00850489 /* Images.xcassets in Resources */,
