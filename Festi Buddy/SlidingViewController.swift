@@ -8,12 +8,15 @@
 
 import UIKit
 
+
 class SlidingViewController: ECSlidingViewController {
 
     override func viewDidLoad() {
+        
+        self.topViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as HomeViewController
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

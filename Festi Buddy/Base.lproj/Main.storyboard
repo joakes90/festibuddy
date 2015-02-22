@@ -1,7 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HpP-86-DSv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Sliding View Controller-->
+        <scene sceneID="7Vb-yo-iwC">
+            <objects>
+                <viewController id="HpP-86-DSv" customClass="SlidingViewController" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YI2-Uk-J9J"/>
+                        <viewControllerLayoutGuide type="bottom" id="H4M-GY-IQ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gXe-po-SKe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIr-Nz-bld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-765.5" y="-295.5"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="E0b-vy-qWO">
+            <objects>
+                <tableViewController storyboardIdentifier="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FPw-kM-pKO" customClass="MenuTableViewController" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yWr-Df-hcl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l5r-Kh-zTL">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l5r-Kh-zTL" id="JVO-g3-ErN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FPw-kM-pKO" id="xDR-gN-Xoo"/>
+                            <outlet property="delegate" destination="FPw-kM-pKO" id="8Xe-Zd-8Xf"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JW9-fI-zxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349.5" y="-295.5"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="VrR-Hi-Sb0">
+            <objects>
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jKW-dE-Pcu" customClass="HomeViewController" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAk-tB-atk"/>
+                        <viewControllerLayoutGuide type="bottom" id="37y-gf-KEJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ihb-jE-UbF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-Dc-6C4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ri-Dc-6C4" firstAttribute="top" secondItem="ihb-jE-UbF" secondAttribute="topMargin" id="E87-kx-ABd"/>
+                            <constraint firstItem="1ri-Dc-6C4" firstAttribute="leading" secondItem="ihb-jE-UbF" secondAttribute="leadingMargin" constant="-16" id="bfC-Nd-iIq"/>
+                            <constraint firstItem="37y-gf-KEJ" firstAttribute="top" secondItem="1ri-Dc-6C4" secondAttribute="bottom" id="c32-m8-3QM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ri-Dc-6C4" secondAttribute="trailing" constant="-16" id="z4s-ek-U9W"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gae-MY-f4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106.5" y="-295.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loadingScreen.png" width="1080" height="1920"/>
+    </resources>
 </document>
