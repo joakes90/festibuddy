@@ -49,15 +49,19 @@ class MenuTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch menuItems[indexPath.row]{
+        
+        let identifier = menuItems[indexPath.row]
+        switch identifier{
             case "" :
                 break
             case "Festival Countdown":
-                //enter code here to set the top view to the countdown view later
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("timerNavController") as UIViewController
+                self.slidingViewController().topViewController = newTopViewController
                 break
-        default :
-            break
-        }
+            default :
+                break
+            }
+        self.slidingViewController().resetTopViewAnimated(true)
     }
 
     /*

@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import iAd
+//import iAd
 
-class DetailViewController: UIViewController, ADBannerViewDelegate {
-
-    @IBOutlet weak var countdownLabel: UILabel!
+class DetailViewController: UIViewController {
     
     var fest: Festivals?
     var timer: NSTimer?
@@ -22,22 +20,22 @@ class DetailViewController: UIViewController, ADBannerViewDelegate {
     
     @IBOutlet weak var timeLabel: UILabel!
 
-    @IBOutlet weak var adBanner: ADBannerView!
+   // @IBOutlet weak var adBanner: ADBannerView!
     
     @IBOutlet weak var titleLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+  /*
         self.canDisplayBannerAds = true
         self.adBanner.delegate = self
         self.adBanner.hidden = true
-        
+    */
         self.setDefaultButton.title = NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil ? "Clear Default Fest" : "Set Default Fest"
         self.setDefaultButton.style = UIBarButtonItemStyle.Plain
         self.setDefaultButton.target = self
         self.setDefaultButton.action = "setDefault"
-        
+
         self.navigationItem.rightBarButtonItem = setDefaultButton
         if fest != nil {
             let imageString = fest?.detailImageString
@@ -51,14 +49,14 @@ class DetailViewController: UIViewController, ADBannerViewDelegate {
         }
     }
     
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
+   /* func bannerViewDidLoadAd(banner: ADBannerView!) {
         adBanner.hidden = false
     }
    
     //shot probably do somthing with this method later, Xcode seems to throw a hissy fit when it is not there.
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
 
-    }
+    }*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
