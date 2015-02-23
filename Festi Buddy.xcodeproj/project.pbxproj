@@ -261,8 +261,8 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
-				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0EF9C2F1A98890B00850489 /* ECSlidingViewController */,
+				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
 				D0EF9C0B1A98889F00850489 /* AppDelegate.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,

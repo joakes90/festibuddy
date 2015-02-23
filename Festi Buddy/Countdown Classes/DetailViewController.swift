@@ -47,6 +47,7 @@ class DetailViewController: UIViewController {
         
             timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         }
+        self.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
     
    /* func bannerViewDidLoadAd(banner: ADBannerView!) {

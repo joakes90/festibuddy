@@ -105,9 +105,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-UG-6g0">
-                                <rect key="frame" x="166" y="72" width="42" height="21"/>
+                                <rect key="frame" x="74" y="72" width="254" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="TIS-dW-gpT"/>
+                                    <constraint firstAttribute="width" constant="254" id="TIS-dW-gpT"/>
                                     <constraint firstAttribute="height" constant="21" id="iah-75-LE2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -135,7 +135,7 @@
                         <constraints>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="leading" secondItem="svL-lV-lMG" secondAttribute="leading" id="0Gh-y7-Gse"/>
                             <constraint firstAttribute="trailing" secondItem="SSq-3R-snE" secondAttribute="trailing" id="5cN-lZ-0FV"/>
-                            <constraint firstItem="r9w-UG-6g0" firstAttribute="centerX" secondItem="SSq-3R-snE" secondAttribute="centerX" constant="-0.5" id="8aF-u1-QQw"/>
+                            <constraint firstItem="r9w-UG-6g0" firstAttribute="centerX" secondItem="SSq-3R-snE" secondAttribute="centerX" constant="13.5" id="8aF-u1-QQw"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="centerX" secondItem="hlp-n6-H6p" secondAttribute="centerX" constant="-13.5" id="Gen-ru-vlj"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="bottom" secondItem="W1R-Wg-Yvm" secondAttribute="top" id="IWU-yr-l8W"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="top" secondItem="r9w-UG-6g0" secondAttribute="bottom" constant="-93" id="Nel-e0-gnS"/>
