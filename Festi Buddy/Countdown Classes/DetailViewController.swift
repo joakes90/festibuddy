@@ -13,9 +13,8 @@ class DetailViewController: UIViewController {
     
     var fest: Festivals?
     var timer: NSTimer?
-    let setDefaultButton: UIBarButtonItem = UIBarButtonItem()
-
     
+
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var timeLabel: UILabel!
@@ -31,12 +30,9 @@ class DetailViewController: UIViewController {
         self.adBanner.delegate = self
         self.adBanner.hidden = true
     */
-        self.setDefaultButton.title = NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil ? "Clear Default Fest" : "Set Default Fest"
-        self.setDefaultButton.style = UIBarButtonItemStyle.Plain
-        self.setDefaultButton.target = self
-        self.setDefaultButton.action = "setDefault"
 
-        self.navigationItem.rightBarButtonItem = setDefaultButton
+       
+        
         if fest != nil {
             let imageString = fest?.detailImageString
             var image: UIImage = UIImage(named: imageString!)!
@@ -71,20 +67,21 @@ class DetailViewController: UIViewController {
         
     }
     
-    
-    func setDefault(){
-        if (NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil){
-            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "default_fest")
-            self.setDefaultButton.title = "Set Default Fest"
-        }else{
-            NSUserDefaults.standardUserDefaults().setValue(fest?.title, forKey: "default_fest")
-            self.setDefaultButton.title = "Clear"
+    @IBAction func arMenu(sender: AnyObject) {
+        let defaultAction: ARAlertAction = ARAlertAction(title: "Set as Default Festival", style: ARAlertActionStyle.Default) { (setDefault) -> Void in
+            println("I ran")
+            NSUserDefaults.standardUserDefaults().setValue(self.fest?.title, forKey: "default_fest")
         }
+    
+        let controller: ARAlertController = ARAlertController(title: "Options", message: nil, preferredStyle: ARAlertControllerStyle.ActionSheet)
+        controller.addAction(defaultAction)
+        controller.presentInViewController(self, animated: true, completion: nil)
     }
-        
     
     
     
+    
+
     /*
     // MARK: - Navigation
 

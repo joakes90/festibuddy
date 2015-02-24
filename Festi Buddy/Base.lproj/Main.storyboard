@@ -75,7 +75,9 @@
                             <outlet property="delegate" destination="0qH-yq-ZRG" id="aqb-ze-Whc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WOo-S5-awA"/>
+                    <navigationItem key="navigationItem" id="WOo-S5-awA">
+                        <barButtonItem key="backBarButtonItem" title="All Festivals" id="B0y-Q6-Xit"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUr-5u-FEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,10 +132,24 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-2v-bhD">
+                                <rect key="frame" x="324" y="612" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bKh-fA-y3y"/>
+                                    <constraint firstAttribute="width" constant="35" id="x54-Rb-dsi"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="armenu.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="arMenu:" destination="5lg-sS-vsm" eventType="touchUpInside" id="FOW-Ch-2IX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="leading" secondItem="svL-lV-lMG" secondAttribute="leading" id="0Gh-y7-Gse"/>
+                            <constraint firstItem="aqS-2v-bhD" firstAttribute="top" secondItem="SSq-3R-snE" secondAttribute="bottom" constant="-55" id="0dF-mU-4Pr"/>
                             <constraint firstAttribute="trailing" secondItem="SSq-3R-snE" secondAttribute="trailing" id="5cN-lZ-0FV"/>
                             <constraint firstItem="r9w-UG-6g0" firstAttribute="centerX" secondItem="SSq-3R-snE" secondAttribute="centerX" constant="13.5" id="8aF-u1-QQw"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="centerX" secondItem="hlp-n6-H6p" secondAttribute="centerX" constant="-13.5" id="Gen-ru-vlj"/>
@@ -141,6 +157,7 @@
                             <constraint firstItem="SSq-3R-snE" firstAttribute="top" secondItem="r9w-UG-6g0" secondAttribute="bottom" constant="-93" id="Nel-e0-gnS"/>
                             <constraint firstItem="OJ1-mq-onB" firstAttribute="top" secondItem="r9w-UG-6g0" secondAttribute="bottom" constant="27" id="QGJ-C5-25v"/>
                             <constraint firstItem="hlp-n6-H6p" firstAttribute="top" secondItem="nUw-xb-zam" secondAttribute="bottom" constant="8" id="Tr5-5M-mcB"/>
+                            <constraint firstItem="aqS-2v-bhD" firstAttribute="leading" secondItem="SSq-3R-snE" secondAttribute="trailing" constant="-51" id="h7h-4R-Af6"/>
                             <constraint firstItem="r9w-UG-6g0" firstAttribute="top" secondItem="FYf-FX-ASE" secondAttribute="bottom" constant="8" symbolic="YES" id="ru0-l9-8cQ"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="centerX" secondItem="OJ1-mq-onB" secondAttribute="centerX" constant="-13.5" id="sed-rb-f6B"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="top" secondItem="nUw-xb-zam" secondAttribute="bottom" constant="-168" id="t1J-cG-e82"/>
@@ -210,6 +227,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="armenu.png" width="150" height="150"/>
         <image name="loadingScreen.png" width="1080" height="1920"/>
         <image name="timeBackground.png" width="1024" height="256"/>
     </resources>

@@ -49,6 +49,9 @@
 		D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B01A9AFE09004518F7 /* waka.jpeg */; };
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
 		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
+		D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B905121A9BE168000FE772 /* ARAlertController.m */; };
+		D0B905151A9BE168000FE772 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0B905131A9BE168000FE772 /* Info.plist */; };
+		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
 		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
 		D0DD62191A9A95D900224542 /* Festivals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62161A9A95D900224542 /* Festivals.swift */; };
@@ -123,6 +126,10 @@
 		D05417B01A9AFE09004518F7 /* waka.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waka.jpeg; sourceTree = "<group>"; };
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
 		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
+		D0B905111A9BE168000FE772 /* ARAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAlertController.h; sourceTree = "<group>"; };
+		D0B905121A9BE168000FE772 /* ARAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAlertController.m; sourceTree = "<group>"; };
+		D0B905131A9BE168000FE772 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
 		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D0DD62161A9A95D900224542 /* Festivals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festivals.swift; sourceTree = "<group>"; };
@@ -178,6 +185,7 @@
 		D0037B9D1A994E3900CAE8D9 /* App Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				D0B905161A9BE375000FE772 /* armenu.png */,
 				D0DD62101A998ECB00224542 /* menubutton.png */,
 				D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */,
 				D0037B9F1A994E3900CAE8D9 /* timeBackground.png */,
@@ -230,6 +238,16 @@
 			path = "Fest Images and logos";
 			sourceTree = "<group>";
 		};
+		D0B905101A9BE168000FE772 /* ARAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D0B905111A9BE168000FE772 /* ARAlertController.h */,
+				D0B905121A9BE168000FE772 /* ARAlertController.m */,
+				D0B905131A9BE168000FE772 /* Info.plist */,
+			);
+			path = ARAlertController;
+			sourceTree = "<group>";
+		};
 		D0DD62141A9A95D900224542 /* Countdown Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +279,7 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D0B905101A9BE168000FE772 /* ARAlertController */,
 				D0EF9C2F1A98890B00850489 /* ECSlidingViewController */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
@@ -417,6 +436,7 @@
 				D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */,
 				D05417C11A9AFE09004518F7 /* fireflyLogo.jpeg in Resources */,
 				D05417CF1A9AFE09004518F7 /* sxswLogo.jpeg in Resources */,
+				D0B905151A9BE168000FE772 /* Info.plist in Resources */,
 				D05417BD1A9AFE09004518F7 /* EDCLogo.png in Resources */,
 				D05417CA1A9AFE09004518F7 /* sasquatch.jpeg in Resources */,
 				D05417B61A9AFE09004518F7 /* bumber.jpeg in Resources */,
@@ -437,6 +457,7 @@
 				D05417BA1A9AFE09004518F7 /* counterpoint.jpeg in Resources */,
 				D05417CC1A9AFE09004518F7 /* sc.jpeg in Resources */,
 				D0DD62111A998ECB00224542 /* menubutton.png in Resources */,
+				D0B905171A9BE375000FE772 /* armenu.png in Resources */,
 				D05417D41A9AFE09004518F7 /* voodoo.jpeg in Resources */,
 				D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */,
 				D05417BC1A9AFE09004518F7 /* EDC.jpg in Resources */,
@@ -482,6 +503,7 @@
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
 				D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */,
 				D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */,
 				D0DD621A1A9A95D900224542 /* TableViewController.swift in Sources */,
 				D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */,
 			);
