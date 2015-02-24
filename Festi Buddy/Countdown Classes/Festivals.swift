@@ -25,6 +25,7 @@ class Festivals {
     var lat: NSNumber = 0
     var long: NSNumber = 0
     
+    var lineup: NSString
     var timer: NSTimer?
     
     
@@ -67,7 +68,7 @@ class Festivals {
 
     }
     
-    init(title: NSString?, date: NSString?, imageString: NSString?, tableImageString: NSString?, lat: NSNumber, long: NSNumber){
+    init(title: NSString?, date: NSString?, imageString: NSString?, tableImageString: NSString?, lat: NSNumber, long: NSNumber, lineup: NSString){
         
         let dateFormater: NSDateFormatter = NSDateFormatter()
         dateFormater.dateFormat = "yyyy-MM-dd"
@@ -76,6 +77,7 @@ class Festivals {
         self.date = dateFormater.dateFromString(date!)
         self.detailImageString = imageString!
         self.tableImage = tableImageString!
+        self.lineup = lineup
         
        var componets = timeTillFest()
         

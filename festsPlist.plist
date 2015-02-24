@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- PEALISTv1: TextSize:0| -->
 <plist version="1.0">
 <array>
 	<dict>
@@ -15,6 +16,8 @@
 		<real>30.2585025</real>
 		<key>long</key>
 		<real>-97.7692911</real>
+		<key>lineup</key>
+		<string>http://www.aclfestival.com/2014-lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -29,6 +32,8 @@
 		<real>35.472265</real>
 		<key>long</key>
 		<real>-86.04873000000001</real>
+		<key>lineup</key>
+		<string>http://lineup.bonnaroo.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -43,6 +48,8 @@
 		<real>47.622038</real>
 		<key>long</key>
 		<real>-122.352</real>
+		<key>lineup</key>
+		<string>http://bumbershoot.org/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -57,6 +64,8 @@
 		<real>33.678452</real>
 		<key>long</key>
 		<real>-116.237273</real>
+		<key>lineup</key>
+		<string>https://www.coachella.com/poster-iframe/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -71,6 +80,8 @@
 		<real>33.678452</real>
 		<key>long</key>
 		<real>-116.237273</real>
+		<key>lineup</key>
+		<string>https://www.coachella.com/poster-iframe/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -85,6 +96,8 @@
 		<real>33.6333706</real>
 		<key>long</key>
 		<real>-84.70248839999999</real>
+		<key>lineup</key>
+		<string>http://cpfp2.c3cdn.com/wp/wp-content/uploads/2015/01/CP15_poster_v24.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -99,6 +112,8 @@
 		<real>36.271542</real>
 		<key>long</key>
 		<real>-115.009732</real>
+		<key>lineup</key>
+		<string>http://lasvegas.electricdaisycarnival.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -113,6 +128,8 @@
 		<real>43.5221943</real>
 		<key>long</key>
 		<real>-86.3611314</real>
+		<key>lineup</key>
+		<string>http://19oy1zxwwpri9q7r1a1psdi3.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/EF_Lineup-1294x2000.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -127,6 +144,8 @@
 		<real>39.194752</real>
 		<key>long</key>
 		<real>-75.523732</real>
+		<key>lineup</key>
+		<string>https://s3.amazonaws.com/fireflyfestival/wp-content/uploads/2013/10/Firefly-2015-Lineup-2.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -141,6 +160,8 @@
 		<real>40.795813</real>
 		<key>long</key>
 		<real>-73.922517</real>
+		<key>lineup</key>
+		<string>http://lineup.governorsballmusicfestival.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -155,6 +176,8 @@
 		<real>30.252283</real>
 		<key>long</key>
 		<real>-87.689481</real>
+		<key>lineup</key>
+		<string>http://lineup.hangoutmusicfest.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -169,6 +192,8 @@
 		<real>41.8741871</real>
 		<key>long</key>
 		<real>-87.6207948</real>
+		<key>lineup</key>
+		<string>http://www.lollapalooza.com/2014-lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -183,6 +208,8 @@
 		<real>47.101387</real>
 		<key>long</key>
 		<real>-119.995638</real>
+		<key>lineup</key>
+		<string>http://lineup.sasquatchfestival.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -197,6 +224,8 @@
 		<real>40.893674</real>
 		<key>long</key>
 		<real>-89.504002</real>
+		<key>lineup</key>
+		<string>http://summercampfestival.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -211,6 +240,8 @@
 		<real>-97.7275389</real>
 		<key>lat</key>
 		<real>30.263388</real>
+		<key>lineup</key>
+		<string>http://schedule.sxsw.com/?conference=music&amp;lsort=name&amp;day=ALL&amp;event_type=showcase</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -225,6 +256,8 @@
 		<real>41.884762</real>
 		<key>long</key>
 		<real>-87.66527600000001</real>
+		<key>lineup</key>
+		<string>http://www.pitchforkmusicfestival.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -239,6 +272,8 @@
 		<real>33.6333706</real>
 		<key>long</key>
 		<real>-84.70248839999999</real>
+		<key>lineup</key>
+		<string>http://www.tomorrowworld.com/Lineup</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -253,6 +288,8 @@
 		<real>-80.207033</real>
 		<key>lat</key>
 		<real>25.76679</real>
+		<key>lineup</key>
+		<string>http://www.ultramusicfestival.com/lineup</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -267,6 +304,8 @@
 		<real>30.005564</real>
 		<key>long</key>
 		<real>-90.09166999999999</real>
+		<key>lineup</key>
+		<string>http://worshipthemusic.com/artists/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -281,6 +320,8 @@
 		<real>35.711776</real>
 		<key>long</key>
 		<real>-93.797192</real>
+		<key>lineup</key>
+		<string>http://www.wakarusa.com/artist-lineup/</string>
 	</dict>
 </array>
 </plist>

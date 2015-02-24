@@ -52,6 +52,8 @@
 		D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B905121A9BE168000FE772 /* ARAlertController.m */; };
 		D0B905151A9BE168000FE772 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0B905131A9BE168000FE772 /* Info.plist */; };
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
+		D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B905181A9C2395000FE772 /* MapKit.framework */; };
+		D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68D111A9C769200F21A5C /* countdownWebView.swift */; };
 		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
 		D0DD62191A9A95D900224542 /* Festivals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62161A9A95D900224542 /* Festivals.swift */; };
@@ -130,6 +132,8 @@
 		D0B905121A9BE168000FE772 /* ARAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAlertController.m; sourceTree = "<group>"; };
 		D0B905131A9BE168000FE772 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
+		D0B905181A9C2395000FE772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0D68D111A9C769200F21A5C /* countdownWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countdownWebView.swift; sourceTree = "<group>"; };
 		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D0DD62161A9A95D900224542 /* Festivals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festivals.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +259,7 @@
 				D0DD62151A9A95D900224542 /* DetailViewController.swift */,
 				D0DD62161A9A95D900224542 /* Festivals.swift */,
 				D0DD62171A9A95D900224542 /* TableViewController.swift */,
+				D0D68D111A9C769200F21A5C /* countdownWebView.swift */,
 			);
 			path = "Countdown Classes";
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 		D0EF9BFA1A98889F00850489 = {
 			isa = PBXGroup;
 			children = (
+				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D0EF9C051A98889F00850489 /* Festi Buddy */,
 				D0EF9C221A98889F00850489 /* Festi BuddyTests */,
 				D0EF9C041A98889F00850489 /* Products */,
@@ -395,6 +402,11 @@
 				TargetAttributes = {
 					D0EF9C021A98889F00850489 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D0EF9C1E1A98889F00850489 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -506,6 +518,7 @@
 				D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */,
 				D0DD621A1A9A95D900224542 /* TableViewController.swift in Sources */,
 				D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */,
+				D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

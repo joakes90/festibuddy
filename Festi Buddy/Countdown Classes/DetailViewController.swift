@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MapKit
 //import iAd
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIAlertViewDelegate {
     
     var fest: Festivals?
     var timer: NSTimer?
@@ -74,27 +75,65 @@ class DetailViewController: UIViewController {
         }
         let navigateAction: ARAlertAction = ARAlertAction(title: "Navigate to Here", style: ARAlertActionStyle.Default) { (navigate) -> Void in
             let canHandleGoogle: Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "comgooglemaps://")!)
-            println(canHandleGoogle)
+            
+            if canHandleGoogle{
+                let alert: UIAlertView = UIAlertView(title: "Select Map", message: "Would you like to use Google or Apple Maps", delegate: self, cancelButtonTitle: nil)
+                alert.addButtonWithTitle("Google Maps")
+                alert.addButtonWithTitle("Apple Maps")
+                alert.tag = 100
+                alert.show()
+                
+            }else{
+                self.appleMapsNavigation()
+            }
+        }
+        
+        let lineupAction: ARAlertAction = ARAlertAction(title: "View Lineup", style: ARAlertActionStyle.Default) { (lineUp) -> Void in
+            self.performSegueWithIdentifier("showLineup", sender: self)
+            
         }
         
         let controller: ARAlertController = ARAlertController(title: "Options", message: nil, preferredStyle: ARAlertControllerStyle.ActionSheet)
         controller.addAction(defaultAction)
+        controller.addAction(lineupAction)
         controller.addAction(navigateAction)
         controller.presentInViewController(self, animated: true, completion: nil)
     }
     
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex == 0{
+            googleMapsNavigation()
+        } else{
+            appleMapsNavigation()
+        }
     }
-    */
+    
+    func appleMapsNavigation() {
+        var latitude: CLLocationDegrees = (self.fest?.lat as CLLocationDegrees)
+        var longitude: CLLocationDegrees = (self.fest?.long as CLLocationDegrees)
+        var festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        let festPlaceMark: MKPlacemark = MKPlacemark(coordinate: festLocation, addressDictionary: nil)
+        let festMapItem: MKMapItem = MKMapItem(placemark: festPlaceMark)
+        
+        let locations: [MKMapItem] = [MKMapItem.mapItemForCurrentLocation(), festMapItem]
+        let launchItems: NSDictionary = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        MKMapItem.openMapsWithItems(locations, launchOptions: launchItems as NSDictionary)
+
+    }
+    
+    func googleMapsNavigation() {
+        let destiantion: String = "\(self.fest?.lat)+\(self.fest?.long)"
+       
+        let directionsURL: NSURL = NSURL(string: "comgooglemaps://maps.google.com/maps?z=3&t=m&q=loc:\(destiantion)")!
+        UIApplication.sharedApplication().openURL(directionsURL)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showLineup"{
+            let viewController: countdownWebView = segue.destinationViewController as countdownWebView
+            viewController.urlString = fest?.lineup
+        }
+    }
 
 }

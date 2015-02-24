@@ -32,8 +32,9 @@ class TableViewController: UITableViewController {
             var date = i["date"]
             var lat = i["lat"]
             var long = i["long"]
+            var lineup = i["lineup"]
             
-            var newFestivalObject: Festivals = Festivals(title: (title! as NSString), date: (date! as NSString), imageString: (imageString! as NSString), tableImageString: (tableImageString! as NSString), lat: (lat! as NSNumber), long: (long! as NSNumber))
+            var newFestivalObject: Festivals = Festivals(title: (title! as NSString), date: (date! as NSString), imageString: (imageString! as NSString), tableImageString: (tableImageString! as NSString), lat: (lat! as NSNumber), long: (long! as NSNumber), lineup: (lineup! as NSString))
             festivals.append(newFestivalObject)
         }
         if (NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil){
@@ -48,7 +49,7 @@ class TableViewController: UITableViewController {
         }
         initialRun = false
         
-
+        self.slidingViewController().resetTopViewAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {
