@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
 
-    let menuItems: [String] = ["", "Festival Countdown", "Festivals Map", "Make a Packing list", "Tent/Car Finder", "Battery Life Tips"]
+    let menuItems: [String] = ["", "Home", "Festival Countdown", "Festivals Map", "Make a Packing list", "Tent/Car Finder", "Battery Life Tips"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +54,20 @@ class MenuTableViewController: UITableViewController {
         switch identifier{
             case "" :
                 break
+            case "Home":
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as UIViewController
+                self.slidingViewController().topViewController = newTopViewController
+                break
+            
             case "Festival Countdown":
                 let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("timerNavController") as UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
+            
             default :
                 break
             }
-        self.slidingViewController().resetTopViewAnimated(true)
+       // self.slidingViewController().resetTopViewAnimated(true)
     }
 
     /*

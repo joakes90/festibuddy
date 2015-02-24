@@ -43,6 +43,7 @@ class DetailViewController: UIViewController {
         
             timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         }
+        self.slidingViewController().resetTopViewAnimated(true)
         self.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
     
@@ -69,12 +70,16 @@ class DetailViewController: UIViewController {
     
     @IBAction func arMenu(sender: AnyObject) {
         let defaultAction: ARAlertAction = ARAlertAction(title: "Set as Default Festival", style: ARAlertActionStyle.Default) { (setDefault) -> Void in
-            println("I ran")
             NSUserDefaults.standardUserDefaults().setValue(self.fest?.title, forKey: "default_fest")
         }
-    
+        let navigateAction: ARAlertAction = ARAlertAction(title: "Navigate to Here", style: ARAlertActionStyle.Default) { (navigate) -> Void in
+            let canHandleGoogle: Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "comgooglemaps://")!)
+            println(canHandleGoogle)
+        }
+        
         let controller: ARAlertController = ARAlertController(title: "Options", message: nil, preferredStyle: ARAlertControllerStyle.ActionSheet)
         controller.addAction(defaultAction)
+        controller.addAction(navigateAction)
         controller.presentInViewController(self, animated: true, completion: nil)
     }
     

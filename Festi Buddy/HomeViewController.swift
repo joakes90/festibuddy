@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
 
         self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as MenuTableViewController
         
-        
+        self.slidingViewController().resetTopViewAnimated(true)
         self.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
 
