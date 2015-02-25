@@ -17,17 +17,25 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     let locationManager: CLLocationManager = CLLocationManager()
     
-    let latDelta: CLLocationDegrees = 0.10
-    let longDelta: CLLocationDegrees = 0.10
+    let latDelta: CLLocationDegrees = 55.5
+    let longDelta: CLLocationDegrees = 55.5
     
     var festivalLocations: [CLLocationCoordinate2D] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let path = NSBundle.mainBundle().pathForResource("festsPlist", ofType: "plist")
         
+        self.locationManager.requestWhenInUseAuthorization()
+        var location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(35.2468209), longitude: CLLocationDegrees(-97.36237))
+        let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+        var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
+        mapView.showsUserLocation = true
+        mapView.region = theRegon
+        
+
+        
+        let path = NSBundle.mainBundle().pathForResource("festsPlist", ofType: "plist")
         let plistArray: NSArray = NSArray(contentsOfFile: path!)!
         
         for i in plistArray {
@@ -44,8 +52,6 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             
             var latitude: CLLocationDegrees = newFestivalObject.lat as CLLocationDegrees
             var longitude: CLLocationDegrees = newFestivalObject.long as CLLocationDegrees
-            
-            let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
             
             var festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
