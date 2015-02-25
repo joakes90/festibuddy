@@ -14,6 +14,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     
     var fest: Festivals?
     var timer: NSTimer?
+    var closed: Bool = true
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -141,7 +142,13 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     }
     
     @IBAction func showMenu(){
-        self.slidingViewController().anchorTopViewToRightAnimated(true)
+        if self.closed {
+            self.slidingViewController().anchorTopViewToRightAnimated(true)
+            self.closed = false
+        } else{
+            self.slidingViewController().resetTopViewAnimated(true)
+            self.closed = true
+        }
     }
 
 }

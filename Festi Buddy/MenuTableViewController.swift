@@ -63,7 +63,10 @@ class MenuTableViewController: UITableViewController {
                 let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("timerNavController") as UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
-            
+            case "Festivals Map":
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapView") as UIViewController
+                self.slidingViewController().topViewController = newTopViewController
+                break
             default :
                 break
             }

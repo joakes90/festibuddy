@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: UIViewController {
     let menuButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
     
+    var closed: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         menuButton.frame = CGRectMake(8, 25, 35, 35)
@@ -35,8 +37,14 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   @IBAction func showMenu(){
-        self.slidingViewController().anchorTopViewToRightAnimated(true)
+    @IBAction func showMenu(){
+        if self.closed {
+            self.slidingViewController().anchorTopViewToRightAnimated(true)
+            self.closed = false
+        } else{
+            self.slidingViewController().resetTopViewAnimated(true)
+            self.closed = true
+        }
     }
 
 

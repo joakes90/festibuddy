@@ -58,6 +58,7 @@
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
 		D0DD62191A9A95D900224542 /* Festivals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62161A9A95D900224542 /* Festivals.swift */; };
 		D0DD621A1A9A95D900224542 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62171A9A95D900224542 /* TableViewController.swift */; };
+		D0E4A4F91A9D4DA0006BCAB2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E4A4F81A9D4DA0006BCAB2 /* MapView.swift */; };
 		D0EF9C091A98889F00850489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C081A98889F00850489 /* main.m */; };
 		D0EF9C0C1A98889F00850489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C0B1A98889F00850489 /* AppDelegate.m */; };
 		D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */; };
@@ -138,6 +139,7 @@
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D0DD62161A9A95D900224542 /* Festivals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festivals.swift; sourceTree = "<group>"; };
 		D0DD62171A9A95D900224542 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D0E4A4F81A9D4DA0006BCAB2 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D0EF9C031A98889F00850489 /* Festi Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Festi Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF9C071A98889F00850489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EF9C081A98889F00850489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -264,10 +266,17 @@
 			path = "Countdown Classes";
 			sourceTree = "<group>";
 		};
+		D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D0E4A4F81A9D4DA0006BCAB2 /* MapView.swift */,
+			);
+			name = "Map Classes";
+			sourceTree = "<group>";
+		};
 		D0EF9BFA1A98889F00850489 = {
 			isa = PBXGroup;
 			children = (
-				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D0EF9C051A98889F00850489 /* Festi Buddy */,
 				D0EF9C221A98889F00850489 /* Festi BuddyTests */,
 				D0EF9C041A98889F00850489 /* Products */,
@@ -286,9 +295,11 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D0B905101A9BE168000FE772 /* ARAlertController */,
 				D0EF9C2F1A98890B00850489 /* ECSlidingViewController */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
+				D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
 				D0EF9C0B1A98889F00850489 /* AppDelegate.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,
@@ -509,6 +520,7 @@
 				D0EF9C091A98889F00850489 /* main.m in Sources */,
 				D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */,
 				D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */,
+				D0E4A4F91A9D4DA0006BCAB2 /* MapView.swift in Sources */,
 				D0DD62191A9A95D900224542 /* Festivals.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
 				D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */,
