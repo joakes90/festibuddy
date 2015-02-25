@@ -18,6 +18,12 @@ class countdownWebView: UIViewController {
 
         let urlRequest: NSURLRequest = NSURLRequest(URL: NSURL(string: self.urlString!)!)
         webView.loadRequest(urlRequest)
+        
+        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as MenuTableViewController
+        
+        self.slidingViewController().resetTopViewAnimated(true)
+        self.view.addGestureRecognizer(self.slidingViewController().panGesture)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,14 +32,8 @@ class countdownWebView: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func showMenu(){
+        self.slidingViewController().anchorTopViewToRightAnimated(true)
     }
-    */
 
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- PEALISTv1: TextSize:0| -->
 <plist version="1.0">
 <array>
 	<dict>
@@ -97,7 +96,7 @@
 		<key>long</key>
 		<real>-84.70248839999999</real>
 		<key>lineup</key>
-		<string>http://cpfp2.c3cdn.com/wp/wp-content/uploads/2015/01/CP15_poster_v24.jpg</string>
+		<string>http://www.counterpointfestival.com/2015-lineup-poster/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -129,7 +128,7 @@
 		<key>long</key>
 		<real>-86.3611314</real>
 		<key>lineup</key>
-		<string>http://19oy1zxwwpri9q7r1a1psdi3.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/EF_Lineup-1294x2000.jpg</string>
+		<string>http://www.electricforestfestival.com/experience/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -145,7 +144,7 @@
 		<key>long</key>
 		<real>-75.523732</real>
 		<key>lineup</key>
-		<string>https://s3.amazonaws.com/fireflyfestival/wp-content/uploads/2013/10/Firefly-2015-Lineup-2.jpg</string>
+		<string>https://fireflyfestival.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>

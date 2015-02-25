@@ -14,7 +14,6 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     
     var fest: Festivals?
     var timer: NSTimer?
-    
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -31,7 +30,6 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         self.adBanner.delegate = self
         self.adBanner.hidden = true
     */
-
        
         
         if fest != nil {
@@ -93,10 +91,16 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
             
         }
         
+        let cancel: ARAlertAction = ARAlertAction(title: "Cancel", style: ARAlertActionStyle.Cancel) { (cancel) -> Void in
+            
+        }
+        
         let controller: ARAlertController = ARAlertController(title: "Options", message: nil, preferredStyle: ARAlertControllerStyle.ActionSheet)
         controller.addAction(defaultAction)
         controller.addAction(lineupAction)
         controller.addAction(navigateAction)
+        controller.addAction(cancel)
+        
         controller.presentInViewController(self, animated: true, completion: nil)
     }
     
@@ -134,6 +138,10 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
             let viewController: countdownWebView = segue.destinationViewController as countdownWebView
             viewController.urlString = fest?.lineup
         }
+    }
+    
+    @IBAction func showMenu(){
+        self.slidingViewController().anchorTopViewToRightAnimated(true)
     }
 
 }
