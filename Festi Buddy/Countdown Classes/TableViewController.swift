@@ -11,7 +11,6 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var festivals: [Festivals] = []
-    var listBarButton:UIBarButtonItem = UIBarButtonItem()
     var destinationFest: Festivals?
     var initialRun: Bool = true
     
@@ -49,7 +48,6 @@ class TableViewController: UITableViewController {
         }
         initialRun = false
         
-        self.slidingViewController().resetTopViewAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,14 +101,13 @@ class TableViewController: UITableViewController {
         }
     }
     
-            /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
+            self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as UIViewController
+        }
+        self.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
-    */
 
 }

@@ -49,6 +49,15 @@
 		D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B01A9AFE09004518F7 /* waka.jpeg */; };
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
 		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
+		D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9AB71A9EB00D00025D87 /* Items.swift */; };
+		D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABA1A9EB04400025D87 /* ItemList.swift */; };
+		D08C9ABD1A9EB04400025D87 /* AddItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABB1A9EB04400025D87 /* AddItems.swift */; };
+		D08C9ABF1A9EB30800025D87 /* packinglist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D08C9ABE1A9EB30800025D87 /* packinglist.plist */; };
+		D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08C9AC01A9EB3F400025D87 /* CoreData.framework */; };
+		D08C9AC41A9EC52A00025D87 /* minusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC21A9EC52A00025D87 /* minusbutton.png */; };
+		D08C9AC51A9EC52A00025D87 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC31A9EC52A00025D87 /* plusbutton.png */; };
+		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
+		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
 		D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B905121A9BE168000FE772 /* ARAlertController.m */; };
 		D0B905151A9BE168000FE772 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0B905131A9BE168000FE772 /* Info.plist */; };
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
@@ -129,6 +138,15 @@
 		D05417B01A9AFE09004518F7 /* waka.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waka.jpeg; sourceTree = "<group>"; };
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
 		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
+		D08C9AB71A9EB00D00025D87 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		D08C9ABA1A9EB04400025D87 /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		D08C9ABB1A9EB04400025D87 /* AddItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItems.swift; sourceTree = "<group>"; };
+		D08C9ABE1A9EB30800025D87 /* packinglist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = packinglist.plist; sourceTree = "<group>"; };
+		D08C9AC01A9EB3F400025D87 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D08C9AC21A9EC52A00025D87 /* minusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusbutton.png; sourceTree = "<group>"; };
+		D08C9AC31A9EC52A00025D87 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
+		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		D0AC5B9A1A9EC74A00174C21 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		D0B905111A9BE168000FE772 /* ARAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAlertController.h; sourceTree = "<group>"; };
 		D0B905121A9BE168000FE772 /* ARAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAlertController.m; sourceTree = "<group>"; };
 		D0B905131A9BE168000FE772 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -175,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */,
 				D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +211,10 @@
 		D0037B9D1A994E3900CAE8D9 /* App Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				D0AC5B991A9EC74A00174C21 /* checked.png */,
+				D0AC5B9A1A9EC74A00174C21 /* unchecked.png */,
+				D08C9AC21A9EC52A00025D87 /* minusbutton.png */,
+				D08C9AC31A9EC52A00025D87 /* plusbutton.png */,
 				D0B905161A9BE375000FE772 /* armenu.png */,
 				D0DD62101A998ECB00224542 /* menubutton.png */,
 				D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */,
@@ -245,6 +268,15 @@
 			path = "Fest Images and logos";
 			sourceTree = "<group>";
 		};
+		D08C9AB91A9EB01200025D87 /* Packing list Classes  */ = {
+			isa = PBXGroup;
+			children = (
+				D08C9ABA1A9EB04400025D87 /* ItemList.swift */,
+				D08C9ABB1A9EB04400025D87 /* AddItems.swift */,
+			);
+			name = "Packing list Classes ";
+			sourceTree = "<group>";
+		};
 		D0B905101A9BE168000FE772 /* ARAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +309,7 @@
 		D0EF9BFA1A98889F00850489 = {
 			isa = PBXGroup;
 			children = (
+				D08C9AC01A9EB3F400025D87 /* CoreData.framework */,
 				D0EF9C051A98889F00850489 /* Festi Buddy */,
 				D0EF9C221A98889F00850489 /* Festi BuddyTests */,
 				D0EF9C041A98889F00850489 /* Products */,
@@ -300,9 +333,11 @@
 				D0EF9C2F1A98890B00850489 /* ECSlidingViewController */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */,
+				D08C9AB91A9EB01200025D87 /* Packing list Classes  */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
 				D0EF9C0B1A98889F00850489 /* AppDelegate.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,
+				D08C9AB71A9EB00D00025D87 /* Items.swift */,
 				D0EF9C441A98896400850489 /* SlidingViewController.swift */,
 				D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */,
 				D0EF9C461A988D5500850489 /* MenuTableViewController.swift */,
@@ -321,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				D05417D81A9AFE5C004518F7 /* festsPlist.plist */,
+				D08C9ABE1A9EB30800025D87 /* packinglist.plist */,
 				D0EF9C071A98889F00850489 /* Info.plist */,
 				D0EF9C081A98889F00850489 /* main.m */,
 			);
@@ -453,6 +489,7 @@
 				D05417BF1A9AFE09004518F7 /* EFFLogo.jpg in Resources */,
 				D05417B41A9AFE09004518F7 /* Bonnaroo.jpg in Resources */,
 				D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */,
+				D08C9ABF1A9EB30800025D87 /* packinglist.plist in Resources */,
 				D0EF9C151A98889F00850489 /* Main.storyboard in Resources */,
 				D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */,
 				D05417CB1A9AFE09004518F7 /* sasquatchLogo.jpeg in Resources */,
@@ -460,8 +497,11 @@
 				D05417C11A9AFE09004518F7 /* fireflyLogo.jpeg in Resources */,
 				D05417CF1A9AFE09004518F7 /* sxswLogo.jpeg in Resources */,
 				D0B905151A9BE168000FE772 /* Info.plist in Resources */,
+				D08C9AC41A9EC52A00025D87 /* minusbutton.png in Resources */,
 				D05417BD1A9AFE09004518F7 /* EDCLogo.png in Resources */,
 				D05417CA1A9AFE09004518F7 /* sasquatch.jpeg in Resources */,
+				D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */,
+				D08C9AC51A9EC52A00025D87 /* plusbutton.png in Resources */,
 				D05417B61A9AFE09004518F7 /* bumber.jpeg in Resources */,
 				D05417C01A9AFE09004518F7 /* firefly.jpeg in Resources */,
 				D05417BB1A9AFE09004518F7 /* counterpointLogo.jpeg in Resources */,
@@ -475,6 +515,7 @@
 				D05417C41A9AFE09004518F7 /* hangout.jpeg in Resources */,
 				D05417C81A9AFE09004518F7 /* pf.jpeg in Resources */,
 				D05417D01A9AFE09004518F7 /* tworld.jpeg in Resources */,
+				D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */,
 				D05417B81A9AFE09004518F7 /* Coachella.jpeg in Resources */,
 				D05417C31A9AFE09004518F7 /* govlogo.jpeg in Resources */,
 				D05417BA1A9AFE09004518F7 /* counterpoint.jpeg in Resources */,
@@ -517,17 +558,20 @@
 				D0EF9C0C1A98889F00850489 /* AppDelegate.m in Sources */,
 				D0EF9C421A98890B00850489 /* UIViewController+ECSlidingViewController.m in Sources */,
 				D0EF9C471A988D5500850489 /* MenuTableViewController.swift in Sources */,
+				D08C9ABD1A9EB04400025D87 /* AddItems.swift in Sources */,
 				D0EF9C091A98889F00850489 /* main.m in Sources */,
 				D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */,
 				D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */,
 				D0E4A4F91A9D4DA0006BCAB2 /* MapView.swift in Sources */,
 				D0DD62191A9A95D900224542 /* Festivals.swift in Sources */,
+				D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
 				D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */,
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
 				D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */,
 				D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */,
+				D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */,
 				D0DD621A1A9A95D900224542 /* TableViewController.swift in Sources */,
 				D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */,
 				D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */,

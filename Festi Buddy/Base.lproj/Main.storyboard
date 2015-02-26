@@ -339,6 +339,80 @@
             </objects>
             <point key="canvasLocation" x="-883.5" y="407.5"/>
         </scene>
+        <!--Item List-->
+        <scene sceneID="Aaz-lh-8Om">
+            <objects>
+                <tableViewController storyboardIdentifier="packingList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5VY-bp-h4k" customClass="ItemList" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="72N-6h-mdB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="iXD-VB-UZc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXD-VB-UZc" id="rSC-Np-jvG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5VY-bp-h4k" id="u2S-RA-zFF"/>
+                            <outlet property="delegate" destination="5VY-bp-h4k" id="8SK-MP-Ru5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OE0-GD-Wl0"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Np0-88-sX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-358.5" y="1163.5"/>
+        </scene>
+        <!--Add Items-->
+        <scene sceneID="68w-ly-yTO">
+            <objects>
+                <tableViewController storyboardIdentifier="addItems" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cBK-yl-bk9" customClass="AddItems" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z67-eD-tF5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1Ks-es-UFT">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Ks-es-UFT" id="SfQ-5D-yfc">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cBK-yl-bk9" id="feP-km-hiy"/>
+                            <outlet property="delegate" destination="cBK-yl-bk9" id="eVr-dE-wG9"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hsz-xO-JRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159.5" y="1163.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T1U-19-Pjg">
+            <objects>
+                <navigationController storyboardIdentifier="listNavController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c4F-wO-V2q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G0A-pb-xzo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5VY-bp-h4k" kind="relationship" relationship="rootViewController" id="Vu1-A2-VPX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBp-4z-TaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883" y="1164"/>
+        </scene>
     </scenes>
     <resources>
         <image name="armenu.png" width="150" height="150"/>

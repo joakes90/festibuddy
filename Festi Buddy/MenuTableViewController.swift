@@ -67,6 +67,10 @@ class MenuTableViewController: UITableViewController {
                 let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapView") as UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
+            case "Make a Packing list":
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("listNavController") as UIViewController
+                self.slidingViewController().topViewController = newTopViewController
+                break
             default :
                 break
             }
