@@ -85,8 +85,8 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
             var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
             mapview.region = theRegon
         }else if mapview.userLocation.coordinate.latitude != 0.0{
-            var latDelta: CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as Double - mapview.userLocation.coordinate.latitude as Double) + 0.01
-            var longDelta:CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLong") as Double - mapview.userLocation.coordinate.longitude as Double) + 0.01
+            var latDelta: CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as Double - mapview.userLocation.coordinate.latitude as Double) 
+            var longDelta:CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLong") as Double - mapview.userLocation.coordinate.longitude as Double)
             
             if latDelta < 0 { latDelta = latDelta * -1}
             if longDelta < 0 { longDelta = longDelta * -1}

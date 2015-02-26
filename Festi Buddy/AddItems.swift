@@ -111,6 +111,8 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
             
         if !alreadyInList{
             addItems(tableItems[indexPath.row] as String)
+            cell.imageView?.image = minusImage
+            cell.selected = false
         }else{
             var managedObject: NSManagedObject?
             for i in results{

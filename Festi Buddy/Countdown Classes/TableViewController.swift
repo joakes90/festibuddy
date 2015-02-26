@@ -13,10 +13,17 @@ class TableViewController: UITableViewController {
     var festivals: [Festivals] = []
     var destinationFest: Festivals?
     var initialRun: Bool = true
+    var menubutton:UIBarButtonItem = UIBarButtonItem()
+    var closed: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.menubutton.title = "Menu"
+        self.menubutton.style = UIBarButtonItemStyle.Plain
+        self.menubutton.target = self
+        self.menubutton.action = "showMenu"
+        self.navigationItem.leftBarButtonItem = menubutton
         
         let dateFormater: NSDateFormatter = NSDateFormatter()
         dateFormater.dateFormat = "yyyy-MM-dd"
@@ -108,5 +115,13 @@ class TableViewController: UITableViewController {
             self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as UIViewController
         }
     }
-
+    @IBAction func showMenu(){
+        if self.closed {
+            self.slidingViewController().anchorTopViewToRightAnimated(true)
+            self.closed = false
+        } else{
+            self.slidingViewController().resetTopViewAnimated(true)
+            self.closed = true
+        }
+    }
 }

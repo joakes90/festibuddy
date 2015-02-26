@@ -14,12 +14,18 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
     let delegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
     var context: NSManagedObjectContext?
     var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController()
-    
+    var closed: Bool = true
+    var menubutton:UIBarButtonItem = UIBarButtonItem()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        
+        self.menubutton.title = "Menu"
+        self.menubutton.style = UIBarButtonItemStyle.Plain
+        self.menubutton.target = self
+        self.menubutton.action = "showMenu"
+        self.navigationItem.leftBarButtonItem = menubutton
+       
         self.context = delegate.managedObjectContext
         self.showAddItems.title = "Add An Item"
         self.showAddItems.target = self
@@ -41,8 +47,7 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
         if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
             self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as UIViewController
         }
-        self.view.addGestureRecognizer(self.slidingViewController().panGesture)
-    }
+            }
 
 
     override func didReceiveMemoryWarning() {
@@ -139,41 +144,14 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
         context?.save(nil)
     }
     
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    @IBAction func showMenu(){
+        if self.closed {
+            self.slidingViewController().anchorTopViewToRightAnimated(true)
+            self.closed = false
+        } else{
+            self.slidingViewController().resetTopViewAnimated(true)
+            self.closed = true
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
