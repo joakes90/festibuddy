@@ -62,6 +62,7 @@
 		D0B905151A9BE168000FE772 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0B905131A9BE168000FE772 /* Info.plist */; };
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
 		D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B905181A9C2395000FE772 /* MapKit.framework */; };
+		D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C077061A9EF211008D64B9 /* TentViewController.swift */; };
 		D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68D111A9C769200F21A5C /* countdownWebView.swift */; };
 		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
@@ -152,6 +153,7 @@
 		D0B905131A9BE168000FE772 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
 		D0B905181A9C2395000FE772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0C077061A9EF211008D64B9 /* TentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentViewController.swift; sourceTree = "<group>"; };
 		D0D68D111A9C769200F21A5C /* countdownWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countdownWebView.swift; sourceTree = "<group>"; };
 		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,14 @@
 			path = ARAlertController;
 			sourceTree = "<group>";
 		};
+		D0C077051A9EF1D9008D64B9 /* Tent finder Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D0C077061A9EF211008D64B9 /* TentViewController.swift */,
+			);
+			name = "Tent finder Classes";
+			sourceTree = "<group>";
+		};
 		D0DD62141A9A95D900224542 /* Countdown Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */,
 				D08C9AB91A9EB01200025D87 /* Packing list Classes  */,
+				D0C077051A9EF1D9008D64B9 /* Tent finder Classes */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
 				D0EF9C0B1A98889F00850489 /* AppDelegate.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,
@@ -563,6 +574,7 @@
 				D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */,
 				D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */,
 				D0E4A4F91A9D4DA0006BCAB2 /* MapView.swift in Sources */,
+				D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */,
 				D0DD62191A9A95D900224542 /* Festivals.swift in Sources */,
 				D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,

@@ -71,6 +71,10 @@ class MenuTableViewController: UITableViewController {
                 let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("listNavController") as UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
+            case "Tent/Car Finder":
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tent") as UIViewController
+                self.slidingViewController().topViewController = newTopViewController
+                break
             default :
                 break
             }

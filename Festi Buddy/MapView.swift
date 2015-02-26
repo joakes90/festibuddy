@@ -17,23 +17,20 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     let locationManager: CLLocationManager = CLLocationManager()
     
-    let latDelta: CLLocationDegrees = 55.5
-    let longDelta: CLLocationDegrees = 55.5
+    let latDelta: CLLocationDegrees = 10.5
+    let longDelta: CLLocationDegrees = 10.5
     
     var festivalLocations: [CLLocationCoordinate2D] = []
     
+    var locationUpdate: NSTimer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.locationManager.requestWhenInUseAuthorization()
-        var location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(35.2468209), longitude: CLLocationDegrees(-97.36237))
-        let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
-        var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
         mapView.showsUserLocation = true
-        mapView.region = theRegon
         
-
+        locationUpdate = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "setRegion", userInfo: nil, repeats: true)
         
         let path = NSBundle.mainBundle().pathForResource("festsPlist", ofType: "plist")
         let plistArray: NSArray = NSArray(contentsOfFile: path!)!
@@ -78,6 +75,17 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         } else{
             self.slidingViewController().resetTopViewAnimated(true)
             self.closed = true
+        }
+    }
+    
+    func setRegion(){
+        if self.mapView.userLocation.coordinate.latitude == 0.0 {
+            var location:CLLocationCoordinate2D = self.mapView.userLocation.coordinate
+            let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+            var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
+            mapView.region = theRegon
+        }else{
+            locationUpdate?.invalidate()
         }
     }
 

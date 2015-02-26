@@ -47,7 +47,7 @@ class TableViewController: UITableViewController {
             self.performSegueWithIdentifier("seeTheCountdown", sender: self)
         }
         initialRun = false
-        
+        self.slidingViewController().resetTopViewAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,7 +107,6 @@ class TableViewController: UITableViewController {
         if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
             self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as UIViewController
         }
-        self.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
 
 }
