@@ -480,6 +480,97 @@
             </objects>
             <point key="canvasLocation" x="-883.5" y="1918.5"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="7uh-Hn-BvF">
+            <objects>
+                <viewController storyboardIdentifier="about" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ahr-MP-jSd" customClass="AboutViewController" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bHT-gO-xvL"/>
+                        <viewControllerLayoutGuide type="bottom" id="luu-32-snW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vgc-ah-azs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjG-Ap-LfB">
+                                <rect key="frame" x="0.0" y="156" width="375" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Turn down screen brightness
+
+Turn on Airplane mode*
+
+Reduce motion in Settings &gt; General &gt; Accessibility 
+
+Disable Location Services in Settings &gt; Privacy*
+
+Disable Background App Refresh in Settings &gt; General
+
+Disable notifications in Settings
+
+Reduce how frequently you check for new mail in Settings &gt; Mail, Contacts &amp; Calendars &gt; Fetch
+
+Lower the amount of time until the phone auto locks in Settings &gt; General
+
+See what apps are using the most battery in Settings &gt; Usage
+
+*will disable some features of this app</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbv-xN-QrB">
+                                <rect key="frame" x="16" y="20" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="gnI-iW-tbZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="u5f-ag-h6w"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="menubutton.png">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMenu" destination="0E0-Kc-M15" eventType="touchUpInside" id="7yj-Ox-Elm"/>
+                                    <action selector="showMenu" destination="Ahr-MP-jSd" eventType="touchUpInside" id="fqm-Ej-0kR"/>
+                                    <action selector="showMenu" destination="bmV-pB-Hvh" eventType="touchUpInside" id="nug-UC-zqQ"/>
+                                    <action selector="showMenu" destination="5lg-sS-vsm" eventType="touchUpInside" id="rU1-ox-sKy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trj-3U-xhJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RyG-gk-OPS"/>
+                                </constraints>
+                                <string key="text">Festi Buddy
+
+Designed and coded by Justin Oakes 
+Copyright 2015
+
+A few battery tips to keep your phone alive throughout the event</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="58A-Vi-uC8"/>
+                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="Kbv-xN-QrB" secondAttribute="trailing" constant="-51" id="9L3-ji-TXC"/>
+                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="vgc-ah-azs" secondAttribute="leading" id="ByA-Ah-R4O"/>
+                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="SUR-Qt-CkC"/>
+                            <constraint firstItem="VjG-Ap-LfB" firstAttribute="top" secondItem="Trj-3U-xhJ" secondAttribute="bottom" constant="8" id="YLC-ig-ssP"/>
+                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="vgc-ah-azs" secondAttribute="leadingMargin" constant="-16" id="grQ-WX-yea"/>
+                            <constraint firstItem="Kbv-xN-QrB" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="gvn-ND-FWC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Trj-3U-xhJ" secondAttribute="trailing" constant="-16" id="hk0-cD-kMa"/>
+                            <constraint firstAttribute="centerX" secondItem="Trj-3U-xhJ" secondAttribute="centerX" id="j7A-Em-X8K"/>
+                            <constraint firstItem="VjG-Ap-LfB" firstAttribute="leading" secondItem="Trj-3U-xhJ" secondAttribute="leading" id="kFT-hi-Nlo"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VjG-Ap-LfB" secondAttribute="bottom" constant="8" id="pCU-Uq-GzU"/>
+                            <constraint firstItem="VjG-Ap-LfB" firstAttribute="centerX" secondItem="Trj-3U-xhJ" secondAttribute="centerX" id="rpU-ss-uNG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-qk-bEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-882.5" y="2720.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="armenu.png" width="150" height="150"/>

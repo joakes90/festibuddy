@@ -10,6 +10,7 @@
 		D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */; };
 		D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9F1A994E3900CAE8D9 /* timeBackground.png */; };
 		D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */; };
+		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
 		D05417B21A9AFE09004518F7 /* ACL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178C1A9AFE09004518F7 /* ACL.jpg */; };
 		D05417B31A9AFE09004518F7 /* ACLLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178D1A9AFE09004518F7 /* ACLLogo.jpg */; };
 		D05417B41A9AFE09004518F7 /* Bonnaroo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */; };
@@ -100,6 +101,7 @@
 		D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.png; sourceTree = "<group>"; };
 		D0037B9F1A994E3900CAE8D9 /* timeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBackground.png; sourceTree = "<group>"; };
 		D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D03061D61A9FD66A002605D9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D054178C1A9AFE09004518F7 /* ACL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACL.jpg; sourceTree = "<group>"; };
 		D054178D1A9AFE09004518F7 /* ACLLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACLLogo.jpg; sourceTree = "<group>"; };
 		D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bonnaroo.jpg; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				D0EF9C441A98896400850489 /* SlidingViewController.swift */,
 				D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */,
 				D0EF9C461A988D5500850489 /* MenuTableViewController.swift */,
+				D03061D61A9FD66A002605D9 /* AboutViewController.swift */,
 				D0EF9C161A98889F00850489 /* Images.xcassets */,
 				D0EF9C181A98889F00850489 /* LaunchScreen.xib */,
 				D054178B1A9AFE09004518F7 /* Fest Images and logos */,
@@ -587,6 +590,7 @@
 				D0DD621A1A9A95D900224542 /* TableViewController.swift in Sources */,
 				D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */,
 				D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */,
+				D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
