@@ -128,9 +128,9 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func googleMapsNavigation() {
-        let destiantion: String = "\(self.fest?.lat)+\(self.fest?.long)"
+        let destiantion: String = "\(self.fest!.lat),\(self.fest!.long)"
        
-        let directionsURL: NSURL = NSURL(string: "comgooglemaps://maps.google.com/maps?z=3&t=m&q=loc:\(destiantion)")!
+        let directionsURL: NSURL = NSURL(string: "comgooglemaps://?daddr=\(destiantion)&directionsmode=driving")!
         UIApplication.sharedApplication().openURL(directionsURL)
     }
 
