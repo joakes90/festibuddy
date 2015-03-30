@@ -22,7 +22,7 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         self.locationManager.requestWhenInUseAuthorization()
-        self.mapview.showsUserLocation = true
+        self.mapview.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
         
         if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") == nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") == nil{
             button.setTitle("Mark This Spot", forState: UIControlState.Normal)
@@ -37,7 +37,7 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
             mapview.addAnnotation(marker)
 
         }
-        locationUpdate = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "setRegion", userInfo: nil, repeats: true)
+      //  locationUpdate = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "setRegion", userInfo: nil, repeats: true)
         
         self.slidingViewController().resetTopViewAnimated(true)
     }

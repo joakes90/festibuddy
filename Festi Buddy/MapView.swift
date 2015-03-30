@@ -29,6 +29,7 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         self.locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
+
         
         locationUpdate = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "setRegion", userInfo: nil, repeats: true)
         
@@ -55,7 +56,12 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
              var newAnnotation = MKPointAnnotation()
             newAnnotation.coordinate = festLocation
             newAnnotation.title = newFestivalObject.title
-            newAnnotation.subtitle = "Happening in \(newFestivalObject.dayString) days"
+            
+            if newFestivalObject.days <= 0 && newFestivalObject.hours <= 0{
+                newAnnotation.subtitle = "Happening in 0 days"
+            } else {
+                newAnnotation.subtitle = "Happening in \(newFestivalObject.dayString) days"
+            }
             mapView.addAnnotation(newAnnotation)
             
         }
