@@ -40,7 +40,7 @@ class MenuTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         cell.textLabel?.text = menuItems[indexPath.row]
 
@@ -55,28 +55,28 @@ class MenuTableViewController: UITableViewController {
             case "" :
                 break
             case "Home":
-                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as UIViewController
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as! UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
             
             case "Festival Countdown":
-                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("timerNavController") as UIViewController
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("timerNavController") as! UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "Festivals Map":
-                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapView") as UIViewController
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapView") as! UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "Make a Packing list":
-                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("listNavController") as UIViewController
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("listNavController") as! UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "Tent/Car Finder":
-                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tent") as UIViewController
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tent") as! UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "About/Battery Tips":
-                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("about") as UIViewController
+                let newTopViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("about") as! UIViewController
                 self.slidingViewController().topViewController = newTopViewController
                 break
             default :

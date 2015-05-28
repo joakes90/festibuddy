@@ -13,7 +13,7 @@ class SlidingViewController: ECSlidingViewController {
 
     override func viewDidLoad() {
         
-        self.topViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as HomeViewController
+        self.topViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main") as! HomeViewController
         super.viewDidLoad()
         
         

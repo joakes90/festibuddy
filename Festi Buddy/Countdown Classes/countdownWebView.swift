@@ -19,7 +19,7 @@ class countdownWebView: UIViewController {
         let urlRequest: NSURLRequest = NSURLRequest(URL: NSURL(string: self.urlString!)!)
         webView.loadRequest(urlRequest)
         
-        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as MenuTableViewController
+        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! MenuTableViewController
         
         self.slidingViewController().resetTopViewAnimated(true)
         self.view.addGestureRecognizer(self.slidingViewController().panGesture)

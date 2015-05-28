@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let menuButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    let menuButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
     
     var closed: Bool = true
     
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         self.view.layer.shadowColor = UIColor.blackColor().CGColor
         
 
-        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as MenuTableViewController
+        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! MenuTableViewController
         
         self.slidingViewController().resetTopViewAnimated(true)
         self.view.addGestureRecognizer(self.slidingViewController().panGesture)

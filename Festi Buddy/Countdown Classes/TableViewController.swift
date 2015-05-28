@@ -40,11 +40,11 @@ class TableViewController: UITableViewController {
             var long = i["long"]
             var lineup = i["lineup"]
             
-            var newFestivalObject: Festivals = Festivals(title: (title! as NSString), date: (date! as NSString), imageString: (imageString! as NSString), tableImageString: (tableImageString! as NSString), lat: (lat! as NSNumber), long: (long! as NSNumber), lineup: (lineup! as NSString))
+            var newFestivalObject: Festivals = Festivals(title: (title! as! NSString), date: (date! as! NSString), imageString: (imageString! as! NSString), tableImageString: (tableImageString! as! NSString), lat: (lat! as! NSNumber), long: (long! as! NSNumber), lineup: (lineup! as! NSString))
             festivals.append(newFestivalObject)
         }
         if (NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil){
-            let festivalName: String = NSUserDefaults.standardUserDefaults().valueForKey("default_fest") as String
+            let festivalName: String = NSUserDefaults.standardUserDefaults().valueForKey("default_fest") as! String
             for i in festivals{
                 if i.title == festivalName{
                     destinationFest = i
@@ -80,10 +80,10 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
         let cellID = "cell"
-        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID) as UITableViewCell
+        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID) as! UITableViewCell
         var title = festivals[indexPath.row].title
         var image = festivals[indexPath.row].tableImage
-        cell.textLabel?.text = title
+        cell.textLabel?.text = title as String
         cell.imageView?.image = UIImage(named: image)
 
         return cell
@@ -95,12 +95,12 @@ class TableViewController: UITableViewController {
         if segue.identifier == "seeTheCountdown" {
             if !initialRun {
                 var index = tableView.indexPathForSelectedRow()?.row
-                let viewController = segue.destinationViewController as DetailViewController
+                let viewController = segue.destinationViewController as! DetailViewController
                 let fest: Festivals = festivals[index!]
             
                 viewController.fest = fest
             }else{
-                let viewController = segue.destinationViewController as DetailViewController
+                let viewController = segue.destinationViewController as! DetailViewController
                 
                 viewController.fest = destinationFest
 
@@ -112,7 +112,7 @@ class TableViewController: UITableViewController {
         super.viewWillAppear(true)
         
         if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
-            self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as UIViewController
+            self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
         }
     }
     @IBAction func showMenu(){

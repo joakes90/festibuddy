@@ -79,14 +79,14 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func setRegion(){
-        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as Double? == nil && mapview.userLocation.coordinate.latitude != 0.0{
+        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as! Double? == nil && mapview.userLocation.coordinate.latitude != 0.0{
             var location:CLLocationCoordinate2D = self.mapview.userLocation.coordinate
             let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
             var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
             mapview.region = theRegon
         }else if mapview.userLocation.coordinate.latitude != 0.0{
-            var latDelta: CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as Double - mapview.userLocation.coordinate.latitude as Double) 
-            var longDelta:CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLong") as Double - mapview.userLocation.coordinate.longitude as Double)
+            var latDelta: CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as! Double - mapview.userLocation.coordinate.latitude as Double) 
+            var longDelta:CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLong") as! Double - mapview.userLocation.coordinate.longitude as Double)
             
             if latDelta < 0 { latDelta = latDelta * -1}
             if longDelta < 0 { longDelta = longDelta * -1}

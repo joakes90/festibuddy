@@ -46,7 +46,7 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             var long = i["long"]
             var lineup = i["lineup"]
             
-            var newFestivalObject: Festivals = Festivals(title: (title! as NSString), date: (date! as NSString), imageString: (imageString! as NSString), tableImageString: (tableImageString! as NSString), lat: (lat! as NSNumber), long: (long! as NSNumber), lineup: (lineup! as NSString))
+            var newFestivalObject: Festivals = Festivals(title: (title! as! NSString), date: (date! as! NSString), imageString: (imageString! as! NSString), tableImageString: (tableImageString! as! NSString), lat: (lat! as! NSNumber), long: (long! as! NSNumber), lineup: (lineup! as! NSString))
             
             var latitude: CLLocationDegrees = newFestivalObject.lat as CLLocationDegrees
             var longitude: CLLocationDegrees = newFestivalObject.long as CLLocationDegrees
@@ -55,7 +55,7 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             
              var newAnnotation = MKPointAnnotation()
             newAnnotation.coordinate = festLocation
-            newAnnotation.title = newFestivalObject.title
+            newAnnotation.title = newFestivalObject.title as String
             
             if newFestivalObject.days <= 0 && newFestivalObject.hours <= 0{
                 newAnnotation.subtitle = "Happening in 0 days"

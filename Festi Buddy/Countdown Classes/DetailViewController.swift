@@ -35,9 +35,13 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         
         if fest != nil {
             let imageString = fest?.detailImageString
-            var image: UIImage = UIImage(named: imageString!)!
+            var image: UIImage = UIImage(named: imageString! as String)!
             imageView.image = image
-            titleLable.text = fest?.title
+            
+            if fest?.title == "Hangout" {
+                titleLable.textColor = UIColor.darkGrayColor()
+            }
+            titleLable.text = fest?.title as? String
             
             updateTime()
         
@@ -114,8 +118,8 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func appleMapsNavigation() {
-        var latitude: CLLocationDegrees = (self.fest?.lat as CLLocationDegrees)
-        var longitude: CLLocationDegrees = (self.fest?.long as CLLocationDegrees)
+        var latitude: CLLocationDegrees = (self.fest?.lat as! CLLocationDegrees)
+        var longitude: CLLocationDegrees = (self.fest?.long as! CLLocationDegrees)
         var festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
         let festPlaceMark: MKPlacemark = MKPlacemark(coordinate: festLocation, addressDictionary: nil)
@@ -123,7 +127,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         
         let locations: [MKMapItem] = [MKMapItem.mapItemForCurrentLocation(), festMapItem]
         let launchItems: NSDictionary = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        MKMapItem.openMapsWithItems(locations, launchOptions: launchItems as NSDictionary)
+        MKMapItem.openMapsWithItems(locations, launchOptions: launchItems as NSDictionary as [NSObject : AnyObject])
 
     }
     
@@ -136,8 +140,8 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showLineup"{
-            let viewController: countdownWebView = segue.destinationViewController as countdownWebView
-            viewController.urlString = fest?.lineup
+            let viewController: countdownWebView = segue.destinationViewController as! countdownWebView
+            viewController.urlString = fest?.lineup as? String
         }
     }
     

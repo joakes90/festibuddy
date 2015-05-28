@@ -57,6 +57,7 @@
 		D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08C9AC01A9EB3F400025D87 /* CoreData.framework */; };
 		D08C9AC41A9EC52A00025D87 /* minusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC21A9EC52A00025D87 /* minusbutton.png */; };
 		D08C9AC51A9EC52A00025D87 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC31A9EC52A00025D87 /* plusbutton.png */; };
+		D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */; };
 		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
 		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
 		D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B905121A9BE168000FE772 /* ARAlertController.m */; };
@@ -148,6 +149,8 @@
 		D08C9AC01A9EB3F400025D87 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D08C9AC21A9EC52A00025D87 /* minusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusbutton.png; sourceTree = "<group>"; };
 		D08C9AC31A9EC52A00025D87 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
+		D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceController.h; path = ../AppearanceController.h; sourceTree = "<group>"; };
+		D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearanceController.m; path = ../AppearanceController.m; sourceTree = "<group>"; };
 		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		D0AC5B9A1A9EC74A00174C21 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		D0B905111A9BE168000FE772 /* ARAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAlertController.h; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 				D0C077051A9EF1D9008D64B9 /* Tent finder Classes */,
 				D0EF9C0A1A98889F00850489 /* AppDelegate.h */,
 				D0EF9C0B1A98889F00850489 /* AppDelegate.m */,
+				D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */,
+				D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,
 				D08C9AB71A9EB00D00025D87 /* Items.swift */,
 				D0EF9C441A98896400850489 /* SlidingViewController.swift */,
@@ -581,6 +586,7 @@
 				D0DD62191A9A95D900224542 /* Festivals.swift in Sources */,
 				D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
+				D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */,
 				D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */,
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
 				D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */,

@@ -74,9 +74,9 @@ class Festivals {
         dateFormater.dateFormat = "yyyy-MM-dd"
         
         self.title = title!
-        self.date = dateFormater.dateFromString(date!)
+        self.date = dateFormater.dateFromString(date! as String)
         self.detailImageString = imageString!
-        self.tableImage = tableImageString!
+        self.tableImage = tableImageString! as String
         self.lineup = lineup
         
        var componets = timeTillFest()

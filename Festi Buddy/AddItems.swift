@@ -11,7 +11,7 @@ import CoreData
 
 class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    let delegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var context: NSManagedObjectContext?
     var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController()
 
@@ -53,8 +53,8 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellID = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as UITableViewCell
-        var title = tableItems[indexPath.row] as String
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
+        var title = tableItems[indexPath.row] as! String
         var plusImage: UIImage = UIImage(named: "plusbutton.png")!
         var minusImage: UIImage = UIImage(named: "minusbutton.png")!
         
@@ -84,10 +84,10 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cellID = "Cell"
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as UITableViewCell
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
         var plusImage: UIImage = UIImage(named: "plusbutton.png")!
         var minusImage: UIImage = UIImage(named: "minusbutton.png")!
-        var title = tableItems[indexPath.row] as String
+        var title = tableItems[indexPath.row] as! String
         var alreadyInList: Bool = false
         
         var request = NSFetchRequest(entityName: "Items")
@@ -96,7 +96,7 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
         var results: NSArray = (context!.executeFetchRequest(request, error: nil))!
         
         for i in results{
-            if i.name == tableItems[indexPath.row] as NSString{
+            if i.name == tableItems[indexPath.row] as! NSString{
                 alreadyInList = true
                 cell.imageView?.image = minusImage
                 cell.textLabel?.text = title
@@ -110,7 +110,7 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
             cell.selected = false
             
         if !alreadyInList{
-            addItems(tableItems[indexPath.row] as String)
+            addItems(tableItems[indexPath.row] as! String)
             cell.imageView?.image = minusImage
             cell.selected = false
         }else{
@@ -134,7 +134,7 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
         let entityDescription = NSEntityDescription.entityForName("Items", inManagedObjectContext: context!)
         let item = Items(entity: entityDescription!, insertIntoManagedObjectContext: context) as Items
         item.have = 0
-        item.name = name
+        item.name = name as String
         context!.save(nil)
     
     }
