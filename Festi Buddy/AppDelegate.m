@@ -15,9 +15,24 @@
 
 @implementation AppDelegate
 
+NSString *kOldModelDeleted = @"oldModelDeleted";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    if (![defaults boolForKey:kOldModelDeleted]) {
+        _managedObjectContext = nil;
+        _managedObjectModel = nil;
+        _persistentStoreCoordinator = nil;
+        
+        // Delete the sqlite file
+        NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Festi_Buddy.sqlite"];
+        NSError *error = nil;
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]])
+            [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
+        
+        [defaults setBool:YES forKey:kOldModelDeleted];
+    }
     [AppearanceController setupAppearance];
     return YES;
 }

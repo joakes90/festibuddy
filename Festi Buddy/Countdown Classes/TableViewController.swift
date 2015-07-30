@@ -111,9 +111,9 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
+//        if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
             self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
-        }
+//        }
     }
     @IBAction func showMenu(){
         if self.closed {
