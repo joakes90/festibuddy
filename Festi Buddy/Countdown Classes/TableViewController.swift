@@ -73,7 +73,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return festivals.count
+        return festivals.count + 1
     }
 
     
@@ -81,8 +81,14 @@ class TableViewController: UITableViewController {
     
         let cellID = "cell"
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID) as! UITableViewCell
-        var title = festivals[indexPath.row].title
-        var image = festivals[indexPath.row].tableImage
+        
+        if indexPath.row == 0 {
+            cell.textLabel?.text = "+ Add new Festival"
+            cell.imageView?.image = nil
+            return cell
+        }
+        var title = festivals[indexPath.row - 1].title
+        var image = festivals[indexPath.row - 1].tableImage
         cell.textLabel?.text = title as String
         cell.imageView?.image = UIImage(named: image)
 
@@ -90,13 +96,21 @@ class TableViewController: UITableViewController {
     }
     
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if tableView.indexPathForSelectedRow()?.row == 0 {
+            self.performSegueWithIdentifier("addFest", sender: self)
+        } else {
+            self.performSegueWithIdentifier("seeTheCountdown", sender: self)
+        }
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "seeTheCountdown" {
-            if !initialRun {
+            if !initialRun && tableView.indexPathForSelectedRow()?.row != 0 {
                 var index = tableView.indexPathForSelectedRow()?.row
                 let viewController = segue.destinationViewController as! DetailViewController
-                let fest: Festivals = festivals[index!]
+                let fest: Festivals = festivals[index! - 1]
             
                 viewController.fest = fest
             }else{
@@ -111,9 +125,8 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-//        if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
-            self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
-//        }
+        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
+
     }
     @IBAction func showMenu(){
         if self.closed {

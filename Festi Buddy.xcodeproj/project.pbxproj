@@ -50,6 +50,7 @@
 		D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B01A9AFE09004518F7 /* waka.jpeg */; };
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
 		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
+		D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */; };
 		D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9AB71A9EB00D00025D87 /* Items.swift */; };
 		D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABA1A9EB04400025D87 /* ItemList.swift */; };
 		D08C9ABD1A9EB04400025D87 /* AddItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABB1A9EB04400025D87 /* AddItems.swift */; };
@@ -142,6 +143,7 @@
 		D05417B01A9AFE09004518F7 /* waka.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waka.jpeg; sourceTree = "<group>"; };
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
 		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
+		D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFestivalViewController.swift; sourceTree = "<group>"; };
 		D08C9AB71A9EB00D00025D87 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		D08C9ABA1A9EB04400025D87 /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 		D08C9ABB1A9EB04400025D87 /* AddItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItems.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				D0DD62161A9A95D900224542 /* Festivals.swift */,
 				D0DD62171A9A95D900224542 /* TableViewController.swift */,
 				D0D68D111A9C769200F21A5C /* countdownWebView.swift */,
+				D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */,
 			);
 			path = "Countdown Classes";
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */,
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
 				D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */,
+				D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */,
 				D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */,
 				D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */,
