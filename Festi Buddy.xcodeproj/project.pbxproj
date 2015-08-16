@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20C7B268D06DB3576FA388DB /* libPods-Festi Buddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C5F2FB98015D863D0145F9 /* libPods-Festi Buddy.a */; };
 		D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */; };
 		D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9F1A994E3900CAE8D9 /* timeBackground.png */; };
 		D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */; };
@@ -58,11 +59,11 @@
 		D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08C9AC01A9EB3F400025D87 /* CoreData.framework */; };
 		D08C9AC41A9EC52A00025D87 /* minusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC21A9EC52A00025D87 /* minusbutton.png */; };
 		D08C9AC51A9EC52A00025D87 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC31A9EC52A00025D87 /* plusbutton.png */; };
+		D08DBF661B80235D003F12C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08DBF651B80235D003F12C2 /* CoreLocation.framework */; };
+		D08DBF681B80332E003F12C2 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DBF671B80332E003F12C2 /* Festival.swift */; };
 		D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */; };
 		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
 		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
-		D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B905121A9BE168000FE772 /* ARAlertController.m */; };
-		D0B905151A9BE168000FE772 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0B905131A9BE168000FE772 /* Info.plist */; };
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
 		D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B905181A9C2395000FE772 /* MapKit.framework */; };
 		D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C077061A9EF211008D64B9 /* TentViewController.swift */; };
@@ -79,12 +80,6 @@
 		D0EF9C171A98889F00850489 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EF9C161A98889F00850489 /* Images.xcassets */; };
 		D0EF9C1A1A98889F00850489 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EF9C181A98889F00850489 /* LaunchScreen.xib */; };
 		D0EF9C261A98889F00850489 /* Festi_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C251A98889F00850489 /* Festi_BuddyTests.m */; };
-		D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C311A98890B00850489 /* ECPercentDrivenInteractiveTransition.m */; };
-		D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C331A98890B00850489 /* ECSlidingAnimationController.m */; };
-		D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C361A98890B00850489 /* ECSlidingInteractiveTransition.m */; };
-		D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C381A98890B00850489 /* ECSlidingSegue.m */; };
-		D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C3A1A98890B00850489 /* ECSlidingViewController.m */; };
-		D0EF9C421A98890B00850489 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C3C1A98890B00850489 /* UIViewController+ECSlidingViewController.m */; };
 		D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C441A98896400850489 /* SlidingViewController.swift */; };
 		D0EF9C471A988D5500850489 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF9C461A988D5500850489 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +95,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3018CDBD34874B52EE07A8B6 /* Pods-Festi Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Festi Buddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Festi Buddy/Pods-Festi Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		60C5F2FB98015D863D0145F9 /* libPods-Festi Buddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Festi Buddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF457BE5D0E2A02C6A953607 /* Pods-Festi Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Festi Buddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Festi Buddy/Pods-Festi Buddy.release.xcconfig"; sourceTree = "<group>"; };
 		D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.png; sourceTree = "<group>"; };
 		D0037B9F1A994E3900CAE8D9 /* timeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBackground.png; sourceTree = "<group>"; };
 		D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -151,13 +149,12 @@
 		D08C9AC01A9EB3F400025D87 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D08C9AC21A9EC52A00025D87 /* minusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusbutton.png; sourceTree = "<group>"; };
 		D08C9AC31A9EC52A00025D87 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
+		D08DBF651B80235D003F12C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D08DBF671B80332E003F12C2 /* Festival.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
 		D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceController.h; path = ../AppearanceController.h; sourceTree = "<group>"; };
 		D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearanceController.m; path = ../AppearanceController.m; sourceTree = "<group>"; };
 		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		D0AC5B9A1A9EC74A00174C21 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
-		D0B905111A9BE168000FE772 /* ARAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAlertController.h; sourceTree = "<group>"; };
-		D0B905121A9BE168000FE772 /* ARAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAlertController.m; sourceTree = "<group>"; };
-		D0B905131A9BE168000FE772 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
 		D0B905181A9C2395000FE772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0C077061A9EF211008D64B9 /* TentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentViewController.swift; sourceTree = "<group>"; };
@@ -179,19 +176,6 @@
 		D0EF9C1F1A98889F00850489 /* Festi BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Festi BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF9C241A98889F00850489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EF9C251A98889F00850489 /* Festi_BuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Festi_BuddyTests.m; sourceTree = "<group>"; };
-		D0EF9C301A98890B00850489 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
-		D0EF9C311A98890B00850489 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
-		D0EF9C321A98890B00850489 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
-		D0EF9C331A98890B00850489 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
-		D0EF9C341A98890B00850489 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
-		D0EF9C351A98890B00850489 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
-		D0EF9C361A98890B00850489 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
-		D0EF9C371A98890B00850489 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
-		D0EF9C381A98890B00850489 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
-		D0EF9C391A98890B00850489 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
-		D0EF9C3A1A98890B00850489 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
-		D0EF9C3B1A98890B00850489 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
-		D0EF9C3C1A98890B00850489 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 		D0EF9C431A98896400850489 /* Festi Buddy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Festi Buddy-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0EF9C441A98896400850489 /* SlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingViewController.swift; sourceTree = "<group>"; };
 		D0EF9C461A988D5500850489 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
@@ -202,8 +186,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08DBF661B80235D003F12C2 /* CoreLocation.framework in Frameworks */,
 				D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */,
 				D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */,
+				20C7B268D06DB3576FA388DB /* libPods-Festi Buddy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +203,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05CBA790FA35DABDA1044991 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D08DBF651B80235D003F12C2 /* CoreLocation.framework */,
+				60C5F2FB98015D863D0145F9 /* libPods-Festi Buddy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64C5AF5E9C21DD85736DFA0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3018CDBD34874B52EE07A8B6 /* Pods-Festi Buddy.debug.xcconfig */,
+				BF457BE5D0E2A02C6A953607 /* Pods-Festi Buddy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D0037B9D1A994E3900CAE8D9 /* App Artwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,14 +290,14 @@
 			name = "Packing list Classes ";
 			sourceTree = "<group>";
 		};
-		D0B905101A9BE168000FE772 /* ARAlertController */ = {
+		D08DBF5F1B7FFDFC003F12C2 /* CD files */ = {
 			isa = PBXGroup;
 			children = (
-				D0B905111A9BE168000FE772 /* ARAlertController.h */,
-				D0B905121A9BE168000FE772 /* ARAlertController.m */,
-				D0B905131A9BE168000FE772 /* Info.plist */,
+				D08DBF671B80332E003F12C2 /* Festival.swift */,
+				D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */,
+				D08C9AB71A9EB00D00025D87 /* Items.swift */,
 			);
-			path = ARAlertController;
+			name = "CD files";
 			sourceTree = "<group>";
 		};
 		D0C077051A9EF1D9008D64B9 /* Tent finder Classes */ = {
@@ -331,6 +335,8 @@
 				D0EF9C051A98889F00850489 /* Festi Buddy */,
 				D0EF9C221A98889F00850489 /* Festi BuddyTests */,
 				D0EF9C041A98889F00850489 /* Products */,
+				64C5AF5E9C21DD85736DFA0B /* Pods */,
+				05CBA790FA35DABDA1044991 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,9 +352,8 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D08DBF5F1B7FFDFC003F12C2 /* CD files */,
 				D0B905181A9C2395000FE772 /* MapKit.framework */,
-				D0B905101A9BE168000FE772 /* ARAlertController */,
-				D0EF9C2F1A98890B00850489 /* ECSlidingViewController */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */,
 				D08C9AB91A9EB01200025D87 /* Packing list Classes  */,
@@ -358,7 +363,6 @@
 				D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */,
 				D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */,
 				D0EF9C131A98889F00850489 /* Main.storyboard */,
-				D08C9AB71A9EB00D00025D87 /* Items.swift */,
 				D0EF9C441A98896400850489 /* SlidingViewController.swift */,
 				D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */,
 				D0EF9C461A988D5500850489 /* MenuTableViewController.swift */,
@@ -367,7 +371,6 @@
 				D0EF9C181A98889F00850489 /* LaunchScreen.xib */,
 				D054178B1A9AFE09004518F7 /* Fest Images and logos */,
 				D0037B9D1A994E3900CAE8D9 /* App Artwork */,
-				D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */,
 				D0EF9C061A98889F00850489 /* Supporting Files */,
 				D0EF9C431A98896400850489 /* Festi Buddy-Bridging-Header.h */,
 			);
@@ -402,26 +405,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D0EF9C2F1A98890B00850489 /* ECSlidingViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D0EF9C301A98890B00850489 /* ECPercentDrivenInteractiveTransition.h */,
-				D0EF9C311A98890B00850489 /* ECPercentDrivenInteractiveTransition.m */,
-				D0EF9C321A98890B00850489 /* ECSlidingAnimationController.h */,
-				D0EF9C331A98890B00850489 /* ECSlidingAnimationController.m */,
-				D0EF9C341A98890B00850489 /* ECSlidingConstants.h */,
-				D0EF9C351A98890B00850489 /* ECSlidingInteractiveTransition.h */,
-				D0EF9C361A98890B00850489 /* ECSlidingInteractiveTransition.m */,
-				D0EF9C371A98890B00850489 /* ECSlidingSegue.h */,
-				D0EF9C381A98890B00850489 /* ECSlidingSegue.m */,
-				D0EF9C391A98890B00850489 /* ECSlidingViewController.h */,
-				D0EF9C3A1A98890B00850489 /* ECSlidingViewController.m */,
-				D0EF9C3B1A98890B00850489 /* UIViewController+ECSlidingViewController.h */,
-				D0EF9C3C1A98890B00850489 /* UIViewController+ECSlidingViewController.m */,
-			);
-			path = ECSlidingViewController;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,9 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0EF9C291A98889F00850489 /* Build configuration list for PBXNativeTarget "Festi Buddy" */;
 			buildPhases = (
+				D474002995191DD94B704342 /* Check Pods Manifest.lock */,
 				D0EF9BFF1A98889F00850489 /* Sources */,
 				D0EF9C001A98889F00850489 /* Frameworks */,
 				D0EF9C011A98889F00850489 /* Resources */,
+				06B2D21C27AA291A533FE3BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -518,7 +503,6 @@
 				D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */,
 				D05417C11A9AFE09004518F7 /* fireflyLogo.jpeg in Resources */,
 				D05417CF1A9AFE09004518F7 /* sxswLogo.jpeg in Resources */,
-				D0B905151A9BE168000FE772 /* Info.plist in Resources */,
 				D08C9AC41A9EC52A00025D87 /* minusbutton.png in Resources */,
 				D05417BD1A9AFE09004518F7 /* EDCLogo.png in Resources */,
 				D05417CA1A9AFE09004518F7 /* sasquatch.jpeg in Resources */,
@@ -571,6 +555,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06B2D21C27AA291A533FE3BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Festi Buddy/Pods-Festi Buddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D474002995191DD94B704342 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0EF9BFF1A98889F00850489 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -578,24 +595,18 @@
 			files = (
 				D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */,
 				D0EF9C0C1A98889F00850489 /* AppDelegate.m in Sources */,
-				D0EF9C421A98890B00850489 /* UIViewController+ECSlidingViewController.m in Sources */,
 				D0EF9C471A988D5500850489 /* MenuTableViewController.swift in Sources */,
 				D08C9ABD1A9EB04400025D87 /* AddItems.swift in Sources */,
 				D0EF9C091A98889F00850489 /* main.m in Sources */,
-				D0EF9C3F1A98890B00850489 /* ECSlidingInteractiveTransition.m in Sources */,
-				D0EF9C401A98890B00850489 /* ECSlidingSegue.m in Sources */,
 				D0E4A4F91A9D4DA0006BCAB2 /* MapView.swift in Sources */,
 				D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */,
 				D0DD62191A9A95D900224542 /* Festivals.swift in Sources */,
 				D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
 				D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */,
-				D0EF9C411A98890B00850489 /* ECSlidingViewController.m in Sources */,
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
-				D0EF9C3E1A98890B00850489 /* ECSlidingAnimationController.m in Sources */,
+				D08DBF681B80332E003F12C2 /* Festival.swift in Sources */,
 				D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */,
-				D0EF9C3D1A98890B00850489 /* ECPercentDrivenInteractiveTransition.m in Sources */,
-				D0B905141A9BE168000FE772 /* ARAlertController.m in Sources */,
 				D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */,
 				D0DD621A1A9A95D900224542 /* TableViewController.swift in Sources */,
 				D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */,
@@ -720,6 +731,7 @@
 		};
 		D0EF9C2A1A98889F00850489 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3018CDBD34874B52EE07A8B6 /* Pods-Festi Buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -733,6 +745,7 @@
 		};
 		D0EF9C2B1A98889F00850489 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF457BE5D0E2A02C6A953607 /* Pods-Festi Buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

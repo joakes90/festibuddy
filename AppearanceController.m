@@ -20,6 +20,8 @@
     
     [[UINavigationBar appearance] setTintColor:festiPink];
     [[UINavigationBar appearance] setBarTintColor:festiGreen];
+    [[UIDatePicker appearance] setBackgroundColor:festiYellow];
+    
     
 }
 
