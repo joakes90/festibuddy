@@ -80,11 +80,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
             let canHandleGoogle: Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "comgooglemaps://")!)
             
             if canHandleGoogle{
-                let alert: UIAlertView = UIAlertView(title: "Select Map", message: "Would you like to use Google or Apple Maps", delegate: self, cancelButtonTitle: nil)
-                alert.addButtonWithTitle("Google Maps")
-                alert.addButtonWithTitle("Apple Maps")
-                alert.tag = 100
-                alert.show()
+                self.googleMapsNavigation()
                 
             }else{
                 self.appleMapsNavigation()

@@ -14,6 +14,7 @@ class Festivals {
     let detailImageString: NSString
     let tableImage: String
     let gregorianCalendar = NSCalendar(identifier: NSGregorianCalendar)
+    let customFest: Bool
     var days: Int = 0
     var hours: Int = 0
     var minutes: Int = 0
@@ -78,6 +79,7 @@ class Festivals {
         self.detailImageString = imageString!
         self.tableImage = tableImageString! as String
         self.lineup = lineup
+        self.customFest = false
         
        var componets = timeTillFest()
         
@@ -91,6 +93,22 @@ class Festivals {
         
         self.lat = lat
         self.long = long
+    }
+    
+    init(title: NSString, date: NSString?, lat: NSNumber, long: NSNumber){
+        let dateFormater: NSDateFormatter = NSDateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd"
+        
+        self.title = title
+        self.date = dateFormater.dateFromString(date as! String)
+        self.lat = lat
+        self.long = long
+        self.customFest = true
+        
+        self.tableImage = "defaultTable.png"
+        self.detailImageString = "default.png"
+        self.lineup = ""
+        
     }
 }
 

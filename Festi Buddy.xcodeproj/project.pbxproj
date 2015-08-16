@@ -61,6 +61,9 @@
 		D08C9AC51A9EC52A00025D87 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D08C9AC31A9EC52A00025D87 /* plusbutton.png */; };
 		D08DBF661B80235D003F12C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08DBF651B80235D003F12C2 /* CoreLocation.framework */; };
 		D08DBF681B80332E003F12C2 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DBF671B80332E003F12C2 /* Festival.swift */; };
+		D08DBF6A1B804CD8003F12C2 /* defaultTable.png in Resources */ = {isa = PBXBuildFile; fileRef = D08DBF691B804CD8003F12C2 /* defaultTable.png */; };
+		D08DBF6C1B804E76003F12C2 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = D08DBF6B1B804E76003F12C2 /* default.png */; };
+		D08DBF6E1B8060FA003F12C2 /* FestivalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */; };
 		D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */; };
 		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
 		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
@@ -151,6 +154,9 @@
 		D08C9AC31A9EC52A00025D87 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
 		D08DBF651B80235D003F12C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D08DBF671B80332E003F12C2 /* Festival.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
+		D08DBF691B804CD8003F12C2 /* defaultTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultTable.png; sourceTree = "<group>"; };
+		D08DBF6B1B804E76003F12C2 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalController.swift; sourceTree = "<group>"; };
 		D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceController.h; path = ../AppearanceController.h; sourceTree = "<group>"; };
 		D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearanceController.m; path = ../AppearanceController.m; sourceTree = "<group>"; };
 		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
@@ -239,6 +245,8 @@
 		D054178B1A9AFE09004518F7 /* Fest Images and logos */ = {
 			isa = PBXGroup;
 			children = (
+				D08DBF6B1B804E76003F12C2 /* default.png */,
+				D08DBF691B804CD8003F12C2 /* defaultTable.png */,
 				D054178C1A9AFE09004518F7 /* ACL.jpg */,
 				D054178D1A9AFE09004518F7 /* ACLLogo.jpg */,
 				D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */,
@@ -352,6 +360,7 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */,
 				D08DBF5F1B7FFDFC003F12C2 /* CD files */,
 				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
@@ -494,6 +503,7 @@
 			files = (
 				D05417C91A9AFE09004518F7 /* pfLogo.jpg in Resources */,
 				D05417BF1A9AFE09004518F7 /* EFFLogo.jpg in Resources */,
+				D08DBF6C1B804E76003F12C2 /* default.png in Resources */,
 				D05417B41A9AFE09004518F7 /* Bonnaroo.jpg in Resources */,
 				D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */,
 				D08C9ABF1A9EB30800025D87 /* packinglist.plist in Resources */,
@@ -532,6 +542,7 @@
 				D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */,
 				D05417BC1A9AFE09004518F7 /* EDC.jpg in Resources */,
 				D05417CD1A9AFE09004518F7 /* scLogo.jpeg in Resources */,
+				D08DBF6A1B804CD8003F12C2 /* defaultTable.png in Resources */,
 				D05417B51A9AFE09004518F7 /* BonnarooLogo.jpg in Resources */,
 				D05417C61A9AFE09004518F7 /* lolla.jpeg in Resources */,
 				D0EF9C1A1A98889F00850489 /* LaunchScreen.xib in Resources */,
@@ -602,6 +613,7 @@
 				D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */,
 				D0DD62191A9A95D900224542 /* Festivals.swift in Sources */,
 				D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */,
+				D08DBF6E1B8060FA003F12C2 /* FestivalController.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
 				D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */,
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,

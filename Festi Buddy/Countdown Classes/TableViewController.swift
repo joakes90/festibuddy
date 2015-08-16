@@ -10,11 +10,11 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var festivals: [Festivals] = []
     var destinationFest: Festivals?
     var initialRun: Bool = true
     var menubutton:UIBarButtonItem = UIBarButtonItem()
     var closed: Bool = true
+    let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,27 +25,9 @@ class TableViewController: UITableViewController {
         self.menubutton.action = "showMenu"
         self.navigationItem.leftBarButtonItem = menubutton
         
-        let dateFormater: NSDateFormatter = NSDateFormatter()
-        dateFormater.dateFormat = "yyyy-MM-dd"
-        let path = NSBundle.mainBundle().pathForResource("festsPlist", ofType: "plist")
-        let plistArray: NSArray = NSArray(contentsOfFile: path!)!
-        
-        for i in plistArray{
-            
-            var title = i["title"]
-            var imageString = i["imageString"]
-            var tableImageString = i["tableImageString"]
-            var date = i["date"]
-            var lat = i["lat"]
-            var long = i["long"]
-            var lineup = i["lineup"]
-            
-            var newFestivalObject: Festivals = Festivals(title: (title! as! NSString), date: (date! as! NSString), imageString: (imageString! as! NSString), tableImageString: (tableImageString! as! NSString), lat: (lat! as! NSNumber), long: (long! as! NSNumber), lineup: (lineup! as! NSString))
-            festivals.append(newFestivalObject)
-        }
-        if (NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil){
+                if (NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil){
             let festivalName: String = NSUserDefaults.standardUserDefaults().valueForKey("default_fest") as! String
-            for i in festivals{
+            for i in FestivalController.sharedInstance.festivals {
                 if i.title == festivalName{
                     destinationFest = i
                 }
@@ -55,6 +37,11 @@ class TableViewController: UITableViewController {
         }
         initialRun = false
         self.slidingViewController().resetTopViewAnimated(true)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        FestivalController.sharedInstance.updateFestivals()
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -68,7 +55,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return festivals.count + 1
+        return FestivalController.sharedInstance.festivals.count + 1
     }
 
     
@@ -82,8 +69,8 @@ class TableViewController: UITableViewController {
             cell.imageView?.image = nil
             return cell
         }
-        var title = festivals[indexPath.row - 1].title
-        var image = festivals[indexPath.row - 1].tableImage
+        var title = FestivalController.sharedInstance.festivals[indexPath.row - 1].title
+        var image = FestivalController.sharedInstance.festivals[indexPath.row - 1].tableImage
         cell.textLabel?.text = title as String
         cell.imageView?.image = UIImage(named: image)
 
@@ -105,7 +92,7 @@ class TableViewController: UITableViewController {
             if !initialRun && tableView.indexPathForSelectedRow()?.row != 0 {
                 var index = tableView.indexPathForSelectedRow()?.row
                 let viewController = segue.destinationViewController as! DetailViewController
-                let fest: Festivals = festivals[index! - 1]
+                let fest: Festivals = FestivalController.sharedInstance.festivals[index! - 1]
             
                 viewController.fest = fest
             }else{
