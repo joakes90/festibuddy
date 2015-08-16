@@ -73,36 +73,48 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     }
     
     @IBAction func arMenu(sender: AnyObject) {
-        let defaultAction: ARAlertAction = ARAlertAction(title: "Set as Default Festival", style: ARAlertActionStyle.Default) { (setDefault) -> Void in
-            NSUserDefaults.standardUserDefaults().setValue(self.fest?.title, forKey: "default_fest")
-        }
-        let navigateAction: ARAlertAction = ARAlertAction(title: "Navigate to Here", style: ARAlertActionStyle.Default) { (navigate) -> Void in
-            let canHandleGoogle: Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "comgooglemaps://")!)
-            
-            if canHandleGoogle{
-                self.googleMapsNavigation()
-                
-            }else{
-                self.appleMapsNavigation()
-            }
-        }
+
+    let defaultAction: UIAlertAction = UIAlertAction(title: "Set as Default", style: UIAlertActionStyle.Default) { (action) -> Void in
+        NSUserDefaults.standardUserDefaults().setValue(self.fest?.title, forKey: "default_fest")
+    }
+    
+    
         
-        let lineupAction: ARAlertAction = ARAlertAction(title: "View Lineup", style: ARAlertActionStyle.Default) { (lineUp) -> Void in
+        let navigationAction: UIAlertAction = UIAlertAction(title: "Navigate to Here", style: UIAlertActionStyle.Default) { (action) -> Void in
+                        let canHandleGoogle: Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "comgooglemaps://")!)
+            
+                        if canHandleGoogle{
+                            self.googleMapsNavigation()
+            
+                        }else{
+                            self.appleMapsNavigation()
+                        }
+        }
+
+        
+        let lineupAction: UIAlertAction = UIAlertAction(title: "View Lineup", style: UIAlertActionStyle.Default) { (alert) -> Void in
             self.performSegueWithIdentifier("showLineup", sender: self)
+        }
+        
+
+        
+        let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
             
         }
         
-        let cancel: ARAlertAction = ARAlertAction(title: "Cancel", style: ARAlertActionStyle.Cancel) { (cancel) -> Void in
-            
+        //replacing arMenu with UIAlertController
+        let alertController: UIAlertController = UIAlertController(title: "Options", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        alertController.addAction(defaultAction)
+        if self.fest?.customFest == false {
+            alertController.addAction(lineupAction)
         }
+        alertController.addAction(navigationAction)
+        alertController.addAction(cancel)
         
-        let controller: ARAlertController = ARAlertController(title: "Options", message: nil, preferredStyle: ARAlertControllerStyle.ActionSheet)
-        controller.addAction(defaultAction)
-        controller.addAction(lineupAction)
-        controller.addAction(navigateAction)
-        controller.addAction(cancel)
+       self.presentViewController(alertController, animated: true) { () -> Void in
         
-        controller.presentInViewController(self, animated: true, completion: nil)
+        }
     }
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
