@@ -65,7 +65,9 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
                     self.delegate.managedObjectContext.save(nil)
                     
                     let alertController: UIAlertController = UIAlertController(title: "Save successful", message: "New festival named \(self.titleTextField.text) successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
-                    let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                    let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                        self.performSegueWithIdentifier("unwindFromAddFestVC", sender: self)
+                    })
                     alertController.addAction(alertAction)
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.presentViewController(alertController, animated: true, completion: nil)

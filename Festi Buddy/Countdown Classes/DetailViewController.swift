@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-//import iAd
+
 
 class DetailViewController: UIViewController, UIAlertViewDelegate {
     
@@ -20,18 +20,15 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     
     @IBOutlet weak var timeLabel: UILabel!
 
-   // @IBOutlet weak var adBanner: ADBannerView!
+    @IBOutlet var deleteButton: UIButton!
     
     @IBOutlet weak var titleLable: UILabel!
     
+    let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-  /*
-        self.canDisplayBannerAds = true
-        self.adBanner.delegate = self
-        self.adBanner.hidden = true
-    */
-       
+
         
         if fest != nil {
             let imageString = fest?.detailImageString
@@ -51,17 +48,11 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         self.view.addGestureRecognizer(self.slidingViewController().panGesture)
     }
     
-   /* func bannerViewDidLoadAd(banner: ADBannerView!) {
-        adBanner.hidden = false
-    }
-   
-    //shot probably do somthing with this method later, Xcode seems to throw a hissy fit when it is not there.
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
 
-    }*/
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool) {
+        if self.fest?.customFest == true{
+            self.deleteButton.hidden = false
+        }
     }
     
 
@@ -162,5 +153,19 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
             self.closed = true
         }
     }
-
+    
+    @IBAction func deleteFest(sender: AnyObject) {
+        let fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Festival")
+        let cdFests: [Festival] = delegate.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [Festival]
+        var festToDelete: Festival?
+        for fest: Festival in cdFests {
+            if fest.title == self.fest!.title{
+                festToDelete = fest
+        }
+           
+    }
+        delegate.managedObjectContext.deleteObject(festToDelete!)
+        delegate.managedObjectContext.save(nil)
+        self.performSegueWithIdentifier("unwindFromDetailVC", sender: self)
+    }
 }

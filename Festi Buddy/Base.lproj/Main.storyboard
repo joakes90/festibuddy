@@ -175,9 +175,11 @@
                         <outlet property="datePicker" destination="Kjc-f3-b8y" id="sT6-xw-yNW"/>
                         <outlet property="locationTextField" destination="Qhz-Ne-XqX" id="Tp6-Ve-dT4"/>
                         <outlet property="titleTextField" destination="K6f-B5-EWR" id="2by-Hm-TLG"/>
+                        <segue destination="tC4-EB-xLU" kind="unwind" identifier="unwindFromAddFestVC" unwindAction="prepareForUnwind:" id="Af3-UH-7df"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slV-My-fRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tC4-EB-xLU" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="J8w-qx-uVF">
                     <connections>
                         <action selector="tapped:" destination="Iha-kR-cTr" id="PLn-dm-GJd"/>
@@ -260,6 +262,21 @@
                                     <action selector="showMenu" destination="5lg-sS-vsm" eventType="touchUpInside" id="9eP-X4-9nZ"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig3-hD-I9x">
+                                <rect key="frame" x="142" y="605" width="103" height="30"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.0" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8om-HW-AJy"/>
+                                    <constraint firstAttribute="width" constant="103" id="mNn-Ub-UXv"/>
+                                </constraints>
+                                <state key="normal" title="Delete this fest">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteFest:" destination="5lg-sS-vsm" eventType="touchUpInside" id="l2u-Xo-nbp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -267,12 +284,14 @@
                             <constraint firstItem="aqS-2v-bhD" firstAttribute="top" secondItem="SSq-3R-snE" secondAttribute="bottom" constant="-55" id="0dF-mU-4Pr"/>
                             <constraint firstAttribute="trailing" secondItem="SSq-3R-snE" secondAttribute="trailing" id="5cN-lZ-0FV"/>
                             <constraint firstItem="r9w-UG-6g0" firstAttribute="centerX" secondItem="SSq-3R-snE" secondAttribute="centerX" constant="13.5" id="8aF-u1-QQw"/>
+                            <constraint firstItem="Ig3-hD-I9x" firstAttribute="centerX" secondItem="SSq-3R-snE" secondAttribute="centerX" constant="6" id="FZG-CR-Z11"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="centerX" secondItem="hlp-n6-H6p" secondAttribute="centerX" constant="-13.5" id="Gen-ru-vlj"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="bottom" secondItem="W1R-Wg-Yvm" secondAttribute="top" id="IWU-yr-l8W"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="top" secondItem="Pte-PY-LHo" secondAttribute="bottom" constant="-102" id="Ndd-nC-bx8"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="top" secondItem="r9w-UG-6g0" secondAttribute="bottom" constant="-93" id="Nel-e0-gnS"/>
                             <constraint firstItem="OJ1-mq-onB" firstAttribute="top" secondItem="r9w-UG-6g0" secondAttribute="bottom" constant="27" id="QGJ-C5-25v"/>
                             <constraint firstItem="hlp-n6-H6p" firstAttribute="top" secondItem="nUw-xb-zam" secondAttribute="bottom" constant="8" id="Tr5-5M-mcB"/>
+                            <constraint firstItem="aqS-2v-bhD" firstAttribute="top" secondItem="Ig3-hD-I9x" secondAttribute="top" constant="7" id="eJ1-79-B0a"/>
                             <constraint firstItem="aqS-2v-bhD" firstAttribute="leading" secondItem="SSq-3R-snE" secondAttribute="trailing" constant="-51" id="h7h-4R-Af6"/>
                             <constraint firstItem="SSq-3R-snE" firstAttribute="leading" secondItem="Pte-PY-LHo" secondAttribute="trailing" constant="-51" id="mLl-dy-K7a"/>
                             <constraint firstItem="r9w-UG-6g0" firstAttribute="top" secondItem="FYf-FX-ASE" secondAttribute="bottom" constant="8" symbolic="YES" id="ru0-l9-8cQ"/>
@@ -284,13 +303,16 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="deleteButton" destination="Ig3-hD-I9x" id="Lno-X1-txy"/>
                         <outlet property="imageView" destination="SSq-3R-snE" id="DCe-rX-Tlo"/>
                         <outlet property="timeLabel" destination="nUw-xb-zam" id="3Oz-eH-mId"/>
                         <outlet property="titleLable" destination="r9w-UG-6g0" id="82b-db-bTY"/>
                         <segue destination="Csi-kE-4BC" kind="show" identifier="showLineup" id="xiG-gy-lVU"/>
+                        <segue destination="xVR-Hm-5GR" kind="unwind" identifier="unwindFromDetailVC" unwindAction="prepareForUnwind:" id="hbC-Hd-96d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIj-xk-qjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xVR-Hm-5GR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="97.5" y="-332.5"/>
         </scene>
