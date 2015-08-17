@@ -62,15 +62,15 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
         let cellID = "cell"
-        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID) as! UITableViewCell
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID)!
         
         if indexPath.row == 0 {
             cell.textLabel?.text = "+ Add new Festival"
             cell.imageView?.image = nil
             return cell
         }
-        var title = FestivalController.sharedInstance.festivals[indexPath.row - 1].title
-        var image = FestivalController.sharedInstance.festivals[indexPath.row - 1].tableImage
+        let title = FestivalController.sharedInstance.festivals[indexPath.row - 1].title
+        let image = FestivalController.sharedInstance.festivals[indexPath.row - 1].tableImage
         cell.textLabel?.text = title as String
         cell.imageView?.image = UIImage(named: image)
 
@@ -79,7 +79,7 @@ class TableViewController: UITableViewController {
     
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if tableView.indexPathForSelectedRow()?.row == 0 {
+        if tableView.indexPathForSelectedRow?.row == 0 {
             self.performSegueWithIdentifier("addFest", sender: self)
         } else {
             self.performSegueWithIdentifier("seeTheCountdown", sender: self)
@@ -89,8 +89,8 @@ class TableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "seeTheCountdown" {
-            if !initialRun && tableView.indexPathForSelectedRow()?.row != 0 {
-                var index = tableView.indexPathForSelectedRow()?.row
+            if !initialRun && tableView.indexPathForSelectedRow?.row != 0 {
+                let index = tableView.indexPathForSelectedRow?.row
                 let viewController = segue.destinationViewController as! DetailViewController
                 let fest: Festivals = FestivalController.sharedInstance.festivals[index! - 1]
             
@@ -107,7 +107,7 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
+        self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu")
 
     }
     @IBAction func showMenu(){

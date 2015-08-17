@@ -186,7 +186,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-206.5" y="484.5"/>
+            <point key="canvasLocation" x="605.5" y="484.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="qdt-bk-Uij">
@@ -454,6 +454,7 @@
                             <constraint firstItem="Vos-Vo-rI1" firstAttribute="top" secondItem="oi1-2t-DUK" secondAttribute="bottom" constant="-58" id="qGR-bg-HUe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="C4x-dk-RJH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="Vos-Vo-rI1" id="ADj-ap-oMM"/>
@@ -461,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsa-UM-iLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-883.5" y="1083.5"/>
+            <point key="canvasLocation" x="-71.5" y="1083.5"/>
         </scene>
         <!--Item List-->
         <scene sceneID="Aaz-lh-8Om">
@@ -712,6 +713,24 @@ A few battery tips to keep your phone alive throughout the event</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-qk-bEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-882.5" y="3396.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dh1-kA-OIz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8MT-hw-1Lc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="30S-1i-rSB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bmV-pB-Hvh" kind="relationship" relationship="rootViewController" id="8iN-EO-bGj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dx2-KH-c53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-884" y="1083"/>
         </scene>
     </scenes>
     <resources>

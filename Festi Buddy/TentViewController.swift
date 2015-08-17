@@ -80,9 +80,9 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
     
     func setRegion(){
         if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as! Double? == nil && mapview.userLocation.coordinate.latitude != 0.0{
-            var location:CLLocationCoordinate2D = self.mapview.userLocation.coordinate
+            let location:CLLocationCoordinate2D = self.mapview.userLocation.coordinate
             let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
+            let theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
             mapview.region = theRegon
         }else if mapview.userLocation.coordinate.latitude != 0.0{
             var latDelta: CLLocationDegrees = (NSUserDefaults.standardUserDefaults().valueForKey("tentLat") as! Double - mapview.userLocation.coordinate.latitude as Double) 

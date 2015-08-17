@@ -36,7 +36,10 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
         
         fetchedResultsController = getFetchedResultController()
         fetchedResultsController.delegate = self
-        fetchedResultsController.performFetch(nil)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch _ {
+        }
      
         self.slidingViewController().resetTopViewAnimated(true)
     }
@@ -45,7 +48,7 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
         super.viewWillAppear(true)
         
         if !self.slidingViewController().underLeftViewController.isKindOfClass(MenuTableViewController){
-            self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
+            self.slidingViewController().underLeftViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu")
         }
             }
 
@@ -71,7 +74,7 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
 
     
     func addItems() {
-        let viewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("addItems")! as! AddItems
+        let viewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("addItems") as! AddItems
         self.showViewController(viewController, sender: self)
         
     }
@@ -92,11 +95,11 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
         let unchecked: UIImage = UIImage(named: "unchecked.png")!
         let checked: UIImage = UIImage(named: "checked.png")!
         
-        var item: Items = fetchedResultsController.objectAtIndexPath(indexPath) as! Items
+        let item: Items = fetchedResultsController.objectAtIndexPath(indexPath) as! Items
         
         if Bool(item.have) {
             cell.imageView?.image = checked
@@ -111,7 +114,7 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
         return cell
     }
     
-    func controllerDidChangeContent(controller: NSFetchedResultsController!) {
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.reloadData()
     }
 
@@ -125,23 +128,24 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         let managedObject: NSManagedObject = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
         context?.deleteObject(managedObject)
-        context?.save(nil)
+        do {
+            try context?.save()
+        } catch _ {
+        }
     }
 
    
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cellID = "cell"
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
         let item = fetchedResultsController.objectAtIndexPath(indexPath) as! Items
-        
-        let unchecked: UIImage = UIImage(named: "unchecked.png")!
-        let checked: UIImage = UIImage(named: "checked.png")!
         
         item.have = true
         
-        context?.save(nil)
+        do {
+            try context?.save()
+        } catch _ {
+        }
     }
     
     @IBAction func showMenu(){

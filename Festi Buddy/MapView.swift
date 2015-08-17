@@ -38,22 +38,22 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         for i in plistArray {
             
-            var title = i["title"]
-            var imageString = i["imageString"]
-            var tableImageString = i["tableImageString"]
-            var date = i["date"]
-            var lat = i["lat"]
-            var long = i["long"]
-            var lineup = i["lineup"]
+            let title = i["title"]
+            let imageString = i["imageString"]
+            let tableImageString = i["tableImageString"]
+            let date = i["date"]
+            let lat = i["lat"]
+            let long = i["long"]
+            let lineup = i["lineup"]
             
-            var newFestivalObject: Festivals = Festivals(title: (title! as! NSString), date: (date! as! NSString), imageString: (imageString! as! NSString), tableImageString: (tableImageString! as! NSString), lat: (lat! as! NSNumber), long: (long! as! NSNumber), lineup: (lineup! as! NSString))
+            let newFestivalObject: Festivals = Festivals(title: (title! as! NSString), date: (date! as! NSString), imageString: (imageString! as! NSString), tableImageString: (tableImageString! as! NSString), lat: (lat! as! NSNumber), long: (long! as! NSNumber), lineup: (lineup! as! NSString))
             
-            var latitude: CLLocationDegrees = newFestivalObject.lat as CLLocationDegrees
-            var longitude: CLLocationDegrees = newFestivalObject.long as CLLocationDegrees
+            let latitude: CLLocationDegrees = newFestivalObject.lat as CLLocationDegrees
+            let longitude: CLLocationDegrees = newFestivalObject.long as CLLocationDegrees
             
-            var festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
-             var newAnnotation = MKPointAnnotation()
+             let newAnnotation = MKPointAnnotation()
             newAnnotation.coordinate = festLocation
             newAnnotation.title = newFestivalObject.title as String
             
@@ -86,9 +86,9 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     func setRegion(){
         if self.mapView.userLocation.coordinate.latitude == 0.0 {
-            var location:CLLocationCoordinate2D = self.mapView.userLocation.coordinate
+            let location:CLLocationCoordinate2D = self.mapView.userLocation.coordinate
             let theSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
-            var theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
+            let theRegon: MKCoordinateRegion = MKCoordinateRegion(center: location, span: theSpan)
             mapView.region = theRegon
         }else{
             locationUpdate?.invalidate()

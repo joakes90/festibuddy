@@ -26,7 +26,10 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
         
         fetchedResultsController = getFetchedResultController()
         fetchedResultsController.delegate = self
-        fetchedResultsController.performFetch(nil)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch _ {
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,19 +56,23 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellID = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
-        var title = tableItems[indexPath.row] as! String
-        var plusImage: UIImage = UIImage(named: "plusbutton.png")!
-        var minusImage: UIImage = UIImage(named: "minusbutton.png")!
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) 
+        let title = tableItems[indexPath.row] as! String
+        let plusImage: UIImage = UIImage(named: "plusbutton.png")!
+        let minusImage: UIImage = UIImage(named: "minusbutton.png")!
         
-        var request = NSFetchRequest(entityName: "Items")
+        let request = NSFetchRequest(entityName: "Items")
         request.returnsObjectsAsFaults = false
         
-        var results: NSArray = (context!.executeFetchRequest(request, error: nil))!
-        
+        var results: NSArray?
+        do {
+        results = try (context!.executeFetchRequest(request))
+        } catch {
+            
+        }
         cell.imageView?.image = plusImage
         cell.textLabel?.text = title
-        for i in results{
+        for i in results!{
             if i.name == title{
                 cell.imageView?.image = minusImage
                 cell.textLabel?.text = title
@@ -84,19 +91,24 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cellID = "Cell"
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
-        var plusImage: UIImage = UIImage(named: "plusbutton.png")!
-        var minusImage: UIImage = UIImage(named: "minusbutton.png")!
-        var title = tableItems[indexPath.row] as! String
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) 
+        let plusImage: UIImage = UIImage(named: "plusbutton.png")!
+        let minusImage: UIImage = UIImage(named: "minusbutton.png")!
+        let title = tableItems[indexPath.row] as! String
         var alreadyInList: Bool = false
         
-        var request = NSFetchRequest(entityName: "Items")
+        let request = NSFetchRequest(entityName: "Items")
         request.returnsObjectsAsFaults = false
-       
-        var results: NSArray = (context!.executeFetchRequest(request, error: nil))!
         
-        for i in results{
-            if i.name == tableItems[indexPath.row] as! NSString{
+        var results: NSArray?
+        do {
+        results = try (context!.executeFetchRequest(request))
+        } catch {
+            
+        }
+        
+        for i in results!{
+            if i.name == tableItems[indexPath.row] as? NSString{
                 alreadyInList = true
                 cell.imageView?.image = minusImage
                 cell.textLabel?.text = title
@@ -115,7 +127,7 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
             cell.selected = false
         }else{
             var managedObject: NSManagedObject?
-            for i in results{
+            for i in results!{
                 if i.name == title{
                     managedObject = i as? NSManagedObject
                 }
@@ -125,7 +137,10 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
             cell.textLabel?.text = title
             cell.selected = false
             context!.deleteObject(managedObject!)
-            context!.save(nil)
+            do {
+                try context!.save()
+            } catch _ {
+            }
         }
 
     }
@@ -135,7 +150,10 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
         let item = Items(entity: entityDescription!, insertIntoManagedObjectContext: context) as Items
         item.have = 0
         item.name = name as String
-        context!.save(nil)
+        do {
+            try context!.save()
+        } catch _ {
+        }
     
     }
     
@@ -152,41 +170,6 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         return fetchRequest
-}
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
     }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

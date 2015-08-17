@@ -36,11 +36,11 @@ class Festivals {
     func timeTillFest()->NSDateComponents  {
         let timeZone = NSTimeZone.localTimeZone()
         let interval = timeZone.secondsFromGMT
-        var currentDate = NSDate().dateByAddingTimeInterval(NSTimeInterval(interval))
-        var toDate = self.date!.dateByAddingTimeInterval(NSTimeInterval(interval))
-        let componets: NSCalendarUnit = .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit
+        let currentDate = NSDate().dateByAddingTimeInterval(NSTimeInterval(interval))
+        let toDate = self.date!.dateByAddingTimeInterval(NSTimeInterval(interval))
+        let componets: NSCalendarUnit = [.NSDayCalendarUnit, .NSHourCalendarUnit, .NSMinuteCalendarUnit]
         
-        var currentComponets = gregorianCalendar?.components(componets, fromDate: currentDate, toDate: toDate, options: nil)
+        let currentComponets = gregorianCalendar?.components(componets, fromDate: currentDate, toDate: toDate, options: [])
         
         return currentComponets!
     }
@@ -50,7 +50,7 @@ class Festivals {
     
     
     func update(){
-        var componets = timeTillFest()
+        let componets = timeTillFest()
         
         self.days = componets.day
         self.hours = componets.hour
@@ -81,7 +81,7 @@ class Festivals {
         self.lineup = lineup
         self.customFest = false
         
-       var componets = timeTillFest()
+       let componets = timeTillFest()
         
         self.days = componets.day
         self.hours = componets.hour

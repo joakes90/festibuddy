@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let menuButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+    let menuButton: UIButton = UIButton(type: UIButtonType.Custom)
     
     var closed: Bool = true
     

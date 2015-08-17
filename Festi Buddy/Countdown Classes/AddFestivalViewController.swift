@@ -48,7 +48,7 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveNewFest(sender: AnyObject) {
         if self.titleTextField.text != "" && self.locationTextField.text != "" {
             let geoCoder: CLGeocoder = CLGeocoder()
-            geoCoder.geocodeAddressString(self.locationTextField.text, completionHandler: { (placeMarks, error) -> Void in
+            geoCoder.geocodeAddressString(self.locationTextField.text!, completionHandler: { (placeMarks, error) -> Void in
                 if (error != nil) {
                     let alertController: UIAlertController = UIAlertController(title: "Failed to find location", message: "look up of the location \(self.locationTextField.text) has failed with the error \(error) please try setting the location again", preferredStyle: UIAlertControllerStyle.Alert)
                     let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
@@ -59,10 +59,13 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
                     })
                     
                 } else {
-                    let placeMark: CLPlacemark = placeMarks.last as! CLPlacemark
-                    self.festival?.latitude = placeMark.location.coordinate.latitude as NSNumber
-                    self.festival?.longitude = placeMark.location.coordinate.longitude as NSNumber
-                    self.delegate.managedObjectContext.save(nil)
+                    let placeMark: CLPlacemark = placeMarks!.last! 
+                    self.festival?.latitude = placeMark.location!.coordinate.latitude as NSNumber
+                    self.festival?.longitude = placeMark.location!.coordinate.longitude as NSNumber
+                    do {
+                        try self.delegate.managedObjectContext.save()
+                    } catch _ {
+                    }
                     
                     let alertController: UIAlertController = UIAlertController(title: "Save successful", message: "New festival named \(self.titleTextField.text) successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
                     let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
@@ -76,7 +79,7 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
             })
             
             self.festival = NSEntityDescription.insertNewObjectForEntityForName("Festival", inManagedObjectContext: delegate.managedObjectContext) as? Festival
-            self.festival!.title = self.titleTextField.text
+            self.festival!.title = self.titleTextField.text!
             self.festival!.date = self.datePicker.date
         } else {
             let alertController: UIAlertController = UIAlertController(title: "Fill out all fields", message: "Fill out all fields on this page before adding a new festival", preferredStyle: UIAlertControllerStyle.Alert)

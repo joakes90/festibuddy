@@ -32,7 +32,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         
         if fest != nil {
             let imageString = fest?.detailImageString
-            var image: UIImage = UIImage(named: imageString! as String)!
+            let image: UIImage = UIImage(named: imageString! as String)!
             imageView.image = image
             
             if fest?.title == "Hangout" {
@@ -117,16 +117,16 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func appleMapsNavigation() {
-        var latitude: CLLocationDegrees = (self.fest?.lat as! CLLocationDegrees)
-        var longitude: CLLocationDegrees = (self.fest?.long as! CLLocationDegrees)
-        var festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let latitude: CLLocationDegrees = (self.fest?.lat as! CLLocationDegrees)
+        let longitude: CLLocationDegrees = (self.fest?.long as! CLLocationDegrees)
+        let festLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
         let festPlaceMark: MKPlacemark = MKPlacemark(coordinate: festLocation, addressDictionary: nil)
         let festMapItem: MKMapItem = MKMapItem(placemark: festPlaceMark)
         
         let locations: [MKMapItem] = [MKMapItem.mapItemForCurrentLocation(), festMapItem]
         let launchItems: NSDictionary = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        MKMapItem.openMapsWithItems(locations, launchOptions: launchItems as NSDictionary as [NSObject : AnyObject])
+        MKMapItem.openMapsWithItems(locations, launchOptions: launchItems as? [String : AnyObject])
 
     }
     
@@ -156,7 +156,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
     
     @IBAction func deleteFest(sender: AnyObject) {
         let fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Festival")
-        let cdFests: [Festival] = delegate.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [Festival]
+        let cdFests: [Festival] = try! delegate.managedObjectContext.executeFetchRequest(fetchRequest) as! [Festival]
         var festToDelete: Festival?
         for fest: Festival in cdFests {
             if fest.title == self.fest!.title{
@@ -165,7 +165,11 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
            
     }
         delegate.managedObjectContext.deleteObject(festToDelete!)
-        delegate.managedObjectContext.save(nil)
+        do {
+            try delegate.managedObjectContext.save()
+        } catch _ {
+        }
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "default_fest")
         self.performSegueWithIdentifier("unwindFromDetailVC", sender: self)
     }
 }
