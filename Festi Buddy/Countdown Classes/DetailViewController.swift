@@ -74,7 +74,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         let navigationAction: UIAlertAction = UIAlertAction(title: "Navigate to Here", style: UIAlertActionStyle.Default) { (action) -> Void in
                         let canHandleGoogle: Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "comgooglemaps://")!)
             
-                        if canHandleGoogle{
+                        if canHandleGoogle == true{
                             self.googleMapsNavigation()
             
                         }else{
@@ -108,13 +108,6 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         }
     }
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        if buttonIndex == 0{
-            googleMapsNavigation()
-        } else{
-            appleMapsNavigation()
-        }
-    }
     
     func appleMapsNavigation() {
         let latitude: CLLocationDegrees = (self.fest?.lat as! CLLocationDegrees)

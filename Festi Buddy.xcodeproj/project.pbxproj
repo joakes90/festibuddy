@@ -339,7 +339,6 @@
 		D0EF9BFA1A98889F00850489 = {
 			isa = PBXGroup;
 			children = (
-				D08C9AC01A9EB3F400025D87 /* CoreData.framework */,
 				D0EF9C051A98889F00850489 /* Festi Buddy */,
 				D0EF9C221A98889F00850489 /* Festi BuddyTests */,
 				D0EF9C041A98889F00850489 /* Products */,
@@ -360,9 +359,10 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D08C9AC01A9EB3F400025D87 /* CoreData.framework */,
+				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */,
 				D08DBF5F1B7FFDFC003F12C2 /* CD files */,
-				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */,
 				D08C9AB91A9EB01200025D87 /* Packing list Classes  */,
@@ -686,6 +686,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -728,6 +729,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

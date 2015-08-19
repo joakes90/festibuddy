@@ -67,7 +67,7 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
                     } catch _ {
                     }
                     
-                    let alertController: UIAlertController = UIAlertController(title: "Save successful", message: "New festival named \(self.titleTextField.text) successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
+                    let alertController: UIAlertController = UIAlertController(title: "Save successful", message: "New festival named \(self.titleTextField.text!) successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
                     let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
                         self.performSegueWithIdentifier("unwindFromAddFestVC", sender: self)
                     })

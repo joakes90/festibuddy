@@ -59,7 +59,7 @@ class MenuTableViewController: UITableViewController {
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "Festivals Map":
-                let newTopViewController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("mapView"))!
+                let newTopViewController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("mapNavController"))!
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "Make a Packing list":
@@ -80,14 +80,5 @@ class MenuTableViewController: UITableViewController {
        // self.slidingViewController().resetTopViewAnimated(true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppearanceController.h"
+#import <GoogleMaps/GMSServices.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 NSString *kOldModelDeleted = @"oldModelDeleted";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //providing google maps api key
+    [GMSServices provideAPIKey:@"AIzaSyDxi3O9ST4de-VrCRw6bCZNw-VoAQlKVcQ"];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     if (![defaults boolForKey:kOldModelDeleted]) {

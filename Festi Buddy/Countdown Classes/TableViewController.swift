@@ -12,19 +12,12 @@ class TableViewController: UITableViewController {
 
     var destinationFest: Festivals?
     var initialRun: Bool = true
-    var menubutton:UIBarButtonItem = UIBarButtonItem()
     var closed: Bool = true
     let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.menubutton.title = "Menu"
-        self.menubutton.style = UIBarButtonItemStyle.Plain
-        self.menubutton.target = self
-        self.menubutton.action = "showMenu"
-        self.navigationItem.leftBarButtonItem = menubutton
-        
                 if (NSUserDefaults.standardUserDefaults().valueForKey("default_fest") != nil){
             let festivalName: String = NSUserDefaults.standardUserDefaults().valueForKey("default_fest") as! String
             for i in FestivalController.sharedInstance.festivals {

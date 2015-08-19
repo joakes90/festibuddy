@@ -20,6 +20,7 @@
     
     [[UINavigationBar appearance] setTintColor:festiPink];
     [[UINavigationBar appearance] setBarTintColor:festiGreen];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:festiPink forKey:NSForegroundColorAttributeName]];
     [[UIDatePicker appearance] setBackgroundColor:festiYellow];
     
     

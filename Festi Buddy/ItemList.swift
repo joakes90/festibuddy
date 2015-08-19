@@ -10,29 +10,15 @@ import UIKit
 import CoreData
 class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var showAddItems: UIBarButtonItem = UIBarButtonItem()
     let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var context: NSManagedObjectContext?
     var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController()
     var closed: Bool = true
-    var menubutton:UIBarButtonItem = UIBarButtonItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.menubutton.title = "Menu"
-        self.menubutton.style = UIBarButtonItemStyle.Plain
-        self.menubutton.target = self
-        self.menubutton.action = "showMenu"
-        self.navigationItem.leftBarButtonItem = menubutton
        
         self.context = delegate.managedObjectContext
-        self.showAddItems.title = "Add An Item"
-        self.showAddItems.target = self
-        self.showAddItems.style = UIBarButtonItemStyle.Plain
-        self.showAddItems.action = "addItems"
-        
-        self.navigationItem.rightBarButtonItem = showAddItems
         
         fetchedResultsController = getFetchedResultController()
         fetchedResultsController.delegate = self
