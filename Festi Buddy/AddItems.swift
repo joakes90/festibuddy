@@ -9,11 +9,10 @@
 import UIKit
 import CoreData
 
-class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
+class AddItems: UITableViewController {
 
     let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var context: NSManagedObjectContext?
-    var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController()
 
     var tableItems: NSArray = []
     
@@ -22,15 +21,9 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
         self.context = delegate.managedObjectContext
         
         let itemsPath = NSBundle.mainBundle().pathForResource("packinglist", ofType: "plist")
-        tableItems = NSArray(contentsOfFile: itemsPath!)!
+        self.tableItems = NSArray(contentsOfFile: itemsPath!)!
         
-        fetchedResultsController = getFetchedResultController()
-        fetchedResultsController.delegate = self
-        do {
-            try fetchedResultsController.performFetch()
-        } catch _ {
         }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,134 +35,67 @@ class AddItems: UITableViewController, NSFetchedResultsControllerDelegate {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
+
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return tableItems.count
+
+        return tableItems.count + 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellID = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) 
-        let title = tableItems[indexPath.row] as! String
-        let plusImage: UIImage = UIImage(named: "plusbutton.png")!
-        let minusImage: UIImage = UIImage(named: "minusbutton.png")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        if indexPath.row == 0{
+            cell.textLabel?.text = "Create a new item to add"
+            return cell
+        } else {
+            let title: String = self.tableItems[indexPath.row - 1] as! String
+            let plusImage: UIImage = UIImage(named: "plusbutton.png")!
+            let minusImage: UIImage = UIImage(named: "minusbutton.png")!
         
-        let request = NSFetchRequest(entityName: "Items")
-        request.returnsObjectsAsFaults = false
-        
-        var results: NSArray?
-        do {
-        results = try (context!.executeFetchRequest(request))
-        } catch {
-            
-        }
-        cell.imageView?.image = plusImage
-        cell.textLabel?.text = title
-        for i in results!{
-            if i.name == title{
+            if ItemsController.sharedInstance.checkForDuplicate(title) {
                 cell.imageView?.image = minusImage
-                cell.textLabel?.text = title
+            } else {
+                cell.imageView?.image = plusImage
             }
+        
+            cell.textLabel?.text = title
         }
         return cell
     }
     
 
     
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cellID = "Cell"
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) 
-        let plusImage: UIImage = UIImage(named: "plusbutton.png")!
-        let minusImage: UIImage = UIImage(named: "minusbutton.png")!
-        let title = tableItems[indexPath.row] as! String
-        var alreadyInList: Bool = false
+        //re write code to change the add button check if the item is already in the CD store remove it if it is add it if not
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let request = NSFetchRequest(entityName: "Items")
-        request.returnsObjectsAsFaults = false
-        
-        var results: NSArray?
-        do {
-        results = try (context!.executeFetchRequest(request))
-        } catch {
-            
-        }
-        
-        for i in results!{
-            if i.name == tableItems[indexPath.row] as? NSString{
-                alreadyInList = true
-                cell.imageView?.image = minusImage
-                cell.textLabel?.text = title
-                cell.selected = false
-            }
-            
-        }
-        
-            cell.imageView?.image = minusImage
-            cell.textLabel?.text = title
-            cell.selected = false
-            
-        if !alreadyInList{
-            addItems(tableItems[indexPath.row] as! String)
-            cell.imageView?.image = minusImage
-            cell.selected = false
-        }else{
-            var managedObject: NSManagedObject?
-            for i in results!{
-                if i.name == title{
-                    managedObject = i as? NSManagedObject
-                }
-            }
-            
-            cell.imageView?.image = plusImage
-            cell.textLabel?.text = title
-            cell.selected = false
-            context!.deleteObject(managedObject!)
+        if indexPath.row == 0 {
+            self.performSegueWithIdentifier("addStuff", sender: self)
+        } else if !ItemsController.sharedInstance.checkForDuplicate(tableItems[indexPath.row - 1] as! String){
+            let customItem: Items = NSEntityDescription.insertNewObjectForEntityForName("Items", inManagedObjectContext: delegate.managedObjectContext) as! Items
+            customItem.name = self.tableItems[indexPath.row - 1] as! String
+            customItem.have = NSNumber(bool: false)
             do {
-                try context!.save()
-            } catch _ {
+                try delegate.managedObjectContext.save()
+            } catch {
+                print("failed to save object")
             }
-        }
-
-    }
-
-    func addItems(name: NSString){
-        let entityDescription = NSEntityDescription.entityForName("Items", inManagedObjectContext: context!)
-        let item = Items(entity: entityDescription!, insertIntoManagedObjectContext: context) as Items
-        item.have = 0
-        item.name = name as String
+            self.tableView.reloadData()
+        } else {
+        let fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Items")
+        fetchRequest.predicate = NSPredicate(format: "name = %@", argumentArray: [tableItems[indexPath.row - 1]])
+        var objectToRemove: Items?
         do {
-            try context!.save()
-        } catch _ {
+            objectToRemove = try delegate.managedObjectContext.executeFetchRequest(fetchRequest)[0] as? Items
+        } catch {
+            print("failed to fetch")
         }
-    
+            delegate.managedObjectContext.deleteObject(objectToRemove!)
+            self.tableView.reloadData()
+        }
     }
-    
-    func getFetchedResultController() -> NSFetchedResultsController {
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: itemFetchRequest(), managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
-        
-        return fetchedResultsController
-    }
-
-    func itemFetchRequest() -> NSFetchRequest {
-        let fetchRequest = NSFetchRequest(entityName: "Items")
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        return fetchRequest
-    }
-
 }

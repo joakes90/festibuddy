@@ -52,6 +52,7 @@
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
 		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
 		D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */; };
+		D08AE54F1B85499500B4DECD /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AE54E1B85499500B4DECD /* ItemsController.swift */; };
 		D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9AB71A9EB00D00025D87 /* Items.swift */; };
 		D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABA1A9EB04400025D87 /* ItemList.swift */; };
 		D08C9ABD1A9EB04400025D87 /* AddItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABB1A9EB04400025D87 /* AddItems.swift */; };
@@ -145,6 +146,7 @@
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
 		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
 		D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFestivalViewController.swift; sourceTree = "<group>"; };
+		D08AE54E1B85499500B4DECD /* ItemsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
 		D08C9AB71A9EB00D00025D87 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		D08C9ABA1A9EB04400025D87 /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 		D08C9ABB1A9EB04400025D87 /* AddItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItems.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				D08C9AC01A9EB3F400025D87 /* CoreData.framework */,
 				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */,
+				D08AE54E1B85499500B4DECD /* ItemsController.swift */,
 				D08DBF5F1B7FFDFC003F12C2 /* CD files */,
 				D0DD62141A9A95D900224542 /* Countdown Classes */,
 				D0E4A4F71A9D4D4C006BCAB2 /* Map Classes */,
@@ -617,6 +620,7 @@
 				D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */,
 				D08DBF6E1B8060FA003F12C2 /* FestivalController.swift in Sources */,
 				D0EF9C0F1A98889F00850489 /* Festi_Buddy.xcdatamodeld in Sources */,
+				D08AE54F1B85499500B4DECD /* ItemsController.swift in Sources */,
 				D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */,
 				D0EF9C451A98896400850489 /* SlidingViewController.swift in Sources */,
 				D08DBF681B80332E003F12C2 /* Festival.swift in Sources */,
