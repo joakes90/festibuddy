@@ -71,6 +71,7 @@
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
 		D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B905181A9C2395000FE772 /* MapKit.framework */; };
 		D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C077061A9EF211008D64B9 /* TentViewController.swift */; };
+		D0C5D6321B859EBE00F9D56C /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */; };
 		D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68D111A9C769200F21A5C /* countdownWebView.swift */; };
 		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
@@ -166,6 +167,7 @@
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
 		D0B905181A9C2395000FE772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0C077061A9EF211008D64B9 /* TentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentViewController.swift; sourceTree = "<group>"; };
+		D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		D0D68D111A9C769200F21A5C /* countdownWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countdownWebView.swift; sourceTree = "<group>"; };
 		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				D08C9ABA1A9EB04400025D87 /* ItemList.swift */,
 				D08C9ABB1A9EB04400025D87 /* AddItems.swift */,
+				D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */,
 			);
 			name = "Packing list Classes ";
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */,
 				D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */,
 				D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */,
+				D0C5D6321B859EBE00F9D56C /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,6 +49,7 @@ class AddItems: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         if indexPath.row == 0{
             cell.textLabel?.text = "Create a new item to add"
+            cell.imageView?.image = nil
             return cell
         } else {
             let title: String = self.tableItems[indexPath.row - 1] as! String

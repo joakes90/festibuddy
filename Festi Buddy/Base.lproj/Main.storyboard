@@ -508,10 +508,10 @@
             </objects>
             <point key="canvasLocation" x="159.5" y="1839.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="wCo-34-GUG">
             <objects>
-                <viewController id="R11-am-B6E" sceneMemberID="viewController">
+                <viewController id="R11-am-B6E" customClass="AddItemViewController" customModule="Festi_Buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FST-ot-2ND"/>
                         <viewControllerLayoutGuide type="bottom" id="BJS-re-VuW"/>
@@ -520,15 +520,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Stuff View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-x0-SOg">
-                                <rect key="frame" x="90" y="323" width="194" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3G-Gr-lfC">
+                                <rect key="frame" x="16" y="110" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0g-Qs-YV5">
+                                <rect key="frame" x="155" y="106" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Qtk-TN-beL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DH-uO-qkM">
+                                <rect key="frame" x="78" y="306" width="85" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Top-5r-GpL"/>
+                                    <constraint firstAttribute="width" constant="85" id="zKx-mj-jhs"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.94509803920000002" green="0.86666666670000003" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="R11-am-B6E" eventType="touchUpInside" id="7Bl-d7-oNW"/>
+                                    <action selector="saveNewFest:" destination="Iha-kR-cTr" eventType="touchUpInside" id="ZN6-vI-QM1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uex-Cz-BCF">
+                                <rect key="frame" x="212" y="306" width="85" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="8kw-Qo-Xzz"/>
+                                    <constraint firstAttribute="height" constant="55" id="St5-ep-9lK"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.94509803920000002" green="0.86666666670000003" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="R11-am-B6E" eventType="touchUpInside" id="Jj2-9h-BoB"/>
+                                    <action selector="saveNewFest:" destination="Iha-kR-cTr" eventType="touchUpInside" id="5cs-at-04f"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.76470588240000004" green="0.94117647059999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uex-Cz-BCF" secondAttribute="trailing" constant="58" id="2NF-ON-4eM"/>
+                            <constraint firstItem="2DH-uO-qkM" firstAttribute="centerY" secondItem="Cgb-tT-Qh0" secondAttribute="centerY" id="4xf-Q4-hVt"/>
+                            <constraint firstItem="C3G-Gr-lfC" firstAttribute="top" secondItem="FST-ot-2ND" secondAttribute="bottom" constant="90" id="Em7-9v-52a"/>
+                            <constraint firstItem="uex-Cz-BCF" firstAttribute="centerY" secondItem="2DH-uO-qkM" secondAttribute="centerY" id="Wqi-lL-aXh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b0g-Qs-YV5" secondAttribute="trailing" id="eUm-mM-paW"/>
+                            <constraint firstItem="2DH-uO-qkM" firstAttribute="leading" secondItem="Cgb-tT-Qh0" secondAttribute="leadingMargin" constant="58" id="gpd-Gs-eA6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="C3G-Gr-lfC" secondAttribute="leading" id="vjs-1M-fYz"/>
+                            <constraint firstItem="b0g-Qs-YV5" firstAttribute="centerY" secondItem="C3G-Gr-lfC" secondAttribute="centerY" id="xGI-Lf-e3f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemNameTextField" destination="b0g-Qs-YV5" id="HiW-v4-bDn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpG-Md-ngx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

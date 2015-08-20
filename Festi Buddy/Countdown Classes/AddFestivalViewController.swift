@@ -30,7 +30,8 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+//MARK: text field delegate methods
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if self.titleTextField.isFirstResponder() {
             self.locationTextField.becomeFirstResponder()
