@@ -67,7 +67,7 @@ class MenuTableViewController: UITableViewController {
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "Tent/Car Finder":
-                let newTopViewController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("tent"))!
+                let newTopViewController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("tentNavController"))!
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "About/Battery Tips":

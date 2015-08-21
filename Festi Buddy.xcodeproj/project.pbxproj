@@ -69,7 +69,6 @@
 		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
 		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
-		D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B905181A9C2395000FE772 /* MapKit.framework */; };
 		D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C077061A9EF211008D64B9 /* TentViewController.swift */; };
 		D0C5D6321B859EBE00F9D56C /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */; };
 		D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68D111A9C769200F21A5C /* countdownWebView.swift */; };
@@ -198,7 +197,6 @@
 			files = (
 				D08DBF661B80235D003F12C2 /* CoreLocation.framework in Frameworks */,
 				D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */,
-				D0B905191A9C2395000FE772 /* MapKit.framework in Frameworks */,
 				20C7B268D06DB3576FA388DB /* libPods-Festi Buddy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
