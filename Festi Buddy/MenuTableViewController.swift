@@ -71,7 +71,7 @@ class MenuTableViewController: UITableViewController {
                 self.slidingViewController().topViewController = newTopViewController
                 break
             case "About/Battery Tips":
-                let newTopViewController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("about"))!
+                let newTopViewController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("aboutNavController"))!
                 self.slidingViewController().topViewController = newTopViewController
                 break
             default :

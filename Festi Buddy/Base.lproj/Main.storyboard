@@ -691,10 +691,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjG-Ap-LfB">
-                                <rect key="frame" x="-4" y="161" width="383" height="498"/>
+                                <rect key="frame" x="-4" y="205" width="383" height="454"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.094117647058823528" green="0.75686274509803919" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Turn down screen brightness
+                                <mutableString key="text">Turn on low power mode in Settings &gt; Battery
+
+Turn down screen brightness
 
 Turn on Airplane mode*
 
@@ -710,32 +712,15 @@ Reduce how frequently you check for new mail in Settings &gt; Mail, Contacts &am
 
 Lower the amount of time until the phone auto locks in Settings &gt; General
 
-See what apps are using the most battery in Settings &gt; Usage
+See what apps are using the most battery in Settings &gt; Battery
 
-*will disable some features of this app</string>
+*will disable some features of this app</mutableString>
                                 <color key="textColor" red="0.92941176470588238" green="0.82259516480871842" blue="0.086576737870186243" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbv-xN-QrB">
-                                <rect key="frame" x="12" y="20" width="35" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="gnI-iW-tbZ"/>
-                                    <constraint firstAttribute="height" constant="30" id="u5f-ag-h6w"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="menubutton.png">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <action selector="showMenu" destination="0E0-Kc-M15" eventType="touchUpInside" id="7yj-Ox-Elm"/>
-                                    <action selector="showMenu" destination="Ahr-MP-jSd" eventType="touchUpInside" id="fqm-Ej-0kR"/>
-                                    <action selector="showMenu" destination="bmV-pB-Hvh" eventType="touchUpInside" id="nug-UC-zqQ"/>
-                                    <action selector="showMenu" destination="5lg-sS-vsm" eventType="touchUpInside" id="rU1-ox-sKy"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trj-3U-xhJ">
-                                <rect key="frame" x="-4" y="20" width="383" height="133"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="133"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.89803921568627454" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.92941176470588238" green="0.88627450980392153" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -752,33 +737,15 @@ A few battery tips to keep your phone alive throughout the event</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lEM-uY-Kko">
-                                <rect key="frame" x="12" y="20" width="35" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8ti-bf-CMu"/>
-                                    <constraint firstAttribute="width" constant="35" id="pFi-j0-1zl"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="menubutton.png">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <action selector="showMenu" destination="Ahr-MP-jSd" eventType="touchUpInside" id="Iug-KQ-ozh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.21176470588235294" green="0.89411764705882357" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Trj-3U-xhJ" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="58A-Vi-uC8"/>
-                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="Kbv-xN-QrB" secondAttribute="trailing" constant="-51" id="9L3-ji-TXC"/>
                             <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="vgc-ah-azs" secondAttribute="leading" id="ByA-Ah-R4O"/>
-                            <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="lEM-uY-Kko" secondAttribute="trailing" constant="-51" id="CtS-kk-T63"/>
                             <constraint firstItem="Trj-3U-xhJ" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="SUR-Qt-CkC"/>
                             <constraint firstItem="VjG-Ap-LfB" firstAttribute="top" secondItem="Trj-3U-xhJ" secondAttribute="bottom" constant="8" id="YLC-ig-ssP"/>
-                            <constraint firstItem="lEM-uY-Kko" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="YeH-25-F4o"/>
                             <constraint firstItem="Trj-3U-xhJ" firstAttribute="leading" secondItem="vgc-ah-azs" secondAttribute="leadingMargin" constant="-20" id="grQ-WX-yea"/>
-                            <constraint firstItem="Kbv-xN-QrB" firstAttribute="top" secondItem="bHT-gO-xvL" secondAttribute="bottom" id="gvn-ND-FWC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Trj-3U-xhJ" secondAttribute="trailing" constant="-20" id="hk0-cD-kMa"/>
                             <constraint firstAttribute="centerX" secondItem="Trj-3U-xhJ" secondAttribute="centerX" id="j7A-Em-X8K"/>
                             <constraint firstItem="VjG-Ap-LfB" firstAttribute="leading" secondItem="Trj-3U-xhJ" secondAttribute="leading" id="kFT-hi-Nlo"/>
@@ -791,11 +758,18 @@ A few battery tips to keep your phone alive throughout the event</string>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="jU7-La-M9u">
+                        <barButtonItem key="leftBarButtonItem" image="menubutton.png" id="DiA-Hn-3Nj">
+                            <connections>
+                                <action selector="showMenu" destination="Ahr-MP-jSd" id="YoQ-9K-xXO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-qk-bEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882.5" y="3396.5"/>
+            <point key="canvasLocation" x="-70.5" y="3396.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kHt-KW-7Jx">
@@ -835,6 +809,25 @@ A few battery tips to keep your phone alive throughout the event</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8d-TZ-TCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1038" y="2621"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aHB-FV-Zj1">
+            <objects>
+                <navigationController storyboardIdentifier="aboutNavController" automaticallyAdjustsScrollViewInsets="NO" id="ToM-tp-sZe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8mz-gl-QLu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ahr-MP-jSd" kind="relationship" relationship="rootViewController" id="RFa-5X-OSq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwq-Gw-tMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883" y="3396"/>
         </scene>
     </scenes>
     <resources>

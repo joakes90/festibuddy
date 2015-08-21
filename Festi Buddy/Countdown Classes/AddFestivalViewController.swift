@@ -51,7 +51,7 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
             let geoCoder: CLGeocoder = CLGeocoder()
             geoCoder.geocodeAddressString(self.locationTextField.text!, completionHandler: { (placeMarks, error) -> Void in
                 if (error != nil) {
-                    let alertController: UIAlertController = UIAlertController(title: "Failed to find location", message: "look up of the location \(self.locationTextField.text) has failed with the error \(error) please try setting the location again", preferredStyle: UIAlertControllerStyle.Alert)
+                    let alertController: UIAlertController = UIAlertController(title: "Failed to find location", message: "look up of the location \(self.locationTextField.text!) has failed with the error \(error!) please try setting the location again", preferredStyle: UIAlertControllerStyle.Alert)
                     let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                     alertController.addAction(alertAction)
                     self.delegate.managedObjectContext.deleteObject(self.festival!)
