@@ -666,6 +666,11 @@
                                 <action selector="showMenu" destination="0E0-Kc-M15" id="aWN-eT-Qcg"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="target.png" id="pT3-Xj-im7">
+                            <connections>
+                                <action selector="markLocation:" destination="0E0-Kc-M15" id="tPS-cT-QMZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -836,6 +841,7 @@ A few battery tips to keep your phone alive throughout the event</string>
         <image name="armenu.png" width="150" height="150"/>
         <image name="loadingScreen.png" width="1080" height="1920"/>
         <image name="menubutton.png" width="30" height="30"/>
+        <image name="target.png" width="30" height="30"/>
         <image name="timeBackground.png" width="1024" height="256"/>
     </resources>
 </document>

@@ -15,7 +15,7 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
     var closed: Bool = true
     let locationManager: CLLocationManager = CLLocationManager()
     var mapView: GMSMapView?
-    @IBOutlet weak var button: UIButton!
+    var tentMarker: GMSMarker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,39 +23,38 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.headingFilter = 45
+        self.locationManager.distanceFilter = 5
         self.locationManager.startUpdatingLocation()
         self.locationManager.startUpdatingHeading()
+        self.slidingViewController().resetTopViewAnimated(true)
+    }
+
+    override func viewDidAppear(animated: Bool) {
         if self.locationManager.location != nil {
             let camera = GMSCameraPosition.cameraWithLatitude((self.locationManager.location?.coordinate.latitude)!, longitude: (self.locationManager.location?.coordinate.longitude)!, zoom: Float(16.5))
             self.mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
             self.view = self.mapView
+            self.mapView?.myLocationEnabled = true
             self.mapView!.animateToBearing((self.locationManager.location?.course)!)
-        }
-//        self.mapview.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
-        
-        // look for a way to track location on a google map smialer to this
-        
-//        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") == nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") == nil{
-//            button.setTitle("Mark This Spot", forState: UIControlState.Normal)
-//        } else {
-//            button.setTitle("Clear This Spot", forState: UIControlState.Normal)
-        
-        //use this a refrence for the google maps pointer
             
-//            let marker: MKPointAnnotation = MKPointAnnotation()
-//            let latitude: Double = NSUserDefaults.standardUserDefaults().doubleForKey("tentLat")
-//            let longitude: Double = NSUserDefaults.standardUserDefaults().doubleForKey("tentLong")
-//            let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-//            marker.coordinate = location
-//            marker.title = "My Spot"
-//            mapview.addAnnotation(marker)
-
-//        }
-      //  locationUpdate = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "setRegion", userInfo: nil, repeats: true)
+        } else {
+            let camera = GMSCameraPosition.cameraWithLatitude(39.8282, longitude: -95.9095, zoom: 3.2)
+            self.mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+            self.view = self.mapView
+        }
         
-        self.slidingViewController().resetTopViewAnimated(true)
-    }
+        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") != nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") != nil {
+            let latitude: Double = NSUserDefaults.standardUserDefaults().doubleForKey("tentLat")
+            let longitude: Double = NSUserDefaults.standardUserDefaults().doubleForKey("tentLong")
+            let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+            let marker: GMSMarker = GMSMarker(position: location)
+            marker.map = self.mapView
+            
+        } else {
+            self.tentMarker?.map = nil
+        }
 
+    }
     
     @IBAction func showMenu(){
         if self.closed {
@@ -70,38 +69,46 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func markLocation(sender: AnyObject) {
         //find google maps code to place a marker like this
-        
-//        let marker: MKPointAnnotation = MKPointAnnotation()
-//        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") == nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") == nil{
-//            let latitude: Double = mapview.userLocation.coordinate.latitude as Double
-//            let longitude: Double = mapview.userLocation.coordinate.longitude as Double
-//            NSUserDefaults.standardUserDefaults().setDouble(latitude, forKey: "tentLat")
-//            NSUserDefaults.standardUserDefaults().setDouble(longitude, forKey: "tentLong")
-//            let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-//            marker.coordinate = location
-//            marker.title = "My Spot"
-//            mapview.addAnnotation(marker)
-//            button.setTitle("Clear This Spot", forState: UIControlState.Normal)
-//        }else{
-//            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "tentLat")
-//            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "tentLong")
-//            button.setTitle("Mark This Spot", forState: UIControlState.Normal)
-//            mapview.removeAnnotations(mapview.annotations)
-//        }
+        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") == nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") == nil && self.locationManager.location != nil{
+            let latitude: CLLocationDegrees = (self.locationManager.location?.coordinate.latitude)!
+            let longitude: CLLocationDegrees = (self.locationManager.location?.coordinate.longitude)!
+            NSUserDefaults.standardUserDefaults().setDouble(Double(latitude), forKey: "tentLat")
+            NSUserDefaults.standardUserDefaults().setDouble(Double(longitude), forKey: "tentLong")
+            let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            self.tentMarker = GMSMarker(position: location)
+            self.tentMarker!.appearAnimation = kGMSMarkerAnimationPop
+            self.tentMarker?.map = self.mapView
+        }else{
+            self.tentMarker?.map = nil
+            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "tentLat")
+            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "tentLong")
+            self.mapView?.clear()
+        }
     }
     
     
     //MARK: CLLocationManagerDelegate methods
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        //set the map view here later
+        if self.locationManager.location != nil {
+            self.mapView?.animateToZoom(Float(16.5))
+            self.mapView?.animateToLocation((self.locationManager.location?.coordinate)!)
+            self.mapView?.animateToBearing((self.locationManager.location?.course)!)
+            
+
+        }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        self.mapView?.animateToBearing((self.locationManager.location?.course)!)
+        if self.locationManager.location != nil {
+            self.mapView?.animateToBearing((self.locationManager.location?.course)!)
+        }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+        if self.locationManager.location != nil {
+            self.mapView?.animateToLocation((self.locationManager.location?.coordinate)!)
+        }
     }
+    
 }

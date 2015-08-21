@@ -12,6 +12,8 @@
 		D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9F1A994E3900CAE8D9 /* timeBackground.png */; };
 		D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */; };
 		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
+		D0421E511B86C5CD00E8E86C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E501B86C5CD00E8E86C /* target.png */; };
+		D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E521B86D6FB00E8E86C /* usermarker.png */; };
 		D05417B21A9AFE09004518F7 /* ACL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178C1A9AFE09004518F7 /* ACL.jpg */; };
 		D05417B31A9AFE09004518F7 /* ACLLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178D1A9AFE09004518F7 /* ACLLogo.jpg */; };
 		D05417B41A9AFE09004518F7 /* Bonnaroo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */; };
@@ -52,6 +54,7 @@
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
 		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
 		D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */; };
+		D067C1B91B86EE9C00692A9A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05FA7CF1B86EE190001E871 /* MapKit.framework */; };
 		D08AE54F1B85499500B4DECD /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AE54E1B85499500B4DECD /* ItemsController.swift */; };
 		D08C9AB81A9EB00D00025D87 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9AB71A9EB00D00025D87 /* Items.swift */; };
 		D08C9ABC1A9EB04400025D87 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C9ABA1A9EB04400025D87 /* ItemList.swift */; };
@@ -106,6 +109,9 @@
 		D0037B9F1A994E3900CAE8D9 /* timeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBackground.png; sourceTree = "<group>"; };
 		D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D03061D61A9FD66A002605D9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D0421E501B86C5CD00E8E86C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
+		D0421E521B86D6FB00E8E86C /* usermarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usermarker.png; sourceTree = "<group>"; };
+		D0421E561B86ECA800E8E86C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapKit.framework; sourceTree = "<group>"; };
 		D054178C1A9AFE09004518F7 /* ACL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACL.jpg; sourceTree = "<group>"; };
 		D054178D1A9AFE09004518F7 /* ACLLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACLLogo.jpg; sourceTree = "<group>"; };
 		D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bonnaroo.jpg; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
 		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
 		D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFestivalViewController.swift; sourceTree = "<group>"; };
+		D05FA7CF1B86EE190001E871 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = ../../../../Desktop/MapKit.framework; sourceTree = "<group>"; };
 		D08AE54E1B85499500B4DECD /* ItemsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
 		D08C9AB71A9EB00D00025D87 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		D08C9ABA1A9EB04400025D87 /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
@@ -164,7 +171,6 @@
 		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		D0AC5B9A1A9EC74A00174C21 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
-		D0B905181A9C2395000FE772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0C077061A9EF211008D64B9 /* TentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentViewController.swift; sourceTree = "<group>"; };
 		D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		D0D68D111A9C769200F21A5C /* countdownWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countdownWebView.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D067C1B91B86EE9C00692A9A /* MapKit.framework in Frameworks */,
 				D08DBF661B80235D003F12C2 /* CoreLocation.framework in Frameworks */,
 				D08C9AC11A9EB3F400025D87 /* CoreData.framework in Frameworks */,
 				20C7B268D06DB3576FA388DB /* libPods-Festi Buddy.a in Frameworks */,
@@ -214,6 +221,9 @@
 		05CBA790FA35DABDA1044991 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D05FA7CF1B86EE190001E871 /* MapKit.framework */,
+				D0421E561B86ECA800E8E86C /* MapKit.framework */,
+				D08C9AC01A9EB3F400025D87 /* CoreData.framework */,
 				D08DBF651B80235D003F12C2 /* CoreLocation.framework */,
 				60C5F2FB98015D863D0145F9 /* libPods-Festi Buddy.a */,
 			);
@@ -232,6 +242,8 @@
 		D0037B9D1A994E3900CAE8D9 /* App Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				D0421E521B86D6FB00E8E86C /* usermarker.png */,
+				D0421E501B86C5CD00E8E86C /* target.png */,
 				D0AC5B991A9EC74A00174C21 /* checked.png */,
 				D0AC5B9A1A9EC74A00174C21 /* unchecked.png */,
 				D08C9AC21A9EC52A00025D87 /* minusbutton.png */,
@@ -362,8 +374,6 @@
 		D0EF9C051A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXGroup;
 			children = (
-				D08C9AC01A9EB3F400025D87 /* CoreData.framework */,
-				D0B905181A9C2395000FE772 /* MapKit.framework */,
 				D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */,
 				D08AE54E1B85499500B4DECD /* ItemsController.swift */,
 				D08DBF5F1B7FFDFC003F12C2 /* CD files */,
@@ -539,6 +549,7 @@
 				D05417D01A9AFE09004518F7 /* tworld.jpeg in Resources */,
 				D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */,
 				D05417B81A9AFE09004518F7 /* Coachella.jpeg in Resources */,
+				D0421E511B86C5CD00E8E86C /* target.png in Resources */,
 				D05417C31A9AFE09004518F7 /* govlogo.jpeg in Resources */,
 				D05417BA1A9AFE09004518F7 /* counterpoint.jpeg in Resources */,
 				D05417CC1A9AFE09004518F7 /* sc.jpeg in Resources */,
@@ -549,6 +560,7 @@
 				D05417BC1A9AFE09004518F7 /* EDC.jpg in Resources */,
 				D05417CD1A9AFE09004518F7 /* scLogo.jpeg in Resources */,
 				D08DBF6A1B804CD8003F12C2 /* defaultTable.png in Resources */,
+				D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */,
 				D05417B51A9AFE09004518F7 /* BonnarooLogo.jpg in Resources */,
 				D05417C61A9AFE09004518F7 /* lolla.jpeg in Resources */,
 				D0EF9C1A1A98889F00850489 /* LaunchScreen.xib in Resources */,
@@ -758,6 +770,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Festi",
+					Buddy,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Festi Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oklasoft.$(PRODUCT_NAME:rfc1034identifier)";
@@ -773,6 +791,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Festi",
+					Buddy,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Festi Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oklasoft.$(PRODUCT_NAME:rfc1034identifier)";
