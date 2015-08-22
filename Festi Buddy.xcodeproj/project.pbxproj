@@ -14,6 +14,10 @@
 		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
 		D0421E511B86C5CD00E8E86C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E501B86C5CD00E8E86C /* target.png */; };
 		D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E521B86D6FB00E8E86C /* usermarker.png */; };
+		D053FDFD1B880EB0006FC34F /* CountdownInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */; };
+		D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FDFF1B883FB1006FC34F /* FestivalsController.swift */; };
+		D053FE021B884039006FC34F /* Festivals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FE011B884039006FC34F /* Festivals.swift */; };
+		D053FE041B884764006FC34F /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D053FE031B884764006FC34F /* festsPlist.plist */; };
 		D05417B21A9AFE09004518F7 /* ACL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178C1A9AFE09004518F7 /* ACL.jpg */; };
 		D05417B31A9AFE09004518F7 /* ACLLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178D1A9AFE09004518F7 /* ACLLogo.jpg */; };
 		D05417B41A9AFE09004518F7 /* Bonnaroo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */; };
@@ -68,6 +72,14 @@
 		D08DBF6A1B804CD8003F12C2 /* defaultTable.png in Resources */ = {isa = PBXBuildFile; fileRef = D08DBF691B804CD8003F12C2 /* defaultTable.png */; };
 		D08DBF6C1B804E76003F12C2 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = D08DBF6B1B804E76003F12C2 /* default.png */; };
 		D08DBF6E1B8060FA003F12C2 /* FestivalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */; };
+		D090AF941B87DC310011F91A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D090AF921B87DC310011F91A /* Interface.storyboard */; };
+		D090AF961B87DC310011F91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D090AF951B87DC310011F91A /* Assets.xcassets */; };
+		D090AF9D1B87DC310011F91A /* FestiBuddy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA11B87DC310011F91A /* InterfaceController.swift */; };
+		D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */; };
+		D090AFA61B87DC310011F91A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA51B87DC310011F91A /* ComplicationController.swift */; };
+		D090AFA81B87DC310011F91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D090AFA71B87DC310011F91A /* Assets.xcassets */; };
+		D090AFAC1B87DC310011F91A /* FestiBuddy.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D090AF901B87DC310011F91A /* FestiBuddy.app */; };
 		D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */; };
 		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
 		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
@@ -92,6 +104,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D090AF9E1B87DC310011F91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EF9BFB1A98889F00850489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D090AF9B1B87DC310011F91A;
+			remoteInfo = "FestiBuddy Extension";
+		};
+		D090AFAA1B87DC310011F91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EF9BFB1A98889F00850489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D090AF8F1B87DC310011F91A;
+			remoteInfo = FestiBuddy;
+		};
 		D0EF9C201A98889F00850489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0EF9BFB1A98889F00850489 /* Project object */;
@@ -100,6 +126,31 @@
 			remoteInfo = "Festi Buddy";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D090AFB21B87DC310011F91A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D090AF9D1B87DC310011F91A /* FestiBuddy Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D090AFB41B87DC310011F91A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D090AFAC1B87DC310011F91A /* FestiBuddy.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3018CDBD34874B52EE07A8B6 /* Pods-Festi Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Festi Buddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Festi Buddy/Pods-Festi Buddy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +163,10 @@
 		D0421E501B86C5CD00E8E86C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
 		D0421E521B86D6FB00E8E86C /* usermarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usermarker.png; sourceTree = "<group>"; };
 		D0421E561B86ECA800E8E86C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapKit.framework; sourceTree = "<group>"; };
+		D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownInterfaceController.swift; sourceTree = "<group>"; };
+		D053FDFF1B883FB1006FC34F /* FestivalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalsController.swift; sourceTree = "<group>"; };
+		D053FE011B884039006FC34F /* Festivals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festivals.swift; sourceTree = "<group>"; };
+		D053FE031B884764006FC34F /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = "<group>"; };
 		D054178C1A9AFE09004518F7 /* ACL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACL.jpg; sourceTree = "<group>"; };
 		D054178D1A9AFE09004518F7 /* ACLLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACLLogo.jpg; sourceTree = "<group>"; };
 		D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bonnaroo.jpg; sourceTree = "<group>"; };
@@ -166,6 +221,16 @@
 		D08DBF691B804CD8003F12C2 /* defaultTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultTable.png; sourceTree = "<group>"; };
 		D08DBF6B1B804E76003F12C2 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		D08DBF6D1B8060FA003F12C2 /* FestivalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalController.swift; sourceTree = "<group>"; };
+		D090AF901B87DC310011F91A /* FestiBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestiBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D090AF931B87DC310011F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D090AF951B87DC310011F91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D090AF971B87DC310011F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FestiBuddy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D090AFA11B87DC310011F91A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D090AFA51B87DC310011F91A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D090AFA71B87DC310011F91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D090AFA91B87DC310011F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceController.h; path = ../AppearanceController.h; sourceTree = "<group>"; };
 		D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearanceController.m; path = ../AppearanceController.m; sourceTree = "<group>"; };
 		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
@@ -197,6 +262,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D090AF991B87DC310011F91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0EF9C001A98889F00850489 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +327,15 @@
 			);
 			path = "App Artwork";
 			sourceTree = SOURCE_ROOT;
+		};
+		D053FDFB1B880E63006FC34F /* Interface Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D090AFA11B87DC310011F91A /* InterfaceController.swift */,
+				D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */,
+			);
+			name = "Interface Controllers";
+			sourceTree = "<group>";
 		};
 		D054178B1A9AFE09004518F7 /* Fest Images and logos */ = {
 			isa = PBXGroup;
@@ -323,6 +404,31 @@
 			name = "CD files";
 			sourceTree = "<group>";
 		};
+		D090AF911B87DC310011F91A /* FestiBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				D090AF921B87DC310011F91A /* Interface.storyboard */,
+				D090AF951B87DC310011F91A /* Assets.xcassets */,
+				D090AF971B87DC310011F91A /* Info.plist */,
+			);
+			path = FestiBuddy;
+			sourceTree = "<group>";
+		};
+		D090AFA01B87DC310011F91A /* FestiBuddy Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D053FDFF1B883FB1006FC34F /* FestivalsController.swift */,
+				D053FE011B884039006FC34F /* Festivals.swift */,
+				D053FDFB1B880E63006FC34F /* Interface Controllers */,
+				D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */,
+				D090AFA51B87DC310011F91A /* ComplicationController.swift */,
+				D090AFA71B87DC310011F91A /* Assets.xcassets */,
+				D053FE031B884764006FC34F /* festsPlist.plist */,
+				D090AFA91B87DC310011F91A /* Info.plist */,
+			);
+			path = "FestiBuddy Extension";
+			sourceTree = "<group>";
+		};
 		D0C077051A9EF1D9008D64B9 /* Tent finder Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +462,8 @@
 			children = (
 				D0EF9C051A98889F00850489 /* Festi Buddy */,
 				D0EF9C221A98889F00850489 /* Festi BuddyTests */,
+				D090AF911B87DC310011F91A /* FestiBuddy */,
+				D090AFA01B87DC310011F91A /* FestiBuddy Extension */,
 				D0EF9C041A98889F00850489 /* Products */,
 				64C5AF5E9C21DD85736DFA0B /* Pods */,
 				05CBA790FA35DABDA1044991 /* Frameworks */,
@@ -367,6 +475,8 @@
 			children = (
 				D0EF9C031A98889F00850489 /* Festi Buddy.app */,
 				D0EF9C1F1A98889F00850489 /* Festi BuddyTests.xctest */,
+				D090AF901B87DC310011F91A /* FestiBuddy.app */,
+				D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,6 +541,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D090AF8F1B87DC310011F91A /* FestiBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D090AFB31B87DC310011F91A /* Build configuration list for PBXNativeTarget "FestiBuddy" */;
+			buildPhases = (
+				D090AF8E1B87DC310011F91A /* Resources */,
+				D090AFB21B87DC310011F91A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D090AF9F1B87DC310011F91A /* PBXTargetDependency */,
+			);
+			name = FestiBuddy;
+			productName = FestiBuddy;
+			productReference = D090AF901B87DC310011F91A /* FestiBuddy.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D090AF9B1B87DC310011F91A /* FestiBuddy Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D090AFB11B87DC310011F91A /* Build configuration list for PBXNativeTarget "FestiBuddy Extension" */;
+			buildPhases = (
+				D090AF981B87DC310011F91A /* Sources */,
+				D090AF991B87DC310011F91A /* Frameworks */,
+				D090AF9A1B87DC310011F91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FestiBuddy Extension";
+			productName = "FestiBuddy Extension";
+			productReference = D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		D0EF9C021A98889F00850489 /* Festi Buddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0EF9C291A98889F00850489 /* Build configuration list for PBXNativeTarget "Festi Buddy" */;
@@ -440,10 +584,12 @@
 				D0EF9C001A98889F00850489 /* Frameworks */,
 				D0EF9C011A98889F00850489 /* Resources */,
 				06B2D21C27AA291A533FE3BD /* Copy Pods Resources */,
+				D090AFB41B87DC310011F91A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D090AFAB1B87DC310011F91A /* PBXTargetDependency */,
 			);
 			name = "Festi Buddy";
 			productName = "Festi Buddy";
@@ -479,6 +625,12 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Oklasoft;
 				TargetAttributes = {
+					D090AF8F1B87DC310011F91A = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					D090AF9B1B87DC310011F91A = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					D0EF9C021A98889F00850489 = {
 						CreatedOnToolsVersion = 6.1.1;
 						SystemCapabilities = {
@@ -508,11 +660,31 @@
 			targets = (
 				D0EF9C021A98889F00850489 /* Festi Buddy */,
 				D0EF9C1E1A98889F00850489 /* Festi BuddyTests */,
+				D090AF8F1B87DC310011F91A /* FestiBuddy */,
+				D090AF9B1B87DC310011F91A /* FestiBuddy Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D090AF8E1B87DC310011F91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D090AF961B87DC310011F91A /* Assets.xcassets in Resources */,
+				D090AF941B87DC310011F91A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D090AF9A1B87DC310011F91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D090AFA81B87DC310011F91A /* Assets.xcassets in Resources */,
+				D053FE041B884764006FC34F /* festsPlist.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0EF9C011A98889F00850489 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -618,6 +790,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D090AF981B87DC310011F91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */,
+				D053FE021B884039006FC34F /* Festivals.swift in Sources */,
+				D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */,
+				D090AFA61B87DC310011F91A /* ComplicationController.swift in Sources */,
+				D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */,
+				D053FDFD1B880EB0006FC34F /* CountdownInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0EF9BFF1A98889F00850489 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -658,6 +843,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D090AF9F1B87DC310011F91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D090AF9B1B87DC310011F91A /* FestiBuddy Extension */;
+			targetProxy = D090AF9E1B87DC310011F91A /* PBXContainerItemProxy */;
+		};
+		D090AFAB1B87DC310011F91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D090AF8F1B87DC310011F91A /* FestiBuddy */;
+			targetProxy = D090AFAA1B87DC310011F91A /* PBXContainerItemProxy */;
+		};
 		D0EF9C211A98889F00850489 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0EF9C021A98889F00850489 /* Festi Buddy */;
@@ -666,6 +861,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D090AF921B87DC310011F91A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D090AF931B87DC310011F91A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		D0EF9C131A98889F00850489 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -685,6 +888,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D090AFAD1B87DC310011F91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = FestiBuddy_Extension;
+				INFOPLIST_FILE = FestiBuddy/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oklasoft.Festi-Buddy.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		D090AFAE1B87DC310011F91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = FestiBuddy_Extension;
+				INFOPLIST_FILE = FestiBuddy/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oklasoft.Festi-Buddy.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		D090AFAF1B87DC310011F91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "FestiBuddy Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oklasoft.Festi-Buddy.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		D090AFB01B87DC310011F91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "FestiBuddy Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oklasoft.Festi-Buddy.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		D0EF9C271A98889F00850489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -844,6 +1125,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D090AFB11B87DC310011F91A /* Build configuration list for PBXNativeTarget "FestiBuddy Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D090AFAF1B87DC310011F91A /* Debug */,
+				D090AFB01B87DC310011F91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D090AFB31B87DC310011F91A /* Build configuration list for PBXNativeTarget "FestiBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D090AFAD1B87DC310011F91A /* Debug */,
+				D090AFAE1B87DC310011F91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0EF9BFE1A98889F00850489 /* Build configuration list for PBXProject "Festi Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

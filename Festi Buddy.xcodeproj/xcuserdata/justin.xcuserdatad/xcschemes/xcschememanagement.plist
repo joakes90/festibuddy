@@ -4,14 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Complication - FestiBuddy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Festi Buddy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FestiBuddy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D090AF8F1B87DC310011F91A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D0EF9C021A98889F00850489</key>
 		<dict>
 			<key>primary</key>
