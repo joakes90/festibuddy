@@ -11,6 +11,10 @@
 		D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */; };
 		D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9F1A994E3900CAE8D9 /* timeBackground.png */; };
 		D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */; };
+		D00903B21B8A782C00FD0E83 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D00903B01B8A782C00FD0E83 /* Model.xcdatamodeld */; };
+		D00903B91B8A78E400FD0E83 /* Festival+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00903B71B8A78E400FD0E83 /* Festival+CoreDataProperties.swift */; };
+		D00903BA1B8A78E400FD0E83 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00903B81B8A78E400FD0E83 /* Festival.swift */; };
+		D00903BE1B8A791D00FD0E83 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = D00903BD1B8A791D00FD0E83 /* Stack.m */; };
 		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
 		D0421E511B86C5CD00E8E86C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E501B86C5CD00E8E86C /* target.png */; };
 		D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E521B86D6FB00E8E86C /* usermarker.png */; };
@@ -159,6 +163,12 @@
 		D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.png; sourceTree = "<group>"; };
 		D0037B9F1A994E3900CAE8D9 /* timeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBackground.png; sourceTree = "<group>"; };
 		D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D00903B11B8A782C00FD0E83 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D00903B71B8A78E400FD0E83 /* Festival+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Festival+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D00903B81B8A78E400FD0E83 /* Festival.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
+		D00903BB1B8A791C00FD0E83 /* FestiBuddy Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FestiBuddy Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		D00903BC1B8A791D00FD0E83 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		D00903BD1B8A791D00FD0E83 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		D03061D61A9FD66A002605D9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D0421E501B86C5CD00E8E86C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
 		D0421E521B86D6FB00E8E86C /* usermarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usermarker.png; sourceTree = "<group>"; };
@@ -328,6 +338,19 @@
 			path = "App Artwork";
 			sourceTree = SOURCE_ROOT;
 		};
+		D00903A81B8A769D00FD0E83 /* CD Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00903B71B8A78E400FD0E83 /* Festival+CoreDataProperties.swift */,
+				D00903B81B8A78E400FD0E83 /* Festival.swift */,
+				D00903B01B8A782C00FD0E83 /* Model.xcdatamodeld */,
+				D00903BC1B8A791D00FD0E83 /* Stack.h */,
+				D00903BD1B8A791D00FD0E83 /* Stack.m */,
+				D00903BB1B8A791C00FD0E83 /* FestiBuddy Extension-Bridging-Header.h */,
+			);
+			name = "CD Files";
+			sourceTree = "<group>";
+		};
 		D053FDFB1B880E63006FC34F /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +440,7 @@
 		D090AFA01B87DC310011F91A /* FestiBuddy Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D00903A81B8A769D00FD0E83 /* CD Files */,
 				D053FDFF1B883FB1006FC34F /* FestivalsController.swift */,
 				D053FE011B884039006FC34F /* Festivals.swift */,
 				D053FDFB1B880E63006FC34F /* Interface Controllers */,
@@ -797,9 +821,13 @@
 				D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */,
 				D053FE021B884039006FC34F /* Festivals.swift in Sources */,
 				D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */,
+				D00903B21B8A782C00FD0E83 /* Model.xcdatamodeld in Sources */,
 				D090AFA61B87DC310011F91A /* ComplicationController.swift in Sources */,
 				D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */,
 				D053FDFD1B880EB0006FC34F /* CountdownInterfaceController.swift in Sources */,
+				D00903B91B8A78E400FD0E83 /* Festival+CoreDataProperties.swift in Sources */,
+				D00903BE1B8A791D00FD0E83 /* Stack.m in Sources */,
+				D00903BA1B8A78E400FD0E83 /* Festival.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,6 +960,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -941,6 +970,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FestiBuddy Extension/FestiBuddy Extension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -951,6 +981,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = YES;
@@ -961,6 +992,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FestiBuddy Extension/FestiBuddy Extension-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1173,6 +1205,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		D00903B01B8A782C00FD0E83 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D00903B11B8A782C00FD0E83 /* Model.xcdatamodel */,
+			);
+			currentVersion = D00903B11B8A782C00FD0E83 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		D0EF9C0D1A98889F00850489 /* Festi_Buddy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

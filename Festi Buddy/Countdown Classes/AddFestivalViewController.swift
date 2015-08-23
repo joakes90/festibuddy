@@ -70,6 +70,9 @@ class AddFestivalViewController: UIViewController, UITextFieldDelegate {
                     
                     let alertController: UIAlertController = UIAlertController(title: "Save successful", message: "New festival named \(self.titleTextField.text!) successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
                     let alertAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                        
+                        let newFestDictionary: [String: AnyObject] = ["Festival": "Festival", "title": (self.festival?.title)!, "date":self.datePicker.date]
+                        self.delegate .updateWatchUserDefaultsWithDictionary(newFestDictionary)
                         self.performSegueWithIdentifier("unwindFromAddFestVC", sender: self)
                     })
                     alertController.addAction(alertAction)

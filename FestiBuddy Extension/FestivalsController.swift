@@ -29,22 +29,22 @@ class FestivalController: NSObject {
         
         // uncomment and fix this code when access to custom fests is added
         
-//        let fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Festival")
-//        let customFests: [Festival] = try! delegate.managedObjectContext.executeFetchRequest(fetchRequest) as! [Festival]
+        let fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Festival")
+        let customFests: [Festival] = try! Stack.sharedInstance().managedObjectContext.executeFetchRequest(fetchRequest) as! [Festival]
         
         self.festivals = []
         
-//        for fest: Festival in customFests {
-//            // converting date to compatable string
-//            let dateFormater: NSDateFormatter = NSDateFormatter()
-//            dateFormater.dateFormat = "yyyy-MM-dd"
-//            let dateString: String = dateFormater.stringFromDate(fest.date)
-//            
-//            let convertedFest: Festivals = Festivals(title: fest.title, date: dateString, lat: fest.latitude, long: fest.longitude)
-//            
-//            self.festivals.append(convertedFest)
-//        }
-//        
+        for fest: Festival in customFests {
+            // converting date to compatable string
+            let dateFormater: NSDateFormatter = NSDateFormatter()
+            dateFormater.dateFormat = "yyyy-MM-dd"
+            let dateString: String = dateFormater.stringFromDate(fest.date!)
+            
+            let convertedFest: Festivals = Festivals(title: fest.title!, date: dateString, lat: fest.latitude!, long: fest.longitude!)
+            
+            self.festivals.append(convertedFest)
+        }
+        
         
         
         for i in plistArray{

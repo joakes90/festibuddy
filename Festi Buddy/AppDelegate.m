@@ -156,7 +156,7 @@ NSString *kOldModelDeleted = @"oldModelDeleted";
 #pragma mark WatchConnectivity deleagate and support methods
 
 -(void)updateWatchUserDefaultsWithDictionary:(NSDictionary *)dictionary {
-    [self.session updateApplicationContext:dictionary error:nil];
+    [self.session transferUserInfo:dictionary];
 }
 
 -(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext {
