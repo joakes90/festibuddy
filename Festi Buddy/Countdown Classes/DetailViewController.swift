@@ -67,6 +67,7 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
 
     let defaultAction: UIAlertAction = UIAlertAction(title: "Set as Default", style: UIAlertActionStyle.Default) { (action) -> Void in
         NSUserDefaults.standardUserDefaults().setValue(self.fest?.title, forKey: "default_fest")
+        self.delegate.updateWatchUserDefaultsWithDictionary(["default_fest": self.fest?.title as! String])
     }
     
     

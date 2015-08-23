@@ -9,9 +9,11 @@
 #import "AppDelegate.h"
 #import "AppearanceController.h"
 #import <GoogleMaps/GMSServices.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <WCSessionDelegate>
 
+@property (strong, nonatomic) WCSession *session;
 @end
 
 @implementation AppDelegate
@@ -37,6 +39,12 @@ NSString *kOldModelDeleted = @"oldModelDeleted";
         
         [defaults setBool:YES forKey:kOldModelDeleted];
     }
+    if ([WCSession isSupported]) {
+        self.session = [WCSession defaultSession];
+        self.session.delegate = self;
+        [self.session activateSession];
+    }
+    
     [AppearanceController setupAppearance];
     return YES;
 }
@@ -142,6 +150,18 @@ NSString *kOldModelDeleted = @"oldModelDeleted";
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+    }
+}
+
+#pragma mark WatchConnectivity deleagate and support methods
+
+-(void)updateWatchUserDefaultsWithDictionary:(NSDictionary *)dictionary {
+    [self.session updateApplicationContext:dictionary error:nil];
+}
+
+-(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext {
+    if (applicationContext[@"default_fest"]) {
+        [[NSUserDefaults standardUserDefaults] setValue:applicationContext[@"default_fest"] forKey:@"default_fest"];
     }
 }
 

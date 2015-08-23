@@ -15,10 +15,13 @@ class CountdownInterfaceController: WKInterfaceController {
     @IBOutlet var festPicker: WKInterfacePicker!
     @IBOutlet var infoLabel: WKInterfaceLabel!
     var indexOfVisableFest: Int = 0
+    let delegate: ExtensionDelegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+        if NSUserDefaults.standardUserDefaults().stringForKey("default_fest") != nil {
+            self.indexOfVisableFest = self.findIndexForFestNamed(NSUserDefaults.standardUserDefaults().stringForKey("default_fest")!)
+        }
     }
 
     override func willActivate() {
@@ -31,17 +34,13 @@ class CountdownInterfaceController: WKInterfaceController {
             pickerItems.append(pickerItem)
         }
         self.festPicker.setItems(pickerItems)
-        if FestivalController.sharedInstance.festivals[0].days <= 0{
-            self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[0].title) is over")
+        if FestivalController.sharedInstance.festivals[indexOfVisableFest].days <= 0{
+            self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[indexOfVisableFest].title) is over")
         } else {
-            self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[0].title) happening in \(FestivalController.sharedInstance.festivals[0].days + 1)")
+            self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[indexOfVisableFest].title) happening in \(FestivalController.sharedInstance.festivals[0].days + 1)")
         }
-        
-        if NSUserDefaults.standardUserDefaults().stringForKey("default_fest") != nil {
-            let index: Int = self.findIndexForFestNamed(NSUserDefaults.standardUserDefaults().stringForKey("default_fest")!)
-            self.festPicker.setSelectedItemIndex(index)
+            self.festPicker.setSelectedItemIndex(self.indexOfVisableFest)
         }
-    }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
@@ -61,6 +60,8 @@ class CountdownInterfaceController: WKInterfaceController {
     }
     @IBAction func setDefaultFest() {
         NSUserDefaults.standardUserDefaults().setValue(FestivalController.sharedInstance.festivals[self.indexOfVisableFest].title, forKey: "default_fest")
+        let title = FestivalController.sharedInstance.festivals[indexOfVisableFest].title
+        self.delegate.updateWatchUserDefaultsWith(["default_fest": title])
     }
     
     func findIndexForFestNamed(title: String)-> Int {
