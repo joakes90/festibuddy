@@ -18,6 +18,7 @@
 		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
 		D0421E511B86C5CD00E8E86C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E501B86C5CD00E8E86C /* target.png */; };
 		D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E521B86D6FB00E8E86C /* usermarker.png */; };
+		D04256C71B8AEA3900831D0C /* TableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04256C61B8AEA3900831D0C /* TableInterfaceController.swift */; };
 		D053FDFD1B880EB0006FC34F /* CountdownInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */; };
 		D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FDFF1B883FB1006FC34F /* FestivalsController.swift */; };
 		D053FE021B884039006FC34F /* Festivals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FE011B884039006FC34F /* Festivals.swift */; };
@@ -90,6 +91,9 @@
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
 		D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C077061A9EF211008D64B9 /* TentViewController.swift */; };
 		D0C5D6321B859EBE00F9D56C /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */; };
+		D0CE3C011B8BB89600E907D9 /* Items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE3BFF1B8BB89600E907D9 /* Items+CoreDataProperties.swift */; };
+		D0CE3C021B8BB89600E907D9 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE3C001B8BB89600E907D9 /* Items.swift */; };
+		D0CE3C041B8BB8D500E907D9 /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE3C031B8BB8D500E907D9 /* ItemsController.swift */; };
 		D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68D111A9C769200F21A5C /* countdownWebView.swift */; };
 		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
@@ -173,6 +177,7 @@
 		D0421E501B86C5CD00E8E86C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
 		D0421E521B86D6FB00E8E86C /* usermarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usermarker.png; sourceTree = "<group>"; };
 		D0421E561B86ECA800E8E86C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapKit.framework; sourceTree = "<group>"; };
+		D04256C61B8AEA3900831D0C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
 		D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownInterfaceController.swift; sourceTree = "<group>"; };
 		D053FDFF1B883FB1006FC34F /* FestivalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalsController.swift; sourceTree = "<group>"; };
 		D053FE011B884039006FC34F /* Festivals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festivals.swift; sourceTree = "<group>"; };
@@ -248,6 +253,9 @@
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
 		D0C077061A9EF211008D64B9 /* TentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentViewController.swift; sourceTree = "<group>"; };
 		D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		D0CE3BFF1B8BB89600E907D9 /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0CE3C001B8BB89600E907D9 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		D0CE3C031B8BB8D500E907D9 /* ItemsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
 		D0D68D111A9C769200F21A5C /* countdownWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countdownWebView.swift; sourceTree = "<group>"; };
 		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +349,8 @@
 		D00903A81B8A769D00FD0E83 /* CD Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE3BFF1B8BB89600E907D9 /* Items+CoreDataProperties.swift */,
+				D0CE3C001B8BB89600E907D9 /* Items.swift */,
 				D00903B71B8A78E400FD0E83 /* Festival+CoreDataProperties.swift */,
 				D00903B81B8A78E400FD0E83 /* Festival.swift */,
 				D00903B01B8A782C00FD0E83 /* Model.xcdatamodeld */,
@@ -356,6 +366,7 @@
 			children = (
 				D090AFA11B87DC310011F91A /* InterfaceController.swift */,
 				D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */,
+				D04256C61B8AEA3900831D0C /* TableInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -442,6 +453,7 @@
 			children = (
 				D00903A81B8A769D00FD0E83 /* CD Files */,
 				D053FDFF1B883FB1006FC34F /* FestivalsController.swift */,
+				D0CE3C031B8BB8D500E907D9 /* ItemsController.swift */,
 				D053FE011B884039006FC34F /* Festivals.swift */,
 				D053FDFB1B880E63006FC34F /* Interface Controllers */,
 				D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */,
@@ -818,16 +830,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CE3C041B8BB8D500E907D9 /* ItemsController.swift in Sources */,
 				D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */,
 				D053FE021B884039006FC34F /* Festivals.swift in Sources */,
 				D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */,
 				D00903B21B8A782C00FD0E83 /* Model.xcdatamodeld in Sources */,
 				D090AFA61B87DC310011F91A /* ComplicationController.swift in Sources */,
 				D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */,
+				D0CE3C021B8BB89600E907D9 /* Items.swift in Sources */,
+				D0CE3C011B8BB89600E907D9 /* Items+CoreDataProperties.swift in Sources */,
 				D053FDFD1B880EB0006FC34F /* CountdownInterfaceController.swift in Sources */,
 				D00903B91B8A78E400FD0E83 /* Festival+CoreDataProperties.swift in Sources */,
 				D00903BE1B8A791D00FD0E83 /* Stack.m in Sources */,
 				D00903BA1B8A78E400FD0E83 /* Festival.swift in Sources */,
+				D04256C71B8AEA3900831D0C /* TableInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,6 +32,9 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         } catch {
             print("failed to save new item to core data store")
         }
+//          adding new item to apple watch
+        let itemDictionary: [String: AnyObject] = ["Item": customItem.name, "have": false]
+        delegate.updateWatchUserDefaultsWithDictionary(itemDictionary)
         
         self.itemNameTextField.resignFirstResponder()
         self.dismissViewControllerAnimated(true, completion: nil)

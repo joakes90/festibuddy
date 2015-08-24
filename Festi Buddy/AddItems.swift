@@ -86,6 +86,12 @@ class AddItems: UITableViewController {
                 print("failed to save object")
             }
             self.tableView.reloadData()
+            
+            //send selsected item to watch
+            let itemName = self.tableItems[indexPath.row - 1] as! String
+            let itemDictionary: [String: AnyObject] = ["Item": itemName, "have": false]
+            delegate.updateWatchUserDefaultsWithDictionary(itemDictionary)
+            
         } else {
         let fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Items")
         fetchRequest.predicate = NSPredicate(format: "name = %@", argumentArray: [tableItems[indexPath.row - 1]])
