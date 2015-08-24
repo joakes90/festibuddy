@@ -110,5 +110,7 @@ class Festivals {
         self.detailImageString = "default.png"
         self.lineup = ""
         
+        self.update()
+        
     }
 }

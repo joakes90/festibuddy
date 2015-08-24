@@ -161,6 +161,8 @@ class DetailViewController: UIViewController, UIAlertViewDelegate {
         }
            
     }
+        let dictionary = ["removeFest": (festToDelete?.title)!]
+        delegate.updateWatchUserDefaultsWithDictionary(dictionary)
         delegate.managedObjectContext.deleteObject(festToDelete!)
         do {
             try delegate.managedObjectContext.save()
