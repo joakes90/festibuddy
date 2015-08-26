@@ -106,11 +106,18 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
 
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        let managedObject: NSManagedObject = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+        let managedObject: Items = fetchedResultsController.objectAtIndexPath(indexPath) as! Items
+        //removing item from apple watch
+        
+        let dictionary: [String: AnyObject] = ["removeItem":managedObject.name]
+        delegate.updateWatchUserDefaultsWithDictionary(dictionary)
+        
+        // updating managed object context
         context?.deleteObject(managedObject)
         do {
             try context?.save()
-        } catch _ {
+        } catch {
+            print(error)
         }
     }
 

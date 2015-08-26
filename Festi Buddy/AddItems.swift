@@ -101,6 +101,11 @@ class AddItems: UITableViewController {
         } catch {
             print("failed to fetch")
         }
+            // removing item from apple watch
+            
+            let dictionary: [String: AnyObject] = ["removeItem":(objectToRemove?.name)!]
+            delegate.updateWatchUserDefaultsWithDictionary(dictionary)
+            
             delegate.managedObjectContext.deleteObject(objectToRemove!)
             self.tableView.reloadData()
         }

@@ -25,6 +25,8 @@ class TableInterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
+        ItemsController.sharedInstance.updateItems()
+        
         self.table.setNumberOfRows(ItemsController.sharedInstance.items.count, withRowType: "wkRow")
         
         for var row: Int = 0; row < ItemsController.sharedInstance.items.count; row++ {

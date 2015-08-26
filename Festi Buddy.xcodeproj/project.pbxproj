@@ -83,7 +83,6 @@
 		D090AF9D1B87DC310011F91A /* FestiBuddy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA11B87DC310011F91A /* InterfaceController.swift */; };
 		D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */; };
-		D090AFA61B87DC310011F91A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA51B87DC310011F91A /* ComplicationController.swift */; };
 		D090AFA81B87DC310011F91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D090AFA71B87DC310011F91A /* Assets.xcassets */; };
 		D090AFAC1B87DC310011F91A /* FestiBuddy.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D090AF901B87DC310011F91A /* FestiBuddy.app */; };
 		D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */; };
@@ -839,7 +838,6 @@
 				D053FE021B884039006FC34F /* Festivals.swift in Sources */,
 				D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */,
 				D00903B21B8A782C00FD0E83 /* Model.xcdatamodeld in Sources */,
-				D090AFA61B87DC310011F91A /* ComplicationController.swift in Sources */,
 				D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */,
 				D0CE3C021B8BB89600E907D9 /* Items.swift in Sources */,
 				D0CE3C011B8BB89600E907D9 /* Items+CoreDataProperties.swift in Sources */,
@@ -979,7 +977,6 @@
 		D090AFAF1B87DC310011F91A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = YES;
@@ -1000,7 +997,6 @@
 		D090AFB01B87DC310011F91A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
