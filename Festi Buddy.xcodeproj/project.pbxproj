@@ -88,6 +88,7 @@
 		D0A13DB01B17A43E00A719E8 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */; };
 		D0AC5B9B1A9EC74A00174C21 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B991A9EC74A00174C21 /* checked.png */; };
 		D0AC5B9C1A9EC74A00174C21 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AC5B9A1A9EC74A00174C21 /* unchecked.png */; };
+		D0B2815F1B8D71DF00D5A2DC /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2815E1B8D71DF00D5A2DC /* MapInterfaceController.swift */; };
 		D0B905171A9BE375000FE772 /* armenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B905161A9BE375000FE772 /* armenu.png */; };
 		D0C077071A9EF211008D64B9 /* TentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C077061A9EF211008D64B9 /* TentViewController.swift */; };
 		D0C5D6321B859EBE00F9D56C /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */; };
@@ -251,6 +252,7 @@
 		D0A13DAF1B17A43E00A719E8 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppearanceController.m; path = ../AppearanceController.m; sourceTree = "<group>"; };
 		D0AC5B991A9EC74A00174C21 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		D0AC5B9A1A9EC74A00174C21 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		D0B2815E1B8D71DF00D5A2DC /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
 		D0B905161A9BE375000FE772 /* armenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armenu.png; sourceTree = "<group>"; };
 		D0C077061A9EF211008D64B9 /* TentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentViewController.swift; sourceTree = "<group>"; };
 		D0C5D6311B859EBE00F9D56C /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */,
 				D04256C61B8AEA3900831D0C /* TableInterfaceController.swift */,
 				D019E1171B8C122600BA4030 /* RowController.swift */,
+				D0B2815E1B8D71DF00D5A2DC /* MapInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				D053FE021B884039006FC34F /* Festivals.swift in Sources */,
 				D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */,
 				D00903B21B8A782C00FD0E83 /* Model.xcdatamodeld in Sources */,
+				D0B2815F1B8D71DF00D5A2DC /* MapInterfaceController.swift in Sources */,
 				D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */,
 				D0CE3C021B8BB89600E907D9 /* Items.swift in Sources */,
 				D0CE3C011B8BB89600E907D9 /* Items+CoreDataProperties.swift in Sources */,

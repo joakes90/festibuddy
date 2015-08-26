@@ -16,6 +16,7 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager: CLLocationManager = CLLocationManager()
     var mapView: GMSMapView?
     var tentMarker: GMSMarker?
+    let delegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,7 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
             self.view = self.mapView
         }
         
-        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") != nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") != nil {
+        if NSUserDefaults.standardUserDefaults().doubleForKey("tentLat") != 0.0 && NSUserDefaults.standardUserDefaults().doubleForKey("tentLong") != 0.0 {
             let latitude: Double = NSUserDefaults.standardUserDefaults().doubleForKey("tentLat")
             let longitude: Double = NSUserDefaults.standardUserDefaults().doubleForKey("tentLong")
             let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
@@ -68,8 +69,8 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func markLocation(sender: AnyObject) {
-        //find google maps code to place a marker like this
-        if NSUserDefaults.standardUserDefaults().valueForKey("tentLat") == nil && NSUserDefaults.standardUserDefaults().valueForKey("tentLong") == nil && self.locationManager.location != nil{
+        
+        if NSUserDefaults.standardUserDefaults().doubleForKey("tentLat") == 0.0 && NSUserDefaults.standardUserDefaults().doubleForKey("tentLong") == 0.0 && self.locationManager.location != nil{
             let latitude: CLLocationDegrees = (self.locationManager.location?.coordinate.latitude)!
             let longitude: CLLocationDegrees = (self.locationManager.location?.coordinate.longitude)!
             NSUserDefaults.standardUserDefaults().setDouble(Double(latitude), forKey: "tentLat")
@@ -78,11 +79,19 @@ class TentViewController: UIViewController, CLLocationManagerDelegate {
             self.tentMarker = GMSMarker(position: location)
             self.tentMarker!.appearAnimation = kGMSMarkerAnimationPop
             self.tentMarker?.map = self.mapView
+            
+            // sending location to watch
+            let dictionary: [String: AnyObject] = ["tentLat": Double(latitude), "tentLong": Double(longitude)]
+            self.delegate.updateWatchUserDefaultsWithDictionary(dictionary)
+            
         }else{
             self.tentMarker?.map = nil
-            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "tentLat")
-            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "tentLong")
+            NSUserDefaults.standardUserDefaults().setDouble(0.0, forKey: "tentLat")
+            NSUserDefaults.standardUserDefaults().setDouble(0.0, forKey: "tentLong")
             self.mapView?.clear()
+            //clear location from apple watch
+            let dictionary: [String: AnyObject] = ["tentLat": Double(0.0), "tentLong": Double(0.0)]
+            delegate.updateWatchUserDefaultsWithDictionary(dictionary)
         }
     }
     
