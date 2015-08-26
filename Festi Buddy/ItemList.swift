@@ -104,13 +104,7 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
         tableView.reloadData()
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
+
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         let managedObject: NSManagedObject = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
         context?.deleteObject(managedObject)
@@ -132,6 +126,10 @@ class ItemList: UITableViewController, NSFetchedResultsControllerDelegate {
             try context?.save()
         } catch _ {
         }
+        
+        // sending update to watch
+        let dictionary: [String: AnyObject] = ["haveItem": item.name]
+        delegate.updateWatchUserDefaultsWithDictionary(dictionary)
     }
     
     @IBAction func showMenu(){

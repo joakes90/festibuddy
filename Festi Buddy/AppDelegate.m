@@ -10,6 +10,7 @@
 #import "AppearanceController.h"
 #import <GoogleMaps/GMSServices.h>
 #import <WatchConnectivity/WatchConnectivity.h>
+#import "Festi_Buddy-Swift.h"
 
 @interface AppDelegate () <WCSessionDelegate>
 
@@ -159,9 +160,14 @@ NSString *kOldModelDeleted = @"oldModelDeleted";
     [self.session transferUserInfo:dictionary];
 }
 
--(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext {
-    if (applicationContext[@"default_fest"]) {
-        [[NSUserDefaults standardUserDefaults] setValue:applicationContext[@"default_fest"] forKey:@"default_fest"];
+-(void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *,id> *)userInfo {
+    if (userInfo[@"default_fest"]) {
+        [[NSUserDefaults standardUserDefaults] setValue:userInfo[@"default_fest"] forKey:@"default_fest"];
+    }
+    if (userInfo[@"haveItem"]) {
+        NSInteger index = [[ItemsController sharedInstance] findIndexFor:userInfo[@"haveItem"]];
+        [ItemsController sharedInstance].items[index].have = [NSNumber numberWithBool:YES];
+        [self.managedObjectContext save:nil];
     }
 }
 

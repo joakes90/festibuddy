@@ -15,6 +15,7 @@
 		D00903B91B8A78E400FD0E83 /* Festival+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00903B71B8A78E400FD0E83 /* Festival+CoreDataProperties.swift */; };
 		D00903BA1B8A78E400FD0E83 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00903B81B8A78E400FD0E83 /* Festival.swift */; };
 		D00903BE1B8A791D00FD0E83 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = D00903BD1B8A791D00FD0E83 /* Stack.m */; };
+		D019E1181B8C122600BA4030 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019E1171B8C122600BA4030 /* RowController.swift */; };
 		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
 		D0421E511B86C5CD00E8E86C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E501B86C5CD00E8E86C /* target.png */; };
 		D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E521B86D6FB00E8E86C /* usermarker.png */; };
@@ -173,6 +174,7 @@
 		D00903BB1B8A791C00FD0E83 /* FestiBuddy Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FestiBuddy Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		D00903BC1B8A791D00FD0E83 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		D00903BD1B8A791D00FD0E83 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		D019E1171B8C122600BA4030 /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		D03061D61A9FD66A002605D9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D0421E501B86C5CD00E8E86C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
 		D0421E521B86D6FB00E8E86C /* usermarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usermarker.png; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 				D090AFA11B87DC310011F91A /* InterfaceController.swift */,
 				D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */,
 				D04256C61B8AEA3900831D0C /* TableInterfaceController.swift */,
+				D019E1171B8C122600BA4030 /* RowController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D019E1181B8C122600BA4030 /* RowController.swift in Sources */,
 				D0CE3C041B8BB8D500E907D9 /* ItemsController.swift in Sources */,
 				D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */,
 				D053FE021B884039006FC34F /* Festivals.swift in Sources */,

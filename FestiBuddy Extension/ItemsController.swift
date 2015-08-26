@@ -39,4 +39,15 @@ class ItemsController: NSObject {
         }
         return duplicate
     }
+    
+    func findIndexFor(name: String)-> Int {
+        self.updateItems()
+        var index: Int? = nil
+        for var i: Int = 0; i < items.count; i++ {
+            if items[i].name == name{
+                index = i
+            }
+        }
+        return index!
+    }
 }
