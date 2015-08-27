@@ -171,4 +171,41 @@ NSString *kOldModelDeleted = @"oldModelDeleted";
     }
 }
 
+-(void)sessionWatchStateDidChange:(WCSession *)session {
+    if (session.watchAppInstalled) {
+        NSMutableArray *dictionariesArray = [[NSMutableArray alloc] init];
+        
+        NSNumber *longitude = [NSNumber numberWithDouble:[[NSUserDefaults standardUserDefaults] doubleForKey:@"tentLong"]];
+        NSNumber *latitude = [NSNumber numberWithDouble:[[NSUserDefaults standardUserDefaults] doubleForKey:@"tentLat"]];
+       
+        NSDictionary *defaultFest = [[NSDictionary alloc] initWithObjects:@[[[NSUserDefaults standardUserDefaults] stringForKey:@"default_fest"]]  forKeys:@[@"default_fest"]];
+        NSDictionary *tentlocal = [[NSDictionary alloc] initWithObjects:@[latitude, longitude] forKeys:@[@"tentLat", @"tentLong"]];
+        
+        [dictionariesArray addObject:tentlocal];
+        [dictionariesArray addObject:defaultFest];
+        
+        for (Items *item in [ItemsController sharedInstance].items) {
+            NSString *itemName = item.name;
+            BOOL have = item.have;
+            NSDictionary *itemsDictionary = [[NSDictionary alloc] initWithObjects:@[itemName, [NSNumber numberWithBool:have]] forKeys:@[@"Item", @"have"]];
+            [dictionariesArray addObject:itemsDictionary];
+        }
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Festival"];
+        NSArray *customFsets = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        
+        for (Festival *fest in customFsets) {
+            NSString *title = fest.title;
+            NSDate *date = fest.date;
+            
+            NSDictionary *festDictionary = [[NSDictionary alloc] initWithObjects:@[@"Festival", title, date] forKeys:@[@"Festival", @"title", @"date"]];
+            [dictionariesArray addObject:festDictionary];
+        }
+        
+        for (NSDictionary *dictionary in dictionariesArray) {
+            [self updateWatchUserDefaultsWithDictionary:dictionary];
+        }
+    }
+}
+
 @end

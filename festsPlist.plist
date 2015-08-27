@@ -6,7 +6,7 @@
 		<key>title</key>
 		<string>Austin City Limits</string>
 		<key>date</key>
-		<string>2015-10-09</string>
+		<string>2015-10-02</string>
 		<key>imageString</key>
 		<string>ACL.jpg</string>
 		<key>tableImageString</key>
@@ -16,7 +16,7 @@
 		<key>long</key>
 		<real>-97.7692911</real>
 		<key>lineup</key>
-		<string>https://www.aclfestival.com/2014-lineup/</string>
+		<string>http://www.aclfestival.com/lineup-by-day-weekend-one/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -32,7 +32,7 @@
 		<key>long</key>
 		<real>-86.04873000000001</real>
 		<key>lineup</key>
-		<string>https://lineup.bonnaroo.com/</string>
+		<string>http://lineup.bonnaroo.com</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -48,7 +48,7 @@
 		<key>long</key>
 		<real>-122.352</real>
 		<key>lineup</key>
-		<string>https://bumbershoot.org/lineup/</string>
+		<string>http://bumbershoot.com/full_lineup</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -96,7 +96,7 @@
 		<key>long</key>
 		<real>-84.70248839999999</real>
 		<key>lineup</key>
-		<string>https://www.counterpointfestival.com/2015-lineup-poster/</string>
+		<string>http://www.counterpointfestival.com/wp/wp-content/uploads/2015/04/CP15_lineupbyday_11x17in_0422.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -112,7 +112,7 @@
 		<key>long</key>
 		<real>-115.009732</real>
 		<key>lineup</key>
-		<string>https://lasvegas.electricdaisycarnival.com/</string>
+		<string>http://lasvegas.electricdaisycarnival.com</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -128,7 +128,7 @@
 		<key>long</key>
 		<real>-86.3611314</real>
 		<key>lineup</key>
-		<string>https://www.electricforestfestival.com/experience/lineup/</string>
+		<string>http://www.electricforestfestival.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -160,7 +160,7 @@
 		<key>long</key>
 		<real>-73.922517</real>
 		<key>lineup</key>
-		<string>https://lineup.governorsballmusicfestival.com/</string>
+		<string>http://lineup.governorsballmusicfestival.com</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -176,7 +176,7 @@
 		<key>long</key>
 		<real>-87.689481</real>
 		<key>lineup</key>
-		<string>https://lineup.hangoutmusicfest.com/</string>
+		<string>http://lineup.hangoutmusicfest.com</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -192,7 +192,7 @@
 		<key>long</key>
 		<real>-87.6207948</real>
 		<key>lineup</key>
-		<string>https://www.lollapalooza.com/2014-lineup/</string>
+		<string>https://www.lollapalooza.com/2015-lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -208,7 +208,7 @@
 		<key>long</key>
 		<real>-119.995638</real>
 		<key>lineup</key>
-		<string>https://lineup.sasquatchfestival.com/</string>
+		<string>http://lineup.sasquatchfestival.com</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -224,7 +224,7 @@
 		<key>long</key>
 		<real>-89.504002</real>
 		<key>lineup</key>
-		<string>https://summercampfestival.com/lineup/</string>
+		<string>http://summercampfestival.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -240,7 +240,7 @@
 		<key>lat</key>
 		<real>30.263388</real>
 		<key>lineup</key>
-		<string>https://schedule.sxsw.com/?conference=music&amp;lsort=name&amp;day=ALL&amp;event_type=showcase</string>
+		<string>http://www.sxsw.com/schedule</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -256,7 +256,7 @@
 		<key>long</key>
 		<real>-87.66527600000001</real>
 		<key>lineup</key>
-		<string>https://www.pitchforkmusicfestival.com/</string>
+		<string>http://pitchforkmusicfestival.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -288,7 +288,7 @@
 		<key>lat</key>
 		<real>25.76679</real>
 		<key>lineup</key>
-		<string>https://www.ultramusicfestival.com/lineup</string>
+		<string>http://ultramusicfestival.com</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -304,7 +304,7 @@
 		<key>long</key>
 		<real>-90.09166999999999</real>
 		<key>lineup</key>
-		<string>https://worshipthemusic.com/artists/</string>
+		<string>https://worshipthemusic.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -320,7 +320,7 @@
 		<key>long</key>
 		<real>-93.797192</real>
 		<key>lineup</key>
-		<string>https://www.wakarusa.com/artist-lineup/</string>
+		<string>http://www.wakarusa.com/artist-lineup/</string>
 	</dict>
 </array>
 </plist>

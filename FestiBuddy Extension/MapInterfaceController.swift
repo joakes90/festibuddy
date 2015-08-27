@@ -27,7 +27,7 @@ class MapInterfaceController: WKInterfaceController {
             self.map.setRegion(region)
             
             //add anotation here later
-            self.map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Purple)
+            self.map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Red)
             
         } else {
             let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 35.4822, longitude: -97.5350)
