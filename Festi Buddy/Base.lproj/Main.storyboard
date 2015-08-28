@@ -693,8 +693,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjG-Ap-LfB">
                                 <rect key="frame" x="-4" y="205" width="383" height="454"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.094117647058823528" green="0.75686274509803919" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Turn on low power mode in Settings &gt; Battery
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.86666666670000003" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Turn on low power mode in Settings &gt; Battery
 
 Turn down screen brightness
 
@@ -714,8 +714,8 @@ Lower the amount of time until the phone auto locks in Settings &gt; General
 
 See what apps are using the most battery in Settings &gt; Battery
 
-*will disable some features of this app</mutableString>
-                                <color key="textColor" red="0.92941176470588238" green="0.82259516480871842" blue="0.086576737870186243" alpha="1" colorSpace="calibratedRGB"/>
+*will disable some features of this app</string>
+                                <color key="textColor" red="1" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

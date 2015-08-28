@@ -11,6 +11,7 @@
 		D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */; };
 		D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D0037B9F1A994E3900CAE8D9 /* timeBackground.png */; };
 		D0037BA31A99546F00CAE8D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */; };
+		D0301D631B90392A006B8DB9 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0301D621B90392A006B8DB9 /* festsPlist.plist */; };
 		D03061D71A9FD66A002605D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03061D61A9FD66A002605D9 /* AboutViewController.swift */; };
 		D0421E511B86C5CD00E8E86C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E501B86C5CD00E8E86C /* target.png */; };
 		D0421E531B86D6FB00E8E86C /* usermarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0421E521B86D6FB00E8E86C /* usermarker.png */; };
@@ -52,7 +53,6 @@
 		D05417D51A9AFE09004518F7 /* voodooLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417AF1A9AFE09004518F7 /* voodooLogo.jpeg */; };
 		D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B01A9AFE09004518F7 /* waka.jpeg */; };
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
-		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
 		D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */; };
 		D067C1B91B86EE9C00692A9A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05FA7CF1B86EE190001E871 /* MapKit.framework */; };
 		D08AE54F1B85499500B4DECD /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AE54E1B85499500B4DECD /* ItemsController.swift */; };
@@ -108,6 +108,7 @@
 		D0037B9E1A994E3900CAE8D9 /* loadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.png; sourceTree = "<group>"; };
 		D0037B9F1A994E3900CAE8D9 /* timeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBackground.png; sourceTree = "<group>"; };
 		D0037BA21A99546F00CAE8D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D0301D621B90392A006B8DB9 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = "<group>"; };
 		D03061D61A9FD66A002605D9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D0421E501B86C5CD00E8E86C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
 		D0421E521B86D6FB00E8E86C /* usermarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usermarker.png; sourceTree = "<group>"; };
@@ -150,7 +151,6 @@
 		D05417AF1A9AFE09004518F7 /* voodooLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = voodooLogo.jpeg; sourceTree = "<group>"; };
 		D05417B01A9AFE09004518F7 /* waka.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waka.jpeg; sourceTree = "<group>"; };
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
-		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
 		D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFestivalViewController.swift; sourceTree = "<group>"; };
 		D05FA7CF1B86EE190001E871 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = ../../../../Desktop/MapKit.framework; sourceTree = "<group>"; };
 		D08AE54E1B85499500B4DECD /* ItemsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
@@ -403,8 +403,8 @@
 		D0EF9C061A98889F00850489 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D05417D81A9AFE5C004518F7 /* festsPlist.plist */,
 				D08C9ABE1A9EB30800025D87 /* packinglist.plist */,
+				D0301D621B90392A006B8DB9 /* festsPlist.plist */,
 				D0EF9C071A98889F00850489 /* Info.plist */,
 				D0EF9C081A98889F00850489 /* main.m */,
 			);
@@ -524,7 +524,6 @@
 				D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */,
 				D08C9ABF1A9EB30800025D87 /* packinglist.plist in Resources */,
 				D0EF9C151A98889F00850489 /* Main.storyboard in Resources */,
-				D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */,
 				D05417CB1A9AFE09004518F7 /* sasquatchLogo.jpeg in Resources */,
 				D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */,
 				D05417C11A9AFE09004518F7 /* fireflyLogo.jpeg in Resources */,
@@ -568,6 +567,7 @@
 				D05417B91A9AFE09004518F7 /* CoachellaLogo.jpg in Resources */,
 				D05417D51A9AFE09004518F7 /* voodooLogo.jpeg in Resources */,
 				D05417C21A9AFE09004518F7 /* govBall.jpeg in Resources */,
+				D0301D631B90392A006B8DB9 /* festsPlist.plist in Resources */,
 				D05417C51A9AFE09004518F7 /* hangoutLogo.png in Resources */,
 				D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */,
 				D05417CE1A9AFE09004518F7 /* sxsw.jpeg in Resources */,
