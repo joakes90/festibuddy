@@ -37,7 +37,7 @@ class CountdownInterfaceController: WKInterfaceController {
         if FestivalController.sharedInstance.festivals[indexOfVisableFest].days <= 0{
             self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[indexOfVisableFest].title) is over")
         } else {
-            self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[indexOfVisableFest].title) happening in \(FestivalController.sharedInstance.festivals[0].days + 1)")
+            self.infoLabel.setText("\(FestivalController.sharedInstance.festivals[0].days + 1) days till \(FestivalController.sharedInstance.festivals[indexOfVisableFest].title)")
         }
             self.festPicker.setSelectedItemIndex(self.indexOfVisableFest)
         }
@@ -55,7 +55,7 @@ class CountdownInterfaceController: WKInterfaceController {
         if days <= 0 {
             self.infoLabel.setText("\(newText) is over")
         } else {
-            self.infoLabel.setText("\(newText) happening in \(days) days")
+            self.infoLabel.setText("\(days) days till \(newText)")
         }
     }
     @IBAction func setDefaultFest() {

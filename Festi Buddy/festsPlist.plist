@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- PEALISTv1: TextSize:0| -->
 <plist version="1.0">
 <array>
 	<dict>
 		<key>title</key>
-		<string>Austin City Limits</string>
+		<string>Austin City Limits Weekend 1</string>
 		<key>date</key>
 		<string>2015-10-02</string>
 		<key>imageString</key>
@@ -16,13 +17,29 @@
 		<key>long</key>
 		<real>-97.7692911</real>
 		<key>lineup</key>
-		<string>http://www.aclfestival.com/lineup-by-day-weekend-one/</string>
+		<string>http://www.aclfestival.com/lineup/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Austin City Limits Weekend 2</string>
+		<key>date</key>
+		<string>2015-10-09</string>
+		<key>imageString</key>
+		<string>ACL.jpg</string>
+		<key>tableImageString</key>
+		<string>ACLLogo.jpg</string>
+		<key>lat</key>
+		<real>30.2585025</real>
+		<key>long</key>
+		<real>-97.7692911</real>
+		<key>lineup</key>
+		<string>http://www.aclfestival.com/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Bonnaroo</string>
 		<key>date</key>
-		<string>2015-06-11</string>
+		<string>2016-06-09</string>
 		<key>imageString</key>
 		<string>Bonnaroo.jpg</string>
 		<key>tableImageString</key>
@@ -38,7 +55,7 @@
 		<key>title</key>
 		<string>Bumbershoot</string>
 		<key>date</key>
-		<string>2015-09-07</string>
+		<string>2015-09-05</string>
 		<key>imageString</key>
 		<string>bumber.jpeg</string>
 		<key>tableImageString</key>
@@ -54,7 +71,7 @@
 		<key>title</key>
 		<string>Coachella Weekend 1</string>
 		<key>date</key>
-		<string>2015-04-10</string>
+		<string>2016-04-15</string>
 		<key>imageString</key>
 		<string>Coachella.jpeg</string>
 		<key>tableImageString</key>
@@ -64,13 +81,13 @@
 		<key>long</key>
 		<real>-116.237273</real>
 		<key>lineup</key>
-		<string>https://www.coachella.com/poster-iframe/</string>
+		<string>https://coachella-2014-site.s3.amazonaws.com/wp-content/uploads/2015/06/coa_2015_1800x2400_v44_w2015.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Coachella Weekend 2</string>
 		<key>date</key>
-		<string>2015-04-17</string>
+		<string>2016-04-22</string>
 		<key>imageString</key>
 		<string>Coachella.jpeg</string>
 		<key>tableImageString</key>
@@ -80,13 +97,13 @@
 		<key>long</key>
 		<real>-116.237273</real>
 		<key>lineup</key>
-		<string>https://www.coachella.com/poster-iframe/</string>
+		<string>https://coachella-2014-site.s3.amazonaws.com/wp-content/uploads/2015/06/coa_2015_1800x2400_v44_w2015.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>CounterPoint</string>
 		<key>date</key>
-		<string>2015-05-22</string>
+		<string>2016-05-21</string>
 		<key>imageString</key>
 		<string>counterpoint.jpeg</string>
 		<key>tableImageString</key>
@@ -96,13 +113,13 @@
 		<key>long</key>
 		<real>-84.70248839999999</real>
 		<key>lineup</key>
-		<string>http://www.counterpointfestival.com/wp/wp-content/uploads/2015/04/CP15_lineupbyday_11x17in_0422.jpg</string>
+		<string>http://cpfp3.c3cdn.com/wp/wp-content/uploads/2015/04/CP15_lineupbyday_11x17in_0422.jpg</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Electric Daisy Carnival</string>
 		<key>date</key>
-		<string>2015-06-19</string>
+		<string>2016-06-17</string>
 		<key>imageString</key>
 		<string>EDC.jpg</string>
 		<key>tableImageString</key>
@@ -112,13 +129,13 @@
 		<key>long</key>
 		<real>-115.009732</real>
 		<key>lineup</key>
-		<string>http://lasvegas.electricdaisycarnival.com</string>
+		<string>http://lasvegas.electricdaisycarnival.com/</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Electric Forest</string>
 		<key>date</key>
-		<string>2015-06-25</string>
+		<string>2016-06-24</string>
 		<key>imageString</key>
 		<string>EFF.jpg</string>
 		<key>tableImageString</key>
@@ -128,13 +145,13 @@
 		<key>long</key>
 		<real>-86.3611314</real>
 		<key>lineup</key>
-		<string>http://www.electricforestfestival.com/lineup/</string>
+		<string>https://www.electricforestfestival.com/experience/lineup/</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>FireFly</string>
 		<key>date</key>
-		<string>2015-06-18</string>
+		<string>2016-06-17</string>
 		<key>imageString</key>
 		<string>firefly.jpeg</string>
 		<key>tableImageString</key>
@@ -150,7 +167,7 @@
 		<key>title</key>
 		<string>Governors Ball</string>
 		<key>date</key>
-		<string>2015-06-05</string>
+		<string>2016-06-03</string>
 		<key>imageString</key>
 		<string>govBall.jpeg</string>
 		<key>tableImageString</key>
@@ -160,13 +177,13 @@
 		<key>long</key>
 		<real>-73.922517</real>
 		<key>lineup</key>
-		<string>http://lineup.governorsballmusicfestival.com</string>
+		<string>http://lineup.governorsballmusicfestival.com/?sort=day</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Hangout</string>
 		<key>date</key>
-		<string>2015-05-15</string>
+		<string>2016-05-20</string>
 		<key>imageString</key>
 		<string>hangout.jpeg</string>
 		<key>tableImageString</key>
@@ -176,13 +193,13 @@
 		<key>long</key>
 		<real>-87.689481</real>
 		<key>lineup</key>
-		<string>http://lineup.hangoutmusicfest.com</string>
+		<string>http://lineup.hangoutmusicfest.com/events/2015/05/15/</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Lollapalooza</string>
 		<key>date</key>
-		<string>2015-07-31</string>
+		<string>2016-07-29</string>
 		<key>imageString</key>
 		<string>lolla.jpeg</string>
 		<key>tableImageString</key>
@@ -198,7 +215,7 @@
 		<key>title</key>
 		<string>Sasquatch!</string>
 		<key>date</key>
-		<string>2015-05-23</string>
+		<string>2016-05-27</string>
 		<key>imageString</key>
 		<string>sasquatch.jpeg</string>
 		<key>tableImageString</key>
@@ -212,25 +229,9 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Summer Camp</string>
-		<key>date</key>
-		<string>2015-05-22</string>
-		<key>imageString</key>
-		<string>sc.jpeg</string>
-		<key>tableImageString</key>
-		<string>scLogo.jpeg</string>
-		<key>lat</key>
-		<real>40.893674</real>
-		<key>long</key>
-		<real>-89.504002</real>
-		<key>lineup</key>
-		<string>http://summercampfestival.com/lineup/</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>SxSW</string>
 		<key>date</key>
-		<string>2015-03-13</string>
+		<string>2016-03-15</string>
 		<key>imageString</key>
 		<string>sxsw.jpeg</string>
 		<key>tableImageString</key>
@@ -244,25 +245,9 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>PitchFork</string>
-		<key>date</key>
-		<string>2015-07-17</string>
-		<key>imageString</key>
-		<string>pf.jpeg</string>
-		<key>tableImageString</key>
-		<string>pfLogo.jpg</string>
-		<key>lat</key>
-		<real>41.884762</real>
-		<key>long</key>
-		<real>-87.66527600000001</real>
-		<key>lineup</key>
-		<string>http://pitchforkmusicfestival.com/lineup/</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>Tomorrow World</string>
 		<key>date</key>
-		<string>2015-09-25</string>
+		<string>2016-09-23</string>
 		<key>imageString</key>
 		<string>tworld.jpeg</string>
 		<key>tableImageString</key>
@@ -272,13 +257,13 @@
 		<key>long</key>
 		<real>-84.70248839999999</real>
 		<key>lineup</key>
-		<string>https://www.tomorrowworld.com/Lineup</string>
+		<string>http://www.tomorrowworld.com/Lineup</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Ultra</string>
 		<key>date</key>
-		<string>2015-03-27</string>
+		<string>2016-03-18</string>
 		<key>imageString</key>
 		<string>Ultra.jpg</string>
 		<key>tableImageString</key>
@@ -288,7 +273,7 @@
 		<key>lat</key>
 		<real>25.76679</real>
 		<key>lineup</key>
-		<string>http://ultramusicfestival.com</string>
+		<string>http://www.ultramusicfestival.com/lineup</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -304,13 +289,13 @@
 		<key>long</key>
 		<real>-90.09166999999999</real>
 		<key>lineup</key>
-		<string>https://worshipthemusic.com/lineup/</string>
+		<string>http://worshipthemusic.com/artists/</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Wakarusa</string>
 		<key>date</key>
-		<string>2015-06-04</string>
+		<string>2016-06-02</string>
 		<key>imageString</key>
 		<string>waka.jpeg</string>
 		<key>tableImageString</key>

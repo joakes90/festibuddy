@@ -23,7 +23,6 @@
 		D053FDFD1B880EB0006FC34F /* CountdownInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */; };
 		D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FDFF1B883FB1006FC34F /* FestivalsController.swift */; };
 		D053FE021B884039006FC34F /* Festivals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053FE011B884039006FC34F /* Festivals.swift */; };
-		D053FE041B884764006FC34F /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D053FE031B884764006FC34F /* festsPlist.plist */; };
 		D05417B21A9AFE09004518F7 /* ACL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178C1A9AFE09004518F7 /* ACL.jpg */; };
 		D05417B31A9AFE09004518F7 /* ACLLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178D1A9AFE09004518F7 /* ACLLogo.jpg */; };
 		D05417B41A9AFE09004518F7 /* Bonnaroo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */; };
@@ -62,7 +61,6 @@
 		D05417D51A9AFE09004518F7 /* voodooLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417AF1A9AFE09004518F7 /* voodooLogo.jpeg */; };
 		D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B01A9AFE09004518F7 /* waka.jpeg */; };
 		D05417D71A9AFE09004518F7 /* wakaLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */; };
-		D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05417D81A9AFE5C004518F7 /* festsPlist.plist */; };
 		D05621A91B7FE533004CB47A /* AddFestivalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */; };
 		D067C1B91B86EE9C00692A9A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05FA7CF1B86EE190001E871 /* MapKit.framework */; };
 		D08AE54F1B85499500B4DECD /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AE54E1B85499500B4DECD /* ItemsController.swift */; };
@@ -81,7 +79,6 @@
 		D090AF941B87DC310011F91A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D090AF921B87DC310011F91A /* Interface.storyboard */; };
 		D090AF961B87DC310011F91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D090AF951B87DC310011F91A /* Assets.xcassets */; };
 		D090AF9D1B87DC310011F91A /* FestiBuddy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA11B87DC310011F91A /* InterfaceController.swift */; };
 		D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */; };
 		D090AFA81B87DC310011F91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D090AFA71B87DC310011F91A /* Assets.xcassets */; };
 		D090AFAC1B87DC310011F91A /* FestiBuddy.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D090AF901B87DC310011F91A /* FestiBuddy.app */; };
@@ -95,6 +92,8 @@
 		D0CE3C011B8BB89600E907D9 /* Items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE3BFF1B8BB89600E907D9 /* Items+CoreDataProperties.swift */; };
 		D0CE3C021B8BB89600E907D9 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE3C001B8BB89600E907D9 /* Items.swift */; };
 		D0CE3C041B8BB8D500E907D9 /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE3C031B8BB8D500E907D9 /* ItemsController.swift */; };
+		D0CF051C1BA23B15006A20C8 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0CF051B1BA23B15006A20C8 /* festsPlist.plist */; settings = {ASSET_TAGS = (); }; };
+		D0CF051E1BA23B39006A20C8 /* festsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0CF051D1BA23B39006A20C8 /* festsPlist.plist */; settings = {ASSET_TAGS = (); }; };
 		D0D68D121A9C769200F21A5C /* countdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68D111A9C769200F21A5C /* countdownWebView.swift */; };
 		D0DD62111A998ECB00224542 /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DD62101A998ECB00224542 /* menubutton.png */; };
 		D0DD62181A9A95D900224542 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD62151A9A95D900224542 /* DetailViewController.swift */; };
@@ -183,7 +182,6 @@
 		D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownInterfaceController.swift; sourceTree = "<group>"; };
 		D053FDFF1B883FB1006FC34F /* FestivalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalsController.swift; sourceTree = "<group>"; };
 		D053FE011B884039006FC34F /* Festivals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festivals.swift; sourceTree = "<group>"; };
-		D053FE031B884764006FC34F /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = "<group>"; };
 		D054178C1A9AFE09004518F7 /* ACL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACL.jpg; sourceTree = "<group>"; };
 		D054178D1A9AFE09004518F7 /* ACLLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACLLogo.jpg; sourceTree = "<group>"; };
 		D054178E1A9AFE09004518F7 /* Bonnaroo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bonnaroo.jpg; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 		D05417AF1A9AFE09004518F7 /* voodooLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = voodooLogo.jpeg; sourceTree = "<group>"; };
 		D05417B01A9AFE09004518F7 /* waka.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waka.jpeg; sourceTree = "<group>"; };
 		D05417B11A9AFE09004518F7 /* wakaLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakaLogo.jpeg; sourceTree = "<group>"; };
-		D05417D81A9AFE5C004518F7 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = SOURCE_ROOT; };
 		D05621A81B7FE533004CB47A /* AddFestivalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFestivalViewController.swift; sourceTree = "<group>"; };
 		D05FA7CF1B86EE190001E871 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = ../../../../Desktop/MapKit.framework; sourceTree = "<group>"; };
 		D08AE54E1B85499500B4DECD /* ItemsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
@@ -243,9 +240,7 @@
 		D090AF951B87DC310011F91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D090AF971B87DC310011F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D090AF9C1B87DC310011F91A /* FestiBuddy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FestiBuddy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D090AFA11B87DC310011F91A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D090AFA51B87DC310011F91A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		D090AFA71B87DC310011F91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D090AFA91B87DC310011F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A13DAE1B17A43E00A719E8 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppearanceController.h; path = ../AppearanceController.h; sourceTree = "<group>"; };
@@ -259,6 +254,8 @@
 		D0CE3BFF1B8BB89600E907D9 /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D0CE3C001B8BB89600E907D9 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		D0CE3C031B8BB8D500E907D9 /* ItemsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
+		D0CF051B1BA23B15006A20C8 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = "<group>"; };
+		D0CF051D1BA23B39006A20C8 /* festsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = festsPlist.plist; sourceTree = "<group>"; };
 		D0D68D111A9C769200F21A5C /* countdownWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countdownWebView.swift; sourceTree = "<group>"; };
 		D0DD62101A998ECB00224542 /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubutton.png; sourceTree = "<group>"; };
 		D0DD62151A9A95D900224542 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -367,7 +364,6 @@
 		D053FDFB1B880E63006FC34F /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D090AFA11B87DC310011F91A /* InterfaceController.swift */,
 				D053FDFC1B880EB0006FC34F /* CountdownInterfaceController.swift */,
 				D04256C61B8AEA3900831D0C /* TableInterfaceController.swift */,
 				D019E1171B8C122600BA4030 /* RowController.swift */,
@@ -462,10 +458,9 @@
 				D053FE011B884039006FC34F /* Festivals.swift */,
 				D053FDFB1B880E63006FC34F /* Interface Controllers */,
 				D090AFA31B87DC310011F91A /* ExtensionDelegate.swift */,
-				D090AFA51B87DC310011F91A /* ComplicationController.swift */,
 				D090AFA71B87DC310011F91A /* Assets.xcassets */,
-				D053FE031B884764006FC34F /* festsPlist.plist */,
 				D090AFA91B87DC310011F91A /* Info.plist */,
+				D0CF051D1BA23B39006A20C8 /* festsPlist.plist */,
 			);
 			path = "FestiBuddy Extension";
 			sourceTree = "<group>";
@@ -554,7 +549,7 @@
 		D0EF9C061A98889F00850489 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D05417D81A9AFE5C004518F7 /* festsPlist.plist */,
+				D0CF051B1BA23B15006A20C8 /* festsPlist.plist */,
 				D08C9ABE1A9EB30800025D87 /* packinglist.plist */,
 				D0EF9C071A98889F00850489 /* Info.plist */,
 				D0EF9C081A98889F00850489 /* main.m */,
@@ -722,7 +717,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D090AFA81B87DC310011F91A /* Assets.xcassets in Resources */,
-				D053FE041B884764006FC34F /* festsPlist.plist in Resources */,
+				D0CF051E1BA23B39006A20C8 /* festsPlist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,7 +732,6 @@
 				D05417D61A9AFE09004518F7 /* waka.jpeg in Resources */,
 				D08C9ABF1A9EB30800025D87 /* packinglist.plist in Resources */,
 				D0EF9C151A98889F00850489 /* Main.storyboard in Resources */,
-				D05417D91A9AFE5C004518F7 /* festsPlist.plist in Resources */,
 				D05417CB1A9AFE09004518F7 /* sasquatchLogo.jpeg in Resources */,
 				D0037BA11A994E3900CAE8D9 /* timeBackground.png in Resources */,
 				D05417C11A9AFE09004518F7 /* fireflyLogo.jpeg in Resources */,
@@ -781,6 +775,7 @@
 				D05417B91A9AFE09004518F7 /* CoachellaLogo.jpg in Resources */,
 				D05417D51A9AFE09004518F7 /* voodooLogo.jpeg in Resources */,
 				D05417C21A9AFE09004518F7 /* govBall.jpeg in Resources */,
+				D0CF051C1BA23B15006A20C8 /* festsPlist.plist in Resources */,
 				D05417C51A9AFE09004518F7 /* hangoutLogo.png in Resources */,
 				D0037BA01A994E3900CAE8D9 /* loadingScreen.png in Resources */,
 				D05417CE1A9AFE09004518F7 /* sxsw.jpeg in Resources */,
@@ -839,7 +834,6 @@
 				D0CE3C041B8BB8D500E907D9 /* ItemsController.swift in Sources */,
 				D090AFA41B87DC310011F91A /* ExtensionDelegate.swift in Sources */,
 				D053FE021B884039006FC34F /* Festivals.swift in Sources */,
-				D090AFA21B87DC310011F91A /* InterfaceController.swift in Sources */,
 				D00903B21B8A782C00FD0E83 /* Model.xcdatamodeld in Sources */,
 				D0B2815F1B8D71DF00D5A2DC /* MapInterfaceController.swift in Sources */,
 				D053FE001B883FB1006FC34F /* FestivalsController.swift in Sources */,
